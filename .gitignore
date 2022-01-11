@@ -44,3 +44,6 @@ vignettes/*.pdf
 inst/doc
 /doc/
 /Meta/
+
+# vignettes are build offline for the moment. We need to publish that
+#docs

@@ -3,8 +3,9 @@
 #' @inheritParams dido_dataset
 #' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
 #'
-#' @return un id de dataset. Ce dernier sert pour créer par la suite les
-#'   datafiles et les millésimes.
+#' @return un objet [dido_dataset()]. Ce dernier sert pour créer par la suite
+#'   les datafiles et les millésimes.
+#'
 #' @export
 #'
 #' @examples

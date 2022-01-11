@@ -63,24 +63,8 @@ données}
 un objet dido_dataset
 }
 \description{
-L'objet dido_dataset inclus les champs :
-
-The response object captures all information from a request.  It includes
-fields:
-\itemize{
-\item \code{url} the url the request was actually sent to (after redirects)
-\item \code{handle} the handle associated with the url
-\item \code{status_code} the http status code
-\item \code{header} a named list of headers returned by the server
-\item \code{cookies} a named list of cookies returned by the server
-\item \code{content} the body of the response, as raw vector. See \code{\link[=content]{content()}} for various ways to access the content.
-\item \code{time} request timing information
-\item \code{config} configuration for the request
-}
-}
-\details{
-For non-http(s) responses, some parts including the status and
-header may not be interpretable the same way as http responses.
+L'objet dido_dataset est retourné par \code{get_dataset()} et utilisé en paramètre
+par \code{update_dataset()} \code{create_datafile()} et \code{create_attachment()}
 }
 \examples{
 dataset <- dido_dataset(

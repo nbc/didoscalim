@@ -15,7 +15,7 @@ get_datafile(rid = NULL, title = NULL, dataset = NULL)
 fournir cet argument évite un appel à l'API}
 }
 \value{
-
+un objet \code{\link[=dido_datafile]{dido_datafile()}}
 }
 \description{
 Permet de récupérer les données d'un datafile en utilisant soit son rid soit

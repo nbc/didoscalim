@@ -8,6 +8,15 @@
 \description{
 Ce package permet de charger des données dans DiDo en passant par l'API d'alimentation.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://mtes-mct.github.io/didoscalim/}
+  \item \url{https://github.com/MTES-MCT/didoscalim}
+  \item Report bugs at \url{https://github.com/MTES-MCT/didoscalim/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Nicolas Chuche \email{nicolas.chuche@developpement-durable.gouv.fr}
 

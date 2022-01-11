@@ -1,7 +1,9 @@
 #' L'objet dido_job
 #'
 #' @description
-#' L'objet dido_job est retourné par les fonctions `create_datafile()`, `add_millesime()` et `replace_millesime()`
+#' L'objet dido_job est retourné par les fonctions `create_datafile()`,
+#' `add_millesime()` et `replace_millesime()`
+#'
 #' @name dido_job
 NULL
 

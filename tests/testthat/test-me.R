@@ -28,5 +28,7 @@ test_that("organization works with good params", {
 })
 
 test_that("organization errors if no organization found", {
+  skip_unless_dev_env()
+
   expect_error(organization("some random string"), "aucune organisation")
 })

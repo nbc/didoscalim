@@ -63,8 +63,8 @@ données}
 \item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
 }
 \value{
-un id de dataset. Ce dernier sert pour créer par la suite les
-datafiles et les millésimes.
+un objet \code{\link[=dido_dataset]{dido_dataset()}}. Ce dernier sert pour créer par la suite
+les datafiles et les millésimes.
 }
 \description{
 Créé un dataset

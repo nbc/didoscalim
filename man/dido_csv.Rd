@@ -2,7 +2,7 @@
 % Please edit documentation in R/dido-csv.R
 \name{dido_csv}
 \alias{dido_csv}
-\title{Génère le CSV augmenté utilisé par DiDo}
+\title{Génère les lignes d'entête du CSV augmenté utilisé par DiDo}
 \usage{
 dido_csv(
   tbl,
@@ -21,17 +21,38 @@ dido_csv(
 \item{cog_year}{le millésime du COG utilisé si besoin. Par défaut prend l'année en cours}
 }
 \value{
-un tibble avec les 4 lignes de description
+un tibble avec les 4 lignes de description du csv augmenté
 }
 \description{
-Génère le CSV augmenté utilisé par DiDo
+Génère un tibble avec les lignes d'entêtes du CSV augmenté.
+}
+\details{
+Certains noms de variable sont connus par didoscalim qui génère
+automatiquement le type et la description. La liste complète de ces
+variables et des types/descriptions associés est :\tabular{lll}{
+   nom de la variable \tab type \tab description \cr
+   REGION \tab cog_region_AAAA \tab Code de la région \cr
+   DEPARTEMENT \tab cog_departement_AAAA \tab Code du département \cr
+   COMMUNE \tab cog_commune_AAAA \tab Code de la commune \cr
+   EPCI \tab cog_epci_AAAA \tab Code de l'EPCI \cr
+   IRIS \tab cog_iris_AAAA \tab Code de l'IRIS \cr
+   ANNEE \tab n/a \tab Millésimes des données \cr
+   MOIS \tab n/a \tab mois des données \cr
+}
+
+
+L'année \code{AAAA} est l'année courante, vous pouvez la modifier en passant le paramètre \code{cog_year}
 }
 \examples{
 \dontrun{
 params <- list(
-  OPERATEUR = list(description = "une description", type = "enum"),
-  CONSO = list(description = "une autre", unit = "Mwh")
+  OPERATEUR = list(description = "L'opérateur", type = "texte"),
+  CONSO = list(description = "La consommation", unit = "Mwh")
 )
 dido_csv(my_tibble)
 }
+}
+\seealso{
+En complément, vous pouvez lire : \href{https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/}{la description d'un fichier csv augmenté},
+\href{https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/210-headers/}{la liste des entêtes utilisables}
 }

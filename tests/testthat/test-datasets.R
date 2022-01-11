@@ -4,42 +4,24 @@ test_that("check get_datasets errors on missing param", {
 })
 
 test_that("check get_datasets works", {
+  skip_unless_dev_env()
+
   ds <- get_datasets()
 
   expect_s3_class(ds, "tbl")
 })
 
 test_that("check get_alerts works", {
+  skip_unless_dev_env()
+
   alerts <- get_alerts()
 
   expect_s3_class(alerts, "tbl")
 })
 
-test_that("check get_dataset works", {
-  title <- glue::glue("didoscalim test get dataset {generate_random_string()}")
+test_that("delete works", {
+  skip_unless_dev_env()
 
-  ds <- create_dataset(
-    title = title,
-    description = "test",
-    topic = "Transports",
-    frequency = "unknown",
-  )
-  dataset <- get_dataset(ds$id)
-
-  expect_s3_class(dataset, "dido_dataset")
-  expect_equal(dataset$title, title)
-  expect_equal(dataset$description, "test")
-  expect_equal(dataset$topic, "Transports")
-
-  dataset <- get_dataset(title = title)
-
-  expect_s3_class(dataset, "dido_dataset")
-  expect_equal(dataset$title, title)
-  expect_equal(dataset$description, "test")
-  expect_equal(dataset$topic, "Transports")
-})
-
-test_that("c", {
   dataset <- create_dataset(
     title = "didoscalim ds check get_dataset works",
     description = "test",

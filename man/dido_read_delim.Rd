@@ -70,11 +70,16 @@ option is \code{TRUE} then blank rows will not be represented at all.  If it is
 \code{FALSE} then they will be represented by \code{NA} values in all the columns.}
 }
 \value{
-un tibble dont toutes les colonnes sont en \code{chr}
+un tibble dont toutes les colonnes sont de type \code{chr}
 }
 \description{
 Cette fonction utilise directement \code{readr::read_delim} en enlevant la
 détection du type des colonnes.
+}
+\details{
+Certaines variables peuvent avoir des valeurs secrétisées
+représentées par la valeur \code{secret}, la détection automatique de readr
+n'est donc pas fiable.
 }
 \examples{
 \dontrun{

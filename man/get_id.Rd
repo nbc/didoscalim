@@ -20,3 +20,4 @@ Retourne le dataset id de l'objet
 get_id(dataset)
 }
 }
+\keyword{internal}

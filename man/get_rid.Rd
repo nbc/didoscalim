@@ -20,3 +20,4 @@ Retourne le dafile id de l'objet
 get_rid(job)
 }
 }
+\keyword{internal}

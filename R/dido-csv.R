@@ -8,21 +8,47 @@ default_columns <- list(
   MOIS = list(type = "mois", description = "Mois des données")
 )
 
-#' Génère le CSV augmenté utilisé par DiDo
+#' Génère les lignes d'entête du CSV augmenté utilisé par DiDo
+#'
+#' Génère un tibble avec les lignes d'entêtes du CSV augmenté.
+#'
+#'
 #'
 #' @param tbl le dataframe/tablespace à augmenter
 #' @param params une liste nommée décrivant les caractéristiques des colonnes
 #' @param locale la locale à utiliser
 #' @param cog_year le millésime du COG utilisé si besoin. Par défaut prend l'année en cours
 #'
-#' @return un tibble avec les 4 lignes de description
+#' @return un tibble avec les 4 lignes de description du csv augmenté
 #' @export
+#'
+#' @details Certains noms de variable sont connus par didoscalim qui génère
+#'   automatiquement le type et la description. La liste complète de ces
+#'   variables et des types/descriptions associés est :
+#'
+#' | nom de la variable | type                  | description             |
+#' |--------------------|-----------------------|-------------------------|
+#' | REGION             |cog_region_AAAA        | Code de la région       |
+#' | DEPARTEMENT        |cog_departement_AAAA   | Code du département     |
+#' | COMMUNE            |cog_commune_AAAA       | Code de la commune      |
+#' | EPCI               |cog_epci_AAAA          | Code de l'EPCI          |
+#' | IRIS               |cog_iris_AAAA          | Code de l'IRIS          |
+#' | ANNEE              | n/a                   | Millésimes des données  |
+#' | MOIS               | n/a                   | mois des données        |
+#'
+#' L'année `AAAA` est l'année courante, vous pouvez la modifier en passant le paramètre `cog_year`
+#'
+#' @seealso En complément, vous pouvez lire : [la description d'un fichier
+#'   csv
+#'   augmenté](https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/),
+#'    [la liste des entêtes
+#'   utilisables](https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/210-headers/)
 #'
 #' @examples
 #' \dontrun{
 #' params <- list(
-#'   OPERATEUR = list(description = "une description", type = "enum"),
-#'   CONSO = list(description = "une autre", unit = "Mwh")
+#'   OPERATEUR = list(description = "L'opérateur", type = "texte"),
+#'   CONSO = list(description = "La consommation", unit = "Mwh")
 #' )
 #' dido_csv(my_tibble)
 #' }
@@ -65,7 +91,12 @@ dido_write_csv <- function(tbl, file) {
 #'
 #' @inheritParams readr::read_delim
 #'
-#' @return un tibble dont toutes les colonnes sont en `chr`
+#' @return un tibble dont toutes les colonnes sont de type `chr`
+#'
+#' @details Certaines variables peuvent avoir des valeurs secrétisées
+#'   représentées par la valeur `secret`, la détection automatique de readr
+#'   n'est donc pas fiable.
+#'
 #' @export
 #'
 #' @examples

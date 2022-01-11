@@ -24,37 +24,6 @@ test_that("create datafiles works", {
   expect_equal(datafile$published, date_published)
 })
 
-test_that("create complete datafiles works", {
-  skip_unless_dev_env()
-
-  dataset <- create_dataset(
-    title = "didoscalim ds create complete datafiles work",
-    description = "test",
-    topic = "Transports",
-    frequency = "unknown"
-  )
-
-  datafile <- create_datafile(
-    dataset = dataset,
-    title = "didoscalim df create complete datafiles works",
-    description = "description",
-    file_name = "dido-csv-simple.csv",
-    millesime = "2022-10",
-    date_diffusion = "2022-10-10T08:00:00.000Z",
-    published = "2022-10-10",
-    temporal_coverage_start = "2020-01-01",
-    temporal_coverage_end = "2020-12-31"
-  )
-
-  expect_equal(datafile$data$datafile_metadata$title, "didoscalim df create complete datafiles works")
-  expect_equal(datafile$data$datafile_metadata$description, "description")
-  expect_equal(datafile$data$datafile_metadata$temporal_coverage_start, "2020-01-01T00:00:00.000Z")
-  expect_equal(datafile$data$datafile_metadata$temporal_coverage_end, "2020-12-31T00:00:00.000Z")
-  expect_equal(datafile$data$datafile_metadata$published, "2022-10-10T00:00:00.000Z")
-  expect_equal(datafile$data$datafile_millesime_date_diffusion, "2022-10-10T08:00:00.000Z")
-  expect_equal(datafile$data$datafile_millesime, "2022-10")
-})
-
 test_that("create datafiles warns when missing param", {
   skip_unless_dev_env()
 

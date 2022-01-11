@@ -1,11 +1,13 @@
 Package: didoscalim
 Title: Charger des données dans DiDo
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: 
     person("Nicolas", "Chuche", , "nicolas.chuche@developpement-durable.gouv.fr", role = c("aut", "cre"))
 Description: Ce package permet de charger des données dans DiDo en passant
     par l'API d'alimentation.
 License: GPL (>= 3)
+URL: https://mtes-mct.github.io/didoscalim/, https://github.com/MTES-MCT/didoscalim
+BugReports: https://github.com/MTES-MCT/didoscalim/issues
 Imports: 
     dplyr,
     glue,

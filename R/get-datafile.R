@@ -10,7 +10,7 @@
 #' @param dataset optionnel l'identifiant du dataset ou un objet `dido_dataset`,
 #'   fournir cet argument évite un appel à l'API
 #'
-#' @return
+#' @return un objet [dido_datafile()]
 #' @export
 #'
 #' @examples
@@ -43,11 +43,4 @@ get_datafile <- function(rid = NULL, title = NULL, dataset = NULL) {
 
 get_datafile_id_by_rid <- function(rid) {
   find_by_column(data = get_datafiles(), string = stringr::fixed(rid), col = "rid")
-}
-
-#' @noRd
-#' @export
-print.dido_datafile <- function(x, ...) {
-  str(x)
-  invisible(x)
 }

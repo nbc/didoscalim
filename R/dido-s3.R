@@ -36,6 +36,7 @@ clean_metadata <- function(data) UseMethod("clean_metadata")
 #' \dontrun{
 #' get_id(dataset)
 #' }
+#' @keywords internal
 get_id <- function(data) UseMethod("get_id")
 
 get_id.default <- function(x) NULL
@@ -51,7 +52,7 @@ get_id.default <- function(x) NULL
 #' \dontrun{
 #' get_rid(job)
 #' }
-#' @export
+#' @keywords internal
 get_rid <- function(data) UseMethod("get_rid")
 
 get_rid.default <- function(x) NULL

@@ -50,5 +50,6 @@ add_attachment <- function(dataset,
   )
   if (!quiet) rlang::inform(glue::glue("\t* fichier annexe intégré (rid: {result$rid})"))
   result$id <- id
-  dido_attachment(result)
+
+  invisible(dido_attachment(result))
 }

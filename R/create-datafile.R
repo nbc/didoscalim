@@ -4,7 +4,7 @@
 #' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
 #' @param file_name le nom du fichier à charger
 #'
-#' @return un objet job_result
+#' @return un objet [dido_job()]
 #' @export
 #'
 #' @examples
@@ -64,5 +64,5 @@ create_datafile <- function(dataset,
       "\t    lignes: {job_result$result$rows}"
     ))
   }
-  job_result
+  invisible(job_result)
 }
