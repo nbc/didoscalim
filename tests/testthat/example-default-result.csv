@@ -1,0 +1,8 @@
+"STRING";"NUMBER";"INTEGER";"NUMBERSECRET";"REGION";"DEPARTEMENT";"COMMUNE";"EPCI";"IRIS";"ANNEE";"MOIS";"DESCRIPTION";"UNIT_MWH";"TYPE_NAF"
+"STRING";"NUMBER";"INTEGER";"NUMBERSECRET";"Code de la région";"Code du département";"Code de la commune";"Code de l'EPCI";"Code de l'iris";"Millésime des données";"Mois des données";"Une description";"UNIT_MWH";"TYPE_NAF"
+"texte";"nombre";"entier";"nombre";"cog_region_2022";"cog_departement_2022";"cog_commune_2022";"cog_epci_2022";"cog_iris_2022";"annee";"mois";"texte";"nombre";"naf_division"
+"n/a";"s/u";"s/u";"s/u";"n/a";"n/a";"n/a";"n/a";"n/a";"n/a";"n/a";"n/a";"MWh";"n/a"
+"STRING";"NUMBER";"INTEGER";"NUMBERSECRET";"REGION";"DEPARTEMENT";"COMMUNE";"EPCI";"IRIS";"ANNEE";"MOIS";"DESCRIPTION";"UNIT_MWH";"TYPE_NAF"
+"aaaaa";"0.1";"1";"secret";"11";"47";"84000";"200000545";"010070000";"2020";"2021-01";"aaaaa";"0.1";"28.1"
+"bbbbb";"0.2";"2";"0.1";"13";"48";"93130";"200006682";"956800107";"2021";"2021-04";"bbbbb";"0.2";"64.1"
+"ééééé";;"3";"0.1";"15";"49";"51200";"249500489";"110690601";"2022";"2020-12";"ccccc";"0.3";"89.1"

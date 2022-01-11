@@ -1,0 +1,102 @@
+---
+title: "csv augmenté"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{csv augmenté}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(didoscalim)
+library(magrittr)
+```
+
+# Le CSV augmenté
+
+DiDo utilise un [csv augmenté](https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/). 
+
+```
+"Commune";"Nombre de logements neufs"
+"cog_commune_2020";"entier"
+"n/a";"s/u"
+"COMMUNE";"LOGEMENTS_NEUFS"
+```
+
+## Générer un CSV augmenté.
+
+`didoscalim` propose une fonction pour vous aider.
+
+Trois étapes :
+
+* lire le fichier d'origine : `dido_read_delim()`
+* l'augmenter : `dido_csv()`
+* l'écrire : `dido_write_csv()`
+
+
+## le chargement du fichier d'origine
+
+En premier lieu, charger le fichier dans un dataframe avec la commande `dido_read_delim()`.
+
+```{r}
+tbl <- dido_read_delim("exemple.csv")
+```
+
+Si votre fichier est dans un format autre que `UTF-8`, vous devez l'indiquer :
+
+```{r, eval = FALSE}
+tbl <- dido_read_delim("donnees_gaz_epci_2019.csv",
+                       locale = locale(encoding = "iso-8859-1",
+                                       decimal_mark = ',')
+                       )
+```
+
+## la génération des 4 lignes de description.
+
+didoscalim peut analyser le fichier et proposer un premier niveau de description.
+
+```{r}
+dido_csv(tbl)
+```
+
+Pour aller plus loin, vous pouvez soit écrire le fichier tel quel avec [dido_write_csv()] et l'éditer à la main. Soit utiliser le paramètre `params` de la commande `dido_csv`.
+
+Voici un exemple complet pour le fichier exemple :
+
+```{r}
+params = list(
+  OPERATEUR = list(description = "Nom de l'opérateur"),
+  CODE_CATEGORIE_CONSOMMATION = list(description = "Catégorie de la consommation"),
+  FILIERE = list(description = "Filière"),
+  CODE_SECTEUR_NAF2 = list(description = "Code NAF à 2 positions du secteur (NAF rev2 2008)", type = "naf_division"),
+  CODE_GRAND_SECTEUR = list(description = "Code du grand secteur"),
+  CONSO = list(description = "Consommation (en MWh)", unit = "MWh"),
+  PDL = list(description = "Nombre de points de livraison"),
+  CODE_GRAND_SECTEUR = list(description = "Nombre de points de livraison"),
+  INDQUAL = list(description = "Indice de qualité des données (en pourcent)"),
+  THERMOR = list(description = "Thermosensibilité dans le résidentiel (en kWh/degré-jour)", type = "nombre"),
+  PART = list(description = "Part de la consommation thermosensible dans le résidentiel (en pourcent)", type = "nombre"),
+  NB_IRIS_MASQUES = list(description = "Nombre d'IRIS masqués")
+)
+result <- dido_csv(tbl, params = params)
+```
+
+## écrire le fichier 
+
+```{r, eval = FALSE}
+dido_write_csv(result, "resultat.csv")
+```
+
+## résumé.
+
+Une fois que la configuration de `params` est correcte, vous pouvez chainer avec magrittr :
+
+```{r, eval = FALSE}
+dido_read_delim("exemple.csv") %>% dido_csv(params = params) %>% dido_write_csv("resultat.csv")
