@@ -157,19 +157,20 @@ la liste des datafiles de ce dataset.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='fu'>get_datafiles</span><span class='op'>(</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 9 × 13</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span>   id     rid    title  description millesimes created_at last_modified published</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    </span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> 61deb… 74c0e… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> 61deb… 35130… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> 61deb… 9de4e… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> 61deb… d2bc4… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> 61deb… 81be4… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>6</span> 61deb… 4bac0… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>7</span> 61deb… b0c81… Donné… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>8</span> 61deb… 16a24… parc … parc des v…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>9</span> 61deb… e6449… parc … parc des p…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># … with 5 more variables: url &lt;chr&gt;, millesimes_info &lt;list&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 51 × 13</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    id     rid    title description millesimes created_at last_modified published</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 1</span> 61dec… d0804… Donn… Consommati…          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 2</span> 61dec… 43faa… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 3</span> 61dec… 51043… dido… description          2 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 4</span> 61dec… 9bab4… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 5</span> 61dec… 0e800… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 6</span> 61dec… 34ed7… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 7</span> 61dec… 83dd1… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 8</span> 61dec… 83b27… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 9</span> 61dec… a4873… dido… description          1 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>10</span> 61dec… 8af45… dido… description          2 2022-01-1… 2022-01-12T1… 2022-01-…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># … with 41 more rows, and 5 more variables: url &lt;chr&gt;, millesimes_info &lt;list&gt;,</span></span>
 <span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   legal_notice &lt;chr&gt;, temporal_coverage.start &lt;chr&gt;,</span></span>
 <span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   temporal_coverage.end &lt;chr&gt;</span></span>
 </pre>

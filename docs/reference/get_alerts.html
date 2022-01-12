@@ -130,7 +130,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Récupère les datasets devant être mis à jour</h1>
-    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/datasets.R'><code>R/datasets.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/get_alerts.R'><code>R/get_alerts.R</code></a></small>
     <div class="hidden name"><code>get_alerts.Rd</code></div>
     </div>
 
@@ -147,7 +147,18 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='fu'>get_alerts</span><span class='op'>(</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 0 × 0</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 4 × 20</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   id      title    description topic license frequency created_at  last_modified</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>        </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> 61dec8… didosca… test        Tran… ODbL-1… annual    2022-01-12… 2022-01-12T1…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> 61dec6… didosca… test        Tran… ODbL-1… annual    2022-01-12… 2022-01-12T1…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> 61dec5… didosca… test        Tran… ODbL-1… annual    2022-01-12… 2022-01-12T1…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> 61dec4… didosca… test        Tran… ODbL-1… annual    2022-01-12… 2022-01-12T1…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># … with 12 more variables: last_update &lt;chr&gt;, frequency_date &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   tags &lt;list&gt;, caution &lt;chr&gt;, attachments &lt;list&gt;, datafiles &lt;list&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   organization.id &lt;chr&gt;, organization.title &lt;chr&gt;, spatial.granularity &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   spatial.zones &lt;list&gt;, temporal_coverage.end &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   temporal_coverage.start &lt;chr&gt;</span></span>
 </pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

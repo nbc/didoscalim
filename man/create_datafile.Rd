@@ -47,7 +47,7 @@ YYYY-MM-DD}
 \item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
 }
 \value{
-un objet \code{\link[=job_result]{job_result()}}
+un objet \code{\link[=dido_job]{dido_job()}}
 }
 \description{
 Créé un datafile
