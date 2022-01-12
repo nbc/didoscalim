@@ -2,7 +2,7 @@
 #'
 #' @param datafile un objet datafile retourné par `get_datafile()` ou `extract_metadata()` modifié par l'utilisateur
 #'
-#' @return
+#' @return un objet ``dido_job()``
 #' @export
 #'
 #' @examples
@@ -25,5 +25,5 @@ update_datafile <- function(datafile) {
   body <- jsonlite::toJSON(metadata, pretty = TRUE, auto_unbox = TRUE, na = "null")
 
   result <- dido_api(method = "PUT", path = url, body = body)
-  new_dido_datafile(result)
+  invisible(new_dido_datafile(result))
 }

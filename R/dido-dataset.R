@@ -22,8 +22,8 @@ NULL
 #' @param frequency la fréquence de publication des données
 #' @param frequency_date la date de prochaine publication.
 #' @param organization l'id de l'organisation sous laquelle vous souhaitez
-#'   publier le dataset, si vous n'appartenez qu'à une seule organisation,
-#'   didoscalim la prendra par défaut.
+#'   publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
+#'   n'avez pas à remplir ce champ, didoscalim la prendra par défaut.
 #' @param temporal_coverage_start la date de début de couverture du jeux de
 #'   données
 #' @param temporal_coverage_end  la date de fin de couverture du jeux de données

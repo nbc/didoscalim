@@ -57,6 +57,9 @@
       <a href="../articles/csv-augmente.html">Générer un fichier csv augmenté</a>
     </li>
     <li>
+      <a href="../articles/les-environnements.html">Les environnements</a>
+    </li>
+    <li>
       <a href="../articles/mettre_a_jour_un_datafile.html">Mettre a jour un dataset</a>
     </li>
     <li>
@@ -99,17 +102,23 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></code></pre></div>
-<div id="le-csv-augmenté" class="section level1">
-<h1 class="hasAnchor">
-<a href="#le-csv-augment%C3%A9" class="anchor"></a>Le CSV augmenté</h1>
-<p>DiDo utilise un csv augmenté avec 4 lignes d’entêtes : 1. une description des variables 2. le type de la variable 3. l’unité de la variable 4. le nom de la variable</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span></code></pre></div>
+<div id="le-csv-augmenté" class="section level2">
+<h2 class="hasAnchor">
+<a href="#le-csv-augment%C3%A9" class="anchor"></a>Le CSV augmenté</h2>
+<p>DiDo utilise un csv augmenté avec 4 lignes d’entêtes :</p>
+<ol style="list-style-type: decimal">
+<li>une description des variables</li>
+<li>le type de la variable</li>
+<li>l’unité de la variable</li>
+<li>le nom de la variable</li>
+</ol>
 <pre><code>"Commune";"Nombre de logements neufs"
 "cog_commune_2020";"entier"
 "n/a";"s/u"
 "COMMUNE";"LOGEMENTS_NEUFS"</code></pre>
 <p>Le <a href="https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/">site de documentation de l’API</a> propose une documentation plus complète sur <a href="https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/">le csv augmenté</a> ainsi que sur <a href="https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/210-headers/">la liste des types</a></p>
+</div>
 <div id="générer-un-csv-augmenté-" class="section level2">
 <h2 class="hasAnchor">
 <a href="#g%C3%A9n%C3%A9rer-un-csv-augment%C3%A9-" class="anchor"></a>Générer un CSV augmenté.</h2>
@@ -320,10 +329,10 @@
 <a href="#r%C3%A9sum%C3%A9-" class="anchor"></a>résumé.</h2>
 <p>Une fois que la configuration de <code>params</code> est correcte, vous pouvez chainer avec <code>magrittr::%&gt;%</code> :</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/dido_read_delim.html">dido_read_delim</a></span><span class="op">(</span><span class="st">"exemple.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span>
+<span class="fu"><a href="../reference/dido_read_delim.html">dido_read_delim</a></span><span class="op">(</span><span class="st">"exemple.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="../reference/dido_csv.html">dido_csv</a></span><span class="op">(</span>params <span class="op">=</span> <span class="va">params</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="../reference/dido_write_csv.html">dido_write_csv</a></span><span class="op">(</span><span class="st">"resultat.csv"</span><span class="op">)</span></code></pre></div>
-</div>
 </div>
   </div>
 

@@ -166,9 +166,9 @@ find_lowest_env <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' check_config()
+#' check_envs()
 #' }
-check_config <- function() {
+check_envs <- function() {
   old_env <- get_work_env(quiet = TRUE)
   message <- c("Test de connexion:")
   for (e in list_env_names()) {

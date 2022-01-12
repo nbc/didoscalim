@@ -16,12 +16,12 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(didoscalim)
-library(magrittr)
 ```
 
-# Le CSV augmenté
+## Le CSV augmenté
 
 DiDo utilise un csv augmenté avec 4 lignes d'entêtes :
+
 1. une description des variables
 2. le type de la variable
 3. l'unité de la variable
@@ -117,6 +117,7 @@ Une fois que la configuration de `params` est correcte, vous pouvez chainer avec
 `magrittr::%>%` :
 
 ```{r}
+library(magrittr)
 dido_read_delim("exemple.csv") %>%
   dido_csv(params = params) %>%
   dido_write_csv("resultat.csv")

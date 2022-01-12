@@ -1,28 +1,31 @@
-#' Get user's information
+#' Récupère les informations de l'utilisateur
 #'
-#' @return user's informations
+#' @return Les informations utilisateurs
 #' @export
 #'
 #' @examples
 #' user <- me()
+#' @keywords internal
 me <- function() {
   url <- "/users/me"
   result <- dido_api(method = "GET", path = url)
-  structure(result, class = c("dido_me", "list"))
+  new_dido_me(result)
 }
 
-#' Get user's organization
+#' Récupère l'ID de l'organisation de l'utilisateur.
 #'
-#' Return the user's organization. If user belong to multiple organization, you
-#' can specify a name.
+#' Si l'utilisateur appartient à plusieurs organisations
+#'
+#'
 #'
 #' @param name name or acronym for organization, default to NULL
 #'
-#' @return an organization Id
+#' @return un id d'organisation
 #' @export
 #'
 #' @examples
-#' organization.id <- organization()
+#' organization_id <- organization()
+#' organization_id <- organization( name = "BSRV" )
 organization <- function(name = NULL) {
   orgs <- me()$organizations
   if (is.null(name)) {

@@ -2,16 +2,17 @@
 % Please edit documentation in R/me.R
 \name{me}
 \alias{me}
-\title{Get user's information}
+\title{Récupère les informations de l'utilisateur}
 \usage{
 me()
 }
 \value{
-user's informations
+Les informations utilisateurs
 }
 \description{
-Get user's information
+Récupère les informations de l'utilisateur
 }
 \examples{
 user <- me()
 }
+\keyword{internal}

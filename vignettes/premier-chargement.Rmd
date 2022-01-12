@@ -18,7 +18,10 @@ knitr::opts_chunk$set(
 library(didoscalim)
 ```
 
-# Comment utiliser didoscalim
+## Comment utiliser didoscalim
+
+Afin d'éviter les erreurs de manipulation, il est conseillé de préparer ses
+scripts de chargement sur l'environnement `ECOLE`.
 
 ## Créer le dataset
 

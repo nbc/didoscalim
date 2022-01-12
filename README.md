@@ -51,7 +51,7 @@ Pour vérifier que vos environnements sont bien configurés :
 library(didoscalim)
 readRenviron("~/.Renviron")
 load_envs()
-check_config()
+check_envs()
 ```
 
 Par défaut, didoscalim utilisera l’environnement `ECOLE`. pour basculer

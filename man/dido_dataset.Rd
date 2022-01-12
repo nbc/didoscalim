@@ -46,8 +46,8 @@ entière, country-subset:fr:metro pour la métropole et
 country-subset:fr:drom pour les DROM}
 
 \item{organization}{l'id de l'organisation sous laquelle vous souhaitez
-publier le dataset, si vous n'appartenez qu'à une seule organisation,
-didoscalim la prendra par défaut.}
+publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
+n'avez pas à remplir ce champ, didoscalim la prendra par défaut.}
 
 \item{license}{la licence des données. "fr-lo" par défaut}
 

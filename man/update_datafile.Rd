@@ -10,7 +10,7 @@ update_datafile(datafile)
 \item{datafile}{un objet datafile retourné par \code{get_datafile()} ou \code{extract_metadata()} modifié par l'utilisateur}
 }
 \value{
-
+un objet \code{dido_job()}
 }
 \description{
 Mettre à jour un datafile.

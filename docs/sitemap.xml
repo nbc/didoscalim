@@ -10,7 +10,7 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/add_millesime.html</loc>
   </url>
   <url>
-    <loc>https://mtes-mct.github.io/didoscalim/reference/check_config.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/check_envs.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/clean_metadata.html</loc>
@@ -119,6 +119,9 @@
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/articles/csv-augmente.html</loc>
+  </url>
+  <url>
+    <loc>https://mtes-mct.github.io/didoscalim/articles/les-environnements.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/articles/mettre_a_jour_un_datafile.html</loc>
