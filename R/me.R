@@ -24,8 +24,10 @@ me <- function() {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' organization_id <- organization()
 #' organization_id <- organization( name = "BSRV" )
+#' }
 organization <- function(name = NULL) {
   orgs <- me()$organizations
   if (is.null(name)) {

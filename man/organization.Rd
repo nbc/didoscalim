@@ -2,7 +2,7 @@
 % Please edit documentation in R/me.R
 \name{organization}
 \alias{organization}
-\title{Get user's organization}
+\title{Récupère l'ID de l'organisation de l'utilisateur.}
 \usage{
 organization(name = NULL)
 }
@@ -10,12 +10,14 @@ organization(name = NULL)
 \item{name}{name or acronym for organization, default to NULL}
 }
 \value{
-an organization Id
+un id d'organisation
 }
 \description{
-Return the user's organization. If user belong to multiple organization, you
-can specify a name.
+Si l'utilisateur appartient à plusieurs organisations
 }
 \examples{
-organization.id <- organization()
+\dontrun{
+organization_id <- organization()
+organization_id <- organization( name = "BSRV" )
+}
 }
