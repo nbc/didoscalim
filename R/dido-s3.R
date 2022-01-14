@@ -50,9 +50,9 @@ get_id.default <- function(x) NULL
 #'
 #' @examples
 #' \dontrun{
-#' get_rid(job)
+#' get_datafile_rid(job)
 #' }
 #' @keywords internal
-get_rid <- function(data) UseMethod("get_rid")
+get_datafile_rid <- function(data) UseMethod("get_datafile_rid")
 
-get_rid.default <- function(x) NULL
+get_datafile_rid.default <- function(x) NULL

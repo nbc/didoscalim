@@ -22,4 +22,4 @@ print.dido_job <- function(x, ...) {
 
 get_id.dido_job <- function(x, ...) x$data$dataset_id
 
-get_rid.dido_job <- function(x, ...) x$result$rid
+get_datafile_rid.dido_job <- function(x, ...) x$result$rid

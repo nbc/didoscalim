@@ -59,7 +59,7 @@ create_datafile <- function(dataset,
   if (!quiet) {
     rlang::inform(glue::glue(
       "\t* fichier intégré",
-      "\t    rid: {get_rid(job_result)}",
+      "\t    rid: {get_datafile_rid(job_result)}",
       "\t    millesime: {job_result$result$millesime}",
       "\t    lignes: {job_result$result$rows}"
     ))

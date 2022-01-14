@@ -83,7 +83,7 @@ print.dido_datafile <- function(x, ...) {
 
 get_id.dido_datafile <- function(x, ...) x$id
 
-get_rid.dido_datafile <- function(x, ...) x$rid
+get_datafile_rid.dido_datafile <- function(x, ...) x$rid
 
 #' @noRd
 clean_metadata.dido_datafile <- function(df) {

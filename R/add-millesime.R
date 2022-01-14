@@ -35,7 +35,7 @@ add_millesime <- function(datafile,
   payload$date_diffusion <- date_diffusion %||% format(Sys.time(), "%Y-%m-%dT%H:00:00.000Z")
   payload$millesime <- millesime %||% format(Sys.time(), "%Y-%m")
 
-  rid <- get_rid(datafile)
+  rid <- get_datafile_rid(datafile)
   id <- get_id(datafile)
 
   url <- glue::glue("/datasets/{id}/datafiles/{rid}")

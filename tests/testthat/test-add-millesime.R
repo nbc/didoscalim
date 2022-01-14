@@ -16,7 +16,7 @@ test_that("add millesime works", {
   )
 
   millesime <- add_millesime(
-    datafile = get_datafile(get_rid(job_datafile)),
+    datafile = get_datafile(get_datafile_rid(job_datafile)),
     millesime = "2022-10",
     file_name = "dido-csv-simple.csv"
   )
@@ -24,7 +24,7 @@ test_that("add millesime works", {
   expect_s3_class(millesime, "dido_job")
   expect_equal(millesime$data$datafile_millesime, "2022-10")
 
-  df <- get_datafile(get_rid(job_datafile))
+  df <- get_datafile(get_datafile_rid(job_datafile))
   expect_equal(df$millesimes, 2)
 })
 

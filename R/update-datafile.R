@@ -15,7 +15,7 @@ update_datafile <- function(datafile) {
   if (missing(datafile) || is.null(datafile)) abort_bad_argument("datafile")
   if (!is.dido_datafile(datafile)) abort_bad_argument_type("datafile", c("get_datafile()"))
 
-  rid <- get_rid(datafile)
+  rid <- get_datafile_rid(datafile)
   id <- get_id(datafile)
 
   metadata <- clean_metadata(datafile)
