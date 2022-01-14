@@ -50,7 +50,7 @@ create_datafile <- function(dataset,
 
   body <- jsonlite::toJSON(clean_metadata(datafile), pretty = TRUE, auto_unbox = TRUE, na = "null")
 
-  id <- get_id(dataset)
+  id <- get_dataset_id(dataset)
 
   url <- glue::glue("/datasets/{id}/datafiles")
   job <- dido_api(method = "POST", path = url, body = body)

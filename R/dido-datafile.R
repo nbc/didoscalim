@@ -50,7 +50,7 @@ dido_datafile <- function(dataset,
     "title" = title,
     "description" = description,
     "millesime" = millesime,
-    "id" = get_id(dataset)
+    "id" = get_dataset_id(dataset)
   )
   if (!is.null(temporal_coverage_start)) payload$temporal_coverage_start <- temporal_coverage_start
   if (!is.null(temporal_coverage_end)) payload$temporal_coverage_end <- temporal_coverage_end
@@ -76,13 +76,16 @@ extract_metadata.dido_datafile <- function(data) {
 
 is.dido_datafile <- function(x) inherits(x, "dido_datafile")
 
+#' @export
 print.dido_datafile <- function(x, ...) {
   str(x)
   invisible(x)
 }
+#' @export
 
-get_id.dido_datafile <- function(x, ...) x$id
+get_dataset_id.dido_datafile <- function(x, ...) x$id
 
+#' @export
 get_datafile_rid.dido_datafile <- function(x, ...) x$rid
 
 #' @noRd

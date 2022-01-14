@@ -40,7 +40,7 @@ add_attachment <- function(dataset,
   )
   payload$published <- if (!is.null(published)) published else format(Sys.time(), "%Y-%m-%d")
 
-  id <- get_id(dataset)
+  id <- get_dataset_id(dataset)
 
   url <- glue::glue("/datasets/{id}/attachments")
   result <- dido_api(

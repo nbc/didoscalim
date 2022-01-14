@@ -100,10 +100,12 @@ extract_metadata.dido_dataset <- function(data) {
   data
 }
 
-get_id.dido_dataset <- function(x, ...) x$id
+#' @export
+get_dataset_id.dido_dataset <- function(x, ...) x$id
 
 is.dido_dataset <- function(x) inherits(x, "dido_dataset")
 
+#' @export
 print.dido_dataset <- function(x, ...) {
   str(x)
   invisible(x)

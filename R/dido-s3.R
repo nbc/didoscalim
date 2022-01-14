@@ -34,12 +34,16 @@ clean_metadata <- function(data) UseMethod("clean_metadata")
 #'
 #' @examples
 #' \dontrun{
-#' get_id(dataset)
+#' get_dataset_id(dataset)
 #' }
 #' @keywords internal
-get_id <- function(data) UseMethod("get_id")
+get_dataset_id <- function(data) UseMethod("get_dataset_id")
 
-get_id.default <- function(x) NULL
+#' @export
+get_dataset_id.default <- function(x) NULL
+
+#' @export
+get_dataset_id.character <- function(x) return(x)
 
 #' Retourne le dafile id de l'objet
 #'
@@ -55,4 +59,8 @@ get_id.default <- function(x) NULL
 #' @keywords internal
 get_datafile_rid <- function(data) UseMethod("get_datafile_rid")
 
+#' @export
 get_datafile_rid.default <- function(x) NULL
+
+#' @export
+get_datafile_rid.character <- function(x) return(x)

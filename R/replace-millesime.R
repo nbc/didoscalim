@@ -38,7 +38,7 @@ replace_millesime <- function(datafile,
   payload$date_diffusion <- date_diffusion %||% format(Sys.time(), "%Y-%m-%dT%H:00:00.000Z")
 
   rid <- get_datafile_rid(datafile)
-  id <- get_id(datafile)
+  id <- get_dataset_id(datafile)
 
   url <- glue::glue("/datasets/{id}/datafiles/{rid}/millesimes/{millesime}")
   body <- jsonlite::toJSON(payload, pretty = TRUE, auto_unbox = TRUE, na = "null")

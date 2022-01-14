@@ -36,7 +36,7 @@ add_millesime <- function(datafile,
   payload$millesime <- millesime %||% format(Sys.time(), "%Y-%m")
 
   rid <- get_datafile_rid(datafile)
-  id <- get_id(datafile)
+  id <- get_dataset_id(datafile)
 
   url <- glue::glue("/datasets/{id}/datafiles/{rid}")
   body <- jsonlite::toJSON(payload, pretty = TRUE, auto_unbox = TRUE, na = "null")

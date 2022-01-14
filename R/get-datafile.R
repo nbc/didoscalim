@@ -27,7 +27,7 @@ get_datafile <- function(rid = NULL, title = NULL, dataset = NULL) {
     msg <- glue::glue("`rid` ou `title` sont données, la recherchera est faite par `rid`")
     rlang::warn(message = msg)
   }
-  dataset_id <- if (!is.null(dataset)) get_id(dataset) else NULL
+  dataset_id <- if (!is.null(dataset)) get_dataset_id(dataset) else NULL
   if (!is.null(rid) && is.null(dataset_id)) dataset_id <- get_datafile_id_by_rid(rid)
   if (!is.null(title)) {
     df <- get_datafiles()

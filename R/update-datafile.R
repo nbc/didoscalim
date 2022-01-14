@@ -16,7 +16,7 @@ update_datafile <- function(datafile) {
   if (!is.dido_datafile(datafile)) abort_bad_argument_type("datafile", c("get_datafile()"))
 
   rid <- get_datafile_rid(datafile)
-  id <- get_id(datafile)
+  id <- get_dataset_id(datafile)
 
   metadata <- clean_metadata(datafile)
   if (is.null(metadata$published)) metadata$published <- format(Sys.time(), "%Y-%m-%d")

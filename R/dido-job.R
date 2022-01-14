@@ -15,11 +15,12 @@ dido_job <- function(x) {
 
 is.dido_job <- function(x) inherits(x, "dido_job")
 
+#' @export
 print.dido_job <- function(x, ...) {
   str(x)
   invisible(x)
 }
 
-get_id.dido_job <- function(x, ...) x$data$dataset_id
+get_dataset_id.dido_job <- function(x, ...) x$data$dataset_id
 
 get_datafile_rid.dido_job <- function(x, ...) x$result$rid
