@@ -9,8 +9,8 @@ NULL
 
 #' Créé un objet dido_datafile
 #'
-#' @param dataset l'id d'un dataset ou un objet dataset tel que retourné par
-#'   `get_dataset()` ou `create_dataset()`
+#' @param dataset l'id d'un dataset, un objet `dido_dataset()`,
+#'   `dido_datafile()` ou `dido_job()`
 #' @param title le titre du datafile
 #' @param description la description du datafile
 #' @param millesime le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
@@ -44,8 +44,10 @@ dido_datafile <- function(dataset,
                           temporal_coverage_end = NULL,
                           legal_notice = "SDES",
                           date_diffusion = NULL) {
-  if (!is.dido_dataset(dataset)) abort_bad_argument_type("dataset", c("get_dataset()", "create_dataset()"))
-
+  print(dataset)
+  print(get_dataset_id(dataset))
+  if (is.null(get_dataset_id(dataset))) abort_bad_argument_type("dataset", c("get_dataset()", "create_dataset()"))
+  print(dataset)
   payload <- list(
     "title" = title,
     "description" = description,

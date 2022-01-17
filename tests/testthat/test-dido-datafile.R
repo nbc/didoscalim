@@ -1,6 +1,6 @@
 test_that("dido_datafile works", {
-  dataset <- dido_dataset(
-   title = "didoscalim ds create datafile work",
+  dataset <- create_dataset(
+   title = "didoscalim ds dido_datafile work",
    description = "test",
    topic = "Transports",
    frequency = "unknown"
@@ -18,7 +18,7 @@ test_that("dido_datafile works", {
 })
 
 test_that("commplete dido_datafile works", {
-  dataset <- dido_dataset(
+  dataset <- create_dataset(
     title = "didoscalim ds complete create datafile work",
     description = "test",
     topic = "Transports",

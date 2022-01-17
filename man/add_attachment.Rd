@@ -14,8 +14,8 @@ add_attachment(
 )
 }
 \arguments{
-\item{dataset}{un objet dataset tel que retourné par \code{get_dataset()} ou
-\code{create_dataset()}}
+\item{dataset}{l'id d'un dataset de rattachement, un objet \code{dido_dataset()},
+\code{dido_datafile()} ou \code{dido_job()}}
 
 \item{title}{le titre du fichier annexe}
 

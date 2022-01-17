@@ -35,7 +35,7 @@ test_that("create datafiles warns when missing param", {
   )
 
   expect_error(create_datafile(title = "test", description = "test", file_name = "test.csv"), "is missing")
-  expect_error(create_datafile(dataset = "test", description = "test", file_name = "test.csv"), "pas du type attendu")
+  expect_error(create_datafile(dataset = "test", description = "test", file_name = "test.csv"), "is missing")
   expect_error(create_datafile(dataset = dataset, description = "test", file_name = "test.csv"), "is missing")
   expect_error(create_datafile(dataset = dataset, title = "test", file_name = "test.csv"), "is missing")
   expect_error(create_datafile(dataset = dataset, title = "test", description = "test"), "est obligatoire")

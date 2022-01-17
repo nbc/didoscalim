@@ -1,7 +1,7 @@
 #' Ajoute un fichier annexe à un dataset
 #'
-#' @param dataset un objet dataset tel que retourné par `get_dataset()` ou
-#'   `create_dataset()`
+#' @param dataset l'id d'un dataset de rattachement, un objet `dido_dataset()`,
+#'   `dido_datafile()` ou `dido_job()`
 #' @param title le titre du fichier annexe
 #' @param description la description du fichier annexe
 #' @param file_name le nom du fichier à verser
@@ -22,7 +22,7 @@ add_attachment <- function(dataset,
                            published = NULL,
                            quiet = FALSE) {
   if (missing(dataset) || is.null(dataset)) abort_bad_argument("dataset")
-  if (!is.dido_dataset(dataset)) abort_bad_argument_type("dataset", c("get_dataset()", "create_dataset()"))
+  if (is.null(get_dataset_id(dataset))) abort_bad_argument_type("dataset", c("get_dataset()", "create_dataset()"))
 
   if (missing(title) || is.null(title)) abort_bad_argument("title")
   if (missing(description) || is.null(description)) abort_bad_argument("description")
