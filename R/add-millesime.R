@@ -23,8 +23,9 @@ add_millesime <- function(datafile,
                           millesime = NULL,
                           quiet = TRUE) {
   if (missing(datafile) || is.null(datafile)) abort_bad_argument("datafile")
-  if (!is.dido_datafile(datafile)) abort_bad_argument_type("datafile", c("get_datafile()", "extract_metadata()"))
   if (missing(file_name)) abort_bad_argument("file_name")
+  if (is.null(get_datafile_rid(datafile))) abort_not_datafile()
+
 
   token_file <- upload_file(file_name)
   check_csv(token_file)

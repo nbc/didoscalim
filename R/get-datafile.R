@@ -19,6 +19,7 @@
 #' get_datafile(title = "title")
 #' }
 get_datafile <- function(rid = NULL, title = NULL, dataset = NULL) {
+  # FIXME
   if (is.null(rid) && is.null(title)) {
     msg <- glue::glue("Vous devez préciser un des deux arguments `rid` ou `title`")
     rlang::abort("error_bad_argument", message = msg)

@@ -21,6 +21,8 @@ print.dido_job <- function(x, ...) {
   invisible(x)
 }
 
+#' @export
 get_dataset_id.dido_job <- function(x, ...) x$data$dataset_id
 
+#' @export
 get_datafile_rid.dido_job <- function(x, ...) x$result$rid
