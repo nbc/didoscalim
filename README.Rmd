@@ -35,7 +35,7 @@ Vous pouvez installer ce package depuis GitHub :
 ```{r, eval = FALSE}
 # Install from GitHub
 library(devtools)
-devtools::install_github("mtes-mct/didoscalim")
+devtools::install_github("nbc/didoscalim")
 
 library(didoscalim)
 ```
@@ -85,14 +85,14 @@ set_work_env()
 ## Documentation
 
 Vous pouvez trouver l'ensemble de la documentation sur [la page du
-projet](https://mtes-mct.github.io/didoscalim/) et en particuler :
+projet](https://nbc.github.io/didoscalim/) et en particuler :
 
 * [comment générer un fichier
-augmenté](https://mtes-mct.github.io/didoscalim/articles/csv-augmente.html)
+augmenté](https://nbc.github.io/didoscalim/articles/csv-augmente.html)
 * [comment intégrer des nouveaux jeux/fichiers de
-données](https://mtes-mct.github.io/didoscalim/articles/premier-chargement.html)
+données](https://nbc.github.io/didoscalim/articles/premier-chargement.html)
 * [comment mettre à jour des jeux/fichiers de
-données](https://mtes-mct.github.io/didoscalim/articles/mettre_a_jour_un_datafile.html)
+données](https://nbc.github.io/didoscalim/articles/mettre_a_jour_des_donnees.html)
 (en cours de rédaction)
 
 ## Pour les développeurs

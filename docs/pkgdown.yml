@@ -4,10 +4,10 @@ pkgdown_sha: ~
 articles:
   csv-augmente: csv-augmente.html
   les-environnements: les-environnements.html
-  mettre_a_jour_un_datafile: mettre_a_jour_un_datafile.html
+  mettre_a_jour_des_donnees: mettre_a_jour_des_donnees.html
   premier-chargement: premier-chargement.html
-last_built: 2022-01-12T14:35Z
+last_built: 2022-01-19T16:51Z
 urls:
-  reference: https://mtes-mct.github.io/didoscalim/reference
-  article: https://mtes-mct.github.io/didoscalim/articles
+  reference: https://nbc.github.io/didoscalim/reference
+  article: https://nbc.github.io/didoscalim/articles
 

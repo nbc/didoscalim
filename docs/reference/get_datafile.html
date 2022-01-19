@@ -102,7 +102,7 @@ son titre." />
       <a href="../articles/les-environnements.html">Les environnements</a>
     </li>
     <li>
-      <a href="../articles/mettre_a_jour_un_datafile.html">Mettre a jour un dataset</a>
+      <a href="../articles/mettre_a_jour_des_donnees.html">Mettre a jour un dataset</a>
     </li>
     <li>
       <a href="../articles/premier-chargement.html">Le premier chargement</a>
@@ -143,22 +143,22 @@ son titre." />
 son titre.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_datafile</span><span class='op'>(</span>rid <span class='op'>=</span> <span class='cn'>NULL</span>, title <span class='op'>=</span> <span class='cn'>NULL</span>, dataset <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>get_datafile</span><span class='op'>(</span>datafile <span class='op'>=</span> <span class='cn'>NULL</span>, title <span class='op'>=</span> <span class='cn'>NULL</span>, dataset <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>rid</th>
-      <td><p>l'identifiant du datafile</p></td>
+      <th>datafile</th>
+      <td><p>un rid de datafile, un objet <code><a href='dido_datafile.html'>dido_datafile()</a></code> ou <code><a href='dido_job.html'>dido_job()</a></code></p></td>
     </tr>
     <tr>
       <th>title</th>
-      <td><p>l'identifiant du datafile</p></td>
+      <td><p>le titre d'un datafile</p></td>
     </tr>
     <tr>
       <th>dataset</th>
-      <td><p>optionnel l'identifiant du dataset ou un objet <code>dido_dataset</code>,
+      <td><p>optionnel l'identifiant du dataset ou un objet <code><a href='dido_dataset.html'>dido_dataset()</a></code>,
 fournir cet argument évite un appel à l'API</p></td>
     </tr>
     </table>
