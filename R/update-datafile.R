@@ -1,6 +1,7 @@
 #' Mettre à jour un datafile.
 #'
-#' @param datafile un objet datafile retourné par `get_datafile()` modifié par l'utilisateur
+#' @param datafile un objet datafile retourné par `get_datafile()` modifié par
+#'   l'utilisateur
 #'
 #' @return un objet ``dido_job()``
 #' @export
