@@ -89,7 +89,7 @@ dido_dataset <- function(title,
 }
 
 new_dido_dataset <- function(x) {
-  structure(x, class = c("dido_dataset", class(x)))
+  structure(x, class = c("dido_dataset", "list"))
 }
 
 #' @noRd
@@ -101,7 +101,7 @@ extract_metadata.dido_dataset <- function(data) {
 }
 
 #' @export
-get_dataset_id.dido_dataset <- function(x, ...) x$id
+get_dataset_id.dido_dataset <- function(data, ...) data$id
 
 is.dido_dataset <- function(x) inherits(x, "dido_dataset")
 
@@ -112,15 +112,16 @@ print.dido_dataset <- function(x, ...) {
 }
 
 #' @noRd
-clean_metadata.dido_dataset <- function(ds, ...) {
-  ds <- unclass(ds)
-  ds$id <- NULL
-  ds$created_at <- NULL
-  ds$last_modified <- NULL
-  ds$last_update <- NULL
-  ds$organization <- ds$organization$id
-  ds$attachments <- NULL
-  ds$datafiles <- NULL
+#' @export
+clean_metadata.dido_dataset <- function(data, ...) {
+  data <- unclass(data)
+  data$id <- NULL
+  data$created_at <- NULL
+  data$last_modified <- NULL
+  data$last_update <- NULL
+  data$organization <- data$organization$id
+  data$attachments <- NULL
+  data$datafiles <- NULL
 
-  return(ds)
+  new_dido_dataset(data)
 }

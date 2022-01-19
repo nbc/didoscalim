@@ -23,7 +23,8 @@ get_jobs <- function() {
 #' }
 get_job <- function(job_id) {
   url <- glue::glue("/jobs/{job_id}")
-  dido_api(method = "GET", path = url)
+  job <- dido_api(method = "GET", path = url)
+  dido_job(job)
 }
 
 #' Attend la fin d'un job d'intégration

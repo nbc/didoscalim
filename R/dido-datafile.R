@@ -63,7 +63,7 @@ dido_datafile <- function(dataset,
 }
 
 new_dido_datafile <- function(x) {
-  structure(x, class = c("dido_datafile", class(x)))
+  structure(x, class = c("dido_datafile", "list"))
 }
 
 #' @noRd
@@ -81,27 +81,28 @@ print.dido_datafile <- function(x, ...) {
   invisible(x)
 }
 #' @export
-
-get_dataset_id.dido_datafile <- function(x, ...) x$id
+get_dataset_id.dido_datafile <- function(data, ...) data$id
 
 #' @export
-get_datafile_rid.dido_datafile <- function(x, ...) x$rid
+get_datafile_rid.dido_datafile <- function(data, ...) data$rid
 
 #' @noRd
-clean_metadata.dido_datafile <- function(df) {
-  df <- unclass(df)
-  if (!is.null(df$temporal_coverage$start)) df$temporal_coverage_start <- df$temporal_coverage$start
-  if (!is.null(df$temporal_coverage$end)) df$temporal_coverage_end <- df$temporal_coverage$end
+#' @export
+clean_metadata.dido_datafile <- function(data) {
+  df <- unclass(data)
+  if (!is.null(data$temporal_coverage$start)) data$temporal_coverage_start <- data$temporal_coverage$start
+  if (!is.null(data$temporal_coverage$end)) data$temporal_coverage_end <- data$temporal_coverage$end
 
-  df$id <- NULL
-  df$rid <- NULL
-  df$temporal_coverage <- NULL
-  df$millesimes_info <- NULL
-  df$created_at <- NULL
-  df$last_modified <- NULL
-  df$millesimes <- NULL
+  data$id <- NULL
+  data$rid <- NULL
+  data$temporal_coverage <- NULL
+  data$millesimes_info <- NULL
+  data$created_at <- NULL
+  data$last_modified <- NULL
+  data$millesimes <- NULL
+  # FIXME
   # df$published <- NULL
-  df$url <- NULL
+  data$url <- NULL
 
-  return(df)
+  new_dido_datafile(data)
 }

@@ -40,10 +40,10 @@ clean_metadata <- function(data) UseMethod("clean_metadata")
 get_dataset_id <- function(data) UseMethod("get_dataset_id")
 
 #' @export
-get_dataset_id.default <- function(x) NULL
+get_dataset_id.default <- function(data) NULL
 
 #' @export
-get_dataset_id.character <- function(x) return(x)
+get_dataset_id.character <- function(data) return(data)
 
 #' Retourne le dafile id de l'objet
 #'
@@ -60,7 +60,7 @@ get_dataset_id.character <- function(x) return(x)
 get_datafile_rid <- function(data) UseMethod("get_datafile_rid")
 
 #' @export
-get_datafile_rid.default <- function(x) NULL
+get_datafile_rid.default <- function(data) NULL
 
 #' @export
-get_datafile_rid.character <- function(x) return(x)
+get_datafile_rid.character <- function(data) return(data)

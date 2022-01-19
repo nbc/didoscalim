@@ -10,7 +10,7 @@ NULL
 #' @noRd
 #' @export
 dido_job <- function(x) {
-  structure(x, class = c("dido_job", class(x)))
+  structure(x, class = c("dido_job", "list"))
 }
 
 is.dido_job <- function(x) inherits(x, "dido_job")
@@ -22,7 +22,7 @@ print.dido_job <- function(x, ...) {
 }
 
 #' @export
-get_dataset_id.dido_job <- function(x, ...) x$data$dataset_id
+get_dataset_id.dido_job <- function(data, ...) data$data$dataset_id
 
 #' @export
-get_datafile_rid.dido_job <- function(x, ...) x$result$rid
+get_datafile_rid.dido_job <- function(data, ...) data$result$rid
