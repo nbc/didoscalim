@@ -17,10 +17,10 @@ test_that("get datafile works", {
     file_name = "dido-csv-simple.csv"
   )
 
-  df <- get_datafile(datafile$result$rid)
+  df <- get_datafile(datafile)
   expect_equal(df$rid, datafile$result$rid)
 
-  df <- get_datafile(rid = datafile$result$rid)
+  df <- get_datafile(datafile$result$rid)
   expect_equal(df$rid, datafile$result$rid)
 
   df <- get_datafile(title = title)

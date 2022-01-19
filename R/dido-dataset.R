@@ -1,9 +1,9 @@
 #' L'objet dido_dataset
 #'
 #' @description
-#' L'objet dido_dataset est retourné par `get_dataset()` et utilisé en paramètre
-#' par `update_dataset()` `create_datafile()` et `create_attachment()`
-#'
+#' L'objet dido_dataset est retourné par `get_dataset()` et `create_dataset()`
+#' et utilisé en paramètre par `update_dataset()` `create_datafile()` et
+#' `create_attachment()`
 #'
 #' @name dido_dataset
 NULL
