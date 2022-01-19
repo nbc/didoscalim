@@ -44,10 +44,7 @@ dido_datafile <- function(dataset,
                           temporal_coverage_end = NULL,
                           legal_notice = "SDES",
                           date_diffusion = NULL) {
-  print(dataset)
-  print(get_dataset_id(dataset))
-  if (is.null(get_dataset_id(dataset))) abort_bad_argument_type("dataset", c("get_dataset()", "create_dataset()"))
-  print(dataset)
+  if (is.null(get_dataset_id(dataset))) abort_not_dataset()
   payload <- list(
     "title" = title,
     "description" = description,

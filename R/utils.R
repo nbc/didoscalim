@@ -15,6 +15,16 @@ abort_bad_argument_type <- function(arg, fun) {
   rlang::abort("error_bad_argument_type", message = message)
 }
 
+abort_not_dataset <- function(arg, fun) {
+  message <- c(
+    glue::glue("`dataset` n'est pas du type"),
+    i = glue::glue("Avez-vous généré `{arg}` à partir d'une des fonctions: `create_dataset`, `get_dataset`, `get_datafile`, `create_datafile`")
+  )
+
+  rlang::abort("error_bad_argument_type", message = message)
+}
+
+
 #' cherche dans un tibble
 #'
 #' @param data le dataframe/tibble dans lequel rechercher
