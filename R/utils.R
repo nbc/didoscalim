@@ -28,7 +28,7 @@ abort_not_dataset <- function() {
 #' @noRd
 abort_not_datafile <- function() {
   message <- c(
-    glue::glue("`datafile` n'est pas du bon attendu"),
+    glue::glue("`datafile` n'est pas du type attendu"),
     i = glue::glue("`datafile` doit être un rid de datafile ou la valeur retournée par une des fonctions `get_datafile`, `create_datafile`")
   )
 
