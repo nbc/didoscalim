@@ -11,4 +11,3 @@ me <- function() {
   result <- dido_api(method = "GET", path = url)
   new_dido_me(result)
 }
-

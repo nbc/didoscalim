@@ -9,4 +9,3 @@ get_alerts <- function() {
   url <- "/datasets/alerts"
   dido_api(method = "GET", path = url, as_tibble = TRUE)
 }
-

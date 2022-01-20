@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' organization_id <- organization()
-#' organization_id <- organization( name = "BSI" )
+#' organization_id <- organization(name = "BSI")
 organization <- function(name = NULL) {
   orgs <- me()$organizations
   if (is.null(name)) {

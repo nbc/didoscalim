@@ -27,8 +27,11 @@ get_dataset <- function(data = NULL, title = NULL) {
     rlang::warn(message = msg)
   }
 
-  id <- if (!is.null(title)) find_by_column(get_datasets(), title, "title") else
+  id <- if (!is.null(title)) {
+    find_by_column(get_datasets(), title, "title")
+  } else {
     get_dataset_id(data)
+  }
 
   url <- glue::glue("/datasets/{id}")
   result <- dido_api(method = "GET", path = url)

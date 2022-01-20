@@ -25,4 +25,3 @@ delete_dataset <- function(id) {
   dido_api(method = "DELETE", path = url)
   invisible(TRUE)
 }
-

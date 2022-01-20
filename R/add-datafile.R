@@ -17,16 +17,16 @@
 #' )
 #' }
 add_datafile <- function(dataset,
-                            title,
-                            description,
-                            file_name,
-                            millesime = NULL,
-                            published = NULL,
-                            temporal_coverage_start = NULL,
-                            temporal_coverage_end = NULL,
-                            legal_notice = "SDES",
-                            date_diffusion = NULL,
-                            quiet = FALSE) {
+                         title,
+                         description,
+                         file_name,
+                         millesime = NULL,
+                         published = NULL,
+                         temporal_coverage_start = NULL,
+                         temporal_coverage_end = NULL,
+                         legal_notice = "SDES",
+                         date_diffusion = NULL,
+                         quiet = FALSE) {
   datafile <- dido_datafile(
     dataset = dataset,
     title = title,
