@@ -32,8 +32,8 @@ test_that("replace millesime works", {
 })
 
 test_that("replace_millesime errors on missing params", {
-  expect_error(replace_millesime(datafile = "rid", millesime = "2020-10"), "pas du type attendu")
+  expect_error(replace_millesime(datafile = "rid", millesime = "2020-10"), "obligatoire")
   expect_error(replace_millesime(millesime = "2020-10", file_name = "dido-csv-simple.csv"), "obligatoire")
-  expect_error(replace_millesime(datafile = new_dido_datafile(1), file_name = "dido-csv-simple.csv"), "obligatoire")
-  expect_error(replace_millesime(datafile = new_dido_datafile(1), millesime = "2021-10"), "obligatoire")
+  expect_error(replace_millesime(datafile = new_dido_datafile(list(rid = "rid")), file_name = "dido-csv-simple.csv"), "obligatoire")
+  expect_error(replace_millesime(datafile = new_dido_datafile(list(rid = "rid")), millesime = "2021-10"), "obligatoire")
 })
