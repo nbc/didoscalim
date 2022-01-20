@@ -4,6 +4,6 @@
 \alias{dido_job}
 \title{L'objet dido_job}
 \description{
-L'objet dido_job est retourné par les fonctions \code{create_datafile()},
+L'objet dido_job est retourné par les fonctions \code{add_datafile()},
 \code{add_millesime()} et \code{replace_millesime()}, il peut être utilisé en argument
 }

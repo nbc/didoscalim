@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>L'objet dido_datafile — dido_datafile • didoscalim</title>
+<title>Créé un datafile — add_datafile • didoscalim</title>
 
 
 <!-- jquery -->
@@ -39,11 +39,8 @@
 
 
 
-<meta property="og:title" content="L'objet dido_datafile — dido_datafile" />
-<meta property="og:description" content="L'objet dido_datafile et retourné par get_datafile() et peut-être utilisé
-en paramètre par les fonctions de manipulation de dataset, datafile,
-millésime et attachement.
-Cette fonction est utilisée par add_datafile()" />
+<meta property="og:title" content="Créé un datafile — add_datafile" />
+<meta property="og:description" content="Créé un datafile" />
 
 
 
@@ -132,28 +129,27 @@ Cette fonction est utilisée par add_datafile()" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>L'objet dido_datafile</h1>
-    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/dido-datafile.R'><code>R/dido-datafile.R</code></a></small>
-    <div class="hidden name"><code>dido_datafile.Rd</code></div>
+    <h1>Créé un datafile</h1>
+    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/add-datafile.R'><code>R/add-datafile.R</code></a></small>
+    <div class="hidden name"><code>add_datafile.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>L'objet dido_datafile et retourné par <code><a href='get_datafile.html'>get_datafile()</a></code> et peut-être utilisé
-en paramètre par les fonctions de manipulation de dataset, datafile,
-millésime et attachement.</p>
-<p>Cette fonction est utilisée par <code><a href='add_datafile.html'>add_datafile()</a></code></p>
+    <p>Créé un datafile</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dido_datafile</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>add_datafile</span><span class='op'>(</span>
   <span class='va'>dataset</span>,
   <span class='va'>title</span>,
   <span class='va'>description</span>,
+  <span class='va'>file_name</span>,
   millesime <span class='op'>=</span> <span class='cn'>NULL</span>,
   published <span class='op'>=</span> <span class='cn'>NULL</span>,
   temporal_coverage_start <span class='op'>=</span> <span class='cn'>NULL</span>,
   temporal_coverage_end <span class='op'>=</span> <span class='cn'>NULL</span>,
   legal_notice <span class='op'>=</span> <span class='st'>"SDES"</span>,
-  date_diffusion <span class='op'>=</span> <span class='cn'>NULL</span>
+  date_diffusion <span class='op'>=</span> <span class='cn'>NULL</span>,
+  quiet <span class='op'>=</span> <span class='cn'>FALSE</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -162,7 +158,7 @@ millésime et attachement.</p>
     <tr>
       <th>dataset</th>
       <td><p>l'id d'un dataset, un objet <code><a href='dido_dataset.html'>dido_dataset()</a></code>,
-<code>dido_datafile()</code> ou <code><a href='dido_job.html'>dido_job()</a></code></p></td>
+<code><a href='dido_datafile.html'>dido_datafile()</a></code> ou <code><a href='dido_job.html'>dido_job()</a></code></p></td>
     </tr>
     <tr>
       <th>title</th>
@@ -171,6 +167,10 @@ millésime et attachement.</p>
     <tr>
       <th>description</th>
       <td><p>la description du datafile</p></td>
+    </tr>
+    <tr>
+      <th>file_name</th>
+      <td><p>le nom du fichier à charger</p></td>
     </tr>
     <tr>
       <th>millesime</th>
@@ -201,19 +201,23 @@ YYYY-MM-DD</p></td>
 format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
 jour à minuit, le fichier est donc immédiatement accessible.</p></td>
     </tr>
+    <tr>
+      <th>quiet</th>
+      <td><p>Si TRUE n'affiche pas les messages. Défaut à <code>FALSE</code></p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>un objet <code>[dido_datafile()]</code></p>
+    <p>un objet <code><a href='dido_job.html'>dido_job()</a></code></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
-<span class='r-in'><span class='va'>datafile</span> <span class='op'>&lt;-</span> <span class='fu'>dido_datafile</span><span class='op'>(</span></span>
-<span class='r-in'>  dataset <span class='op'>=</span> <span class='st'>"1"</span>,</span>
+<span class='r-in'><span class='va'>datafile</span> <span class='op'>&lt;-</span> <span class='fu'>add_datafile</span><span class='op'>(</span></span>
+<span class='r-in'>  dataset <span class='op'>=</span> <span class='va'>dataset</span><span class='op'>$</span><span class='va'>id</span>,</span>
 <span class='r-in'>  title <span class='op'>=</span> <span class='st'>"titre"</span>,</span>
 <span class='r-in'>  description <span class='op'>=</span> <span class='st'>"description"</span>,</span>
-<span class='r-in'>  date_diffusion <span class='op'>=</span> <span class='st'>"2022-01-01T08:00:00Z"</span></span>
+<span class='r-in'>  token_file <span class='op'>=</span> <span class='va'>file_id</span></span>
 <span class='r-in'><span class='op'>)</span></span>
 <span class='r-in'><span class='op'>}</span></span>
 </pre>

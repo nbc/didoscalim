@@ -1,8 +1,8 @@
 ---
-title: "Le premier chargement"
+title: "Charger des données"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Le premier chargement}
+  %\VignetteIndexEntry{Charger des données}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -45,7 +45,7 @@ dataset <- create_dataset(
 ### créer un datafile dans ce dataset
 
 ```{r}
-create_datafile(
+add_datafile(
   dataset = dataset,
   file_name = "augmente.csv",
   title = "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020",

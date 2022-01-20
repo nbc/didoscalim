@@ -7,6 +7,9 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/add_attachment.html</loc>
   </url>
   <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/add_datafile.html</loc>
+  </url>
+  <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/add_millesime.html</loc>
   </url>
   <url>
@@ -14,9 +17,6 @@
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/clean_metadata.html</loc>
-  </url>
-  <url>
-    <loc>https://mtes-mct.github.io/didoscalim/reference/create_datafile.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/create_dataset.html</loc>

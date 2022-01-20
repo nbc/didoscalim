@@ -126,7 +126,7 @@
 <h3 class="hasAnchor">
 <a href="#cr%C3%A9er-un-datafile-dans-ce-dataset" class="anchor"></a>créer un datafile dans ce dataset</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/create_datafile.html">create_datafile</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/add_datafile.html">add_datafile</a></span><span class="op">(</span>
   dataset <span class="op">=</span> <span class="va">dataset</span>,
   file_name <span class="op">=</span> <span class="st">"augmente.csv"</span>,
   title <span class="op">=</span> <span class="st">"Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>,
@@ -141,7 +141,7 @@
 <span class="co">#&gt;     intégration du fichier `augmente.csv`</span>
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
-<span class="co">#&gt;  * fichier intégré       rid: 5f51d52f-eeb2-4670-bbd6-8d7018d872b8       millesime: 2021-10      lignes: 20</span></code></pre></div>
+<span class="co">#&gt;  * fichier intégré       rid: 9239b994-d2ed-40ba-b178-cfaca231097f       millesime: 2021-10      lignes: 20</span></code></pre></div>
 </div>
 <div id="ajouter-un-fichier-annexe" class="section level3">
 <h3 class="hasAnchor">
@@ -155,7 +155,7 @@
 <span class="op">)</span>
 <span class="co">#&gt;     intégration du fichier annexe `annexe.txt`</span>
 <span class="co">#&gt;  * fichier versé</span>
-<span class="co">#&gt;  * fichier annexe intégré (rid: e5e631b1-82e8-4cc5-a093-5999931db8ad)</span></code></pre></div>
+<span class="co">#&gt;  * fichier annexe intégré (rid: 2763b232-dec3-406e-8f5d-a189311e618a)</span></code></pre></div>
 </div>
 </div>
 <div id="ajouter-un-millésime-à-un-datafile-existant" class="section level2">
@@ -176,14 +176,14 @@
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "5f51d52f-eeb2-4670-bbd6-8d7018d872b8"</span>
+<span class="co">#&gt;  $ rid                    : chr "9239b994-d2ed-40ba-b178-cfaca231097f"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
 <span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61e9a1f12f77de0089ac3bec"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61e9ae412f77de0089ac3c4e"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div id="ajouter-le-millésime-à-ce-datafile" class="section level3">
@@ -213,7 +213,7 @@
 <code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span><span class="va">millesime</span><span class="op">)</span>  <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "5f51d52f-eeb2-4670-bbd6-8d7018d872b8"</span>
+<span class="co">#&gt;  $ rid                    : chr "9239b994-d2ed-40ba-b178-cfaca231097f"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
@@ -221,7 +221,7 @@
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
 <span class="co">#&gt;  - attr(*, "id")= tibble [1 × 1] (S3: tbl_df/tbl/data.frame)</span>
-<span class="co">#&gt;   ..$ id: chr "61e9a1f12f77de0089ac3bec"</span>
+<span class="co">#&gt;   ..$ id: chr "61e9ae412f77de0089ac3c4e"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 <p>Modifier la ou les métadonnées concernées et faire la mise à jour :</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -236,7 +236,7 @@
 <code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_dataset.html">get_dataset</a></span><span class="op">(</span><span class="va">datafile</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">dataset</span>
 <span class="co">#&gt; List of 11</span>
-<span class="co">#&gt;  $ id               : chr "61e9a1f12f77de0089ac3bec"</span>
+<span class="co">#&gt;  $ id               : chr "61e9ae412f77de0089ac3c4e"</span>
 <span class="co">#&gt;  $ title            : chr "mon nouveau dataset"</span>
 <span class="co">#&gt;  $ description      : chr "test"</span>
 <span class="co">#&gt;  $ organization     : chr "61dc9e68ceaec2e8bef3f0a1"</span>
@@ -279,14 +279,14 @@
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "5f51d52f-eeb2-4670-bbd6-8d7018d872b8"</span>
+<span class="co">#&gt;  $ rid                    : chr "9239b994-d2ed-40ba-b178-cfaca231097f"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
 <span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2021-12-31T00:00:00.000Z"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61e9a1f12f77de0089ac3bec"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61e9ae412f77de0089ac3c4e"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div id="récupérer-le-millésime-à-modifier" class="section level3">
@@ -313,7 +313,7 @@
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
 <span class="co">#&gt; * fichier intégré</span>
-<span class="co">#&gt; (rid: 5f51d52f-eeb2-4670-bbd6-8d7018d872b8, millesime: 2022-10, lignes: 20</span></code></pre></div>
+<span class="co">#&gt; (rid: 9239b994-d2ed-40ba-b178-cfaca231097f, millesime: 2022-10, lignes: 20</span></code></pre></div>
 </div>
 </div>
   </div>

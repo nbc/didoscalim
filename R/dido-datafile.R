@@ -31,12 +31,14 @@ NULL
 #' @return un objet `[dido_datafile()]`
 #'
 #' @examples
+#' \dontrun{
 #' datafile <- dido_datafile(
 #'   dataset = "1",
 #'   title = "titre",
 #'   description = "description",
 #'   date_diffusion = "2022-01-01T08:00:00Z"
 #' )
+#' }
 #' @keywords internal
 dido_datafile <- function(dataset,
                           title,

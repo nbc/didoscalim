@@ -20,8 +20,6 @@ library(didoscalim)
 
 ## Les environnements DiDo
 
-Afin de permettre de tester ses chargements, DiDo propose plusieurs environnements
-
 didoscalim propose de configurer plusieurs environnements pour tester 
 
 Les standards sont `ECOLE` et `PROD`.

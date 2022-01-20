@@ -37,23 +37,28 @@ YYYY-MM-DD}
 
 \item{legal_notice}{mention légale, par défaut "SDES"}
 
-\item{date_diffusion}{date/heure de diffusion du fichier au format ISO 8601
-(2021-10-01T08:00:00Z). Si non précisée prend la date du jour à minuit.}
+\item{date_diffusion}{la date/heure à laquelle le fichier sera accessible au
+format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
+jour à minuit, le fichier est donc immédiatement accessible.}
 }
 \value{
 un objet \verb{[dido_datafile()]}
 }
 \description{
-L'objet dido_datafile est utilisé par \code{create_datafile()} et retourné par
-\code{get_datafile()}
+L'objet dido_datafile et retourné par \code{get_datafile()} et peut-être utilisé
+en paramètre par les fonctions de manipulation de dataset, datafile,
+millésime et attachement.
+
+Cette fonction est utilisée par \code{add_datafile()}
 }
 \examples{
 \dontrun{
-datafile <- create_datafile(
-  dataset = dataset$id,
+datafile <- dido_datafile(
+  dataset = "1",
   title = "titre",
   description = "description",
-  token_file = file_id
+  date_diffusion = "2022-01-01T08:00:00Z"
 )
 }
 }
+\keyword{internal}

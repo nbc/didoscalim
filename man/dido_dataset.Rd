@@ -64,7 +64,7 @@ un objet dido_dataset
 }
 \description{
 L'objet dido_dataset est retourné par \code{get_dataset()} et \code{create_dataset()}
-et utilisé en paramètre par \code{update_dataset()} \code{create_datafile()} et
+et utilisé en paramètre par \code{update_dataset()} \code{add_datafile()} et
 \code{create_attachment()}
 }
 \examples{
