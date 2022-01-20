@@ -17,7 +17,7 @@ abort_bad_argument_type <- function(arg, fun) {
 
 abort_not_dataset <- function(arg, fun) {
   message <- c(
-    glue::glue("`dataset` n'est pas du bon type"),
+    glue::glue("`dataset` n'est pas du type attendu"),
     i = glue::glue("`dataset` doit être soit un id de dataset soit la valeur retournée par par une des fonctions : `create_dataset`, `get_dataset`, `get_datafile`, `create_datafile`")
   )
 
@@ -26,7 +26,7 @@ abort_not_dataset <- function(arg, fun) {
 
 abort_not_datafile <- function(arg, fun) {
   message <- c(
-    glue::glue("`datafile` n'est pas du bon type"),
+    glue::glue("`datafile` n'est pas du bon attendu"),
     i = glue::glue("`datafile` doit être un rid de datafile ou la valeur retournée par une des fonctions `get_datafile`, `create_datafile`")
   )
 

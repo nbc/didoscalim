@@ -115,7 +115,6 @@ print.dido_dataset <- function(x, ...) {
 #' @export
 clean_metadata.dido_dataset <- function(data, ...) {
   data <- unclass(data)
-  data$id <- NULL
   data$created_at <- NULL
   data$last_modified <- NULL
   data$last_update <- NULL

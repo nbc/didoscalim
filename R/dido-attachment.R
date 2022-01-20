@@ -11,7 +11,7 @@ NULL
 #' @noRd
 #' @export
 dido_attachment <- function(x) {
-  structure(x, class = c("dido_attachment", class(x)))
+  structure(x, class = c("dido_attachment", "list"))
 }
 
 is.dido_attachment <- function(x) {
@@ -24,3 +24,9 @@ print.dido_attachment <- function(x, ...) {
   str(x)
   invisible(x)
 }
+
+#' @export
+get_dataset_id.dido_attachment <- function(data, ...) data$id
+
+#' @export
+get_datafile_rid.dido_attachment <- function(data, ...) data$rid

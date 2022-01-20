@@ -93,8 +93,6 @@ clean_metadata.dido_datafile <- function(data) {
   if (!is.null(data$temporal_coverage$start)) data$temporal_coverage_start <- data$temporal_coverage$start
   if (!is.null(data$temporal_coverage$end)) data$temporal_coverage_end <- data$temporal_coverage$end
 
-  data$id <- NULL
-  data$rid <- NULL
   data$temporal_coverage <- NULL
   data$millesimes_info <- NULL
   data$created_at <- NULL

@@ -16,13 +16,12 @@
 #' }
 update_dataset <- function(dataset) {
   if (missing(dataset) || is.null(dataset)) abort_bad_argument("dataset")
-  if (!is.dido_dataset(dataset)) {
-    abort_bad_argument_type("dataset", c("get_dataset", "extract_metadata"))
-  }
+  if (!is.dido_dataset(dataset)) abort_not_dataset()
 
   id <- dataset$id
   url <- glue::glue("/datasets/{id}")
 
+  dataset$id <- NULL
   metadata <- clean_metadata(dataset)
 
   body <- jsonlite::toJSON(metadata, pretty = TRUE, auto_unbox = TRUE, na = "null")
