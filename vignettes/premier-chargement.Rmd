@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+suppressPackageStartupMessages(library(tidyverse))
 library(didoscalim)
 ```
 
@@ -23,20 +24,23 @@ library(didoscalim)
 Afin d'éviter les erreurs de manipulation, il est conseillé de préparer ses
 scripts de chargement sur l'environnement `ECOLE`.
 
-## Créer le dataset
+## Créer un dataset
+
+Créer un dataset avec les caractéristiques suivantes :
 
 ```{r}
 dataset <- create_dataset(
   title = "mon dataset de test didoscalim",
   description = "test",
   topic = "Transports",
-  frequency = "unknown",
   temporal_coverage_start = "2020-01-01",
-  temporal_coverage_end = "2020-12-31"
+  temporal_coverage_end = "2020-12-31",
+  frequency = "annual",
+  frequency_date = "2021-10-10"
 )
 ```
 
-## créer un datafile
+### créer un datafile dans ce dataset
 
 ```{r}
 create_datafile(
@@ -47,10 +51,12 @@ create_datafile(
                           "(agriculture, industrie, tertiaire, résidentiel et non affecté) ou selon le code NAF à 2 niveaux ",
                           "selon les cas, à la maille IRIS"),
   temporal_coverage_start = "2020-01-01",
-  temporal_coverage_end = "2020-12-31"
+  temporal_coverage_end = "2020-12-31",
+  millesime = "2021-10"
+
 )
 ```
-## ajouter des fichiers annexes
+### ajouter un fichier annexe
 
 ```{r}
 add_attachment(
@@ -60,3 +66,55 @@ add_attachment(
     description = "Détail des variables - fichiers chaleur et froid"
 )
 ```
+
+## ajouter un millésime à un datafile existant
+
+Pour ajouter un millésime vous devez d'abord récupérer le fichier de données.
+Vous pouvez le chercher par son identifiant ou par son titre avec la fonction
+`get_datafile()`. Cette fonction retourne beaucoup d'information non pertinentes
+dans le cadre d'une mise à jour, vous pouvez utiliser `clean_metadata()` :
+
+```{r}
+datafile <- get_datafile(title = "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020") %>%
+  clean_metadata()
+datafile
+```
+```{r}
+millesime <- add_millesime(
+  datafile = datafile,
+  file_name = "augmente.csv",
+  millesime = "2022-10"
+)
+```
+L'ajout de ce millésime peut modifier :
+
+```{r}
+datafile <- get_datafile(millesime)  %>% clean_metadata()
+datafile
+```
+Si le millésime modifie la couverture temporelle, vous devez la mettre à jour au niveau du datafile :
+
+```{r}
+datafile$temporal_coverage_end <- "2022-12-31"
+update_datafile(datafile)
+```
+
+Et enfin mettre à jour du dataset :
+
+```{r}
+dataset <- get_dataset(datafile) %>% clean_metadata()
+dataset
+```
+
+```{r}
+dataset$temporal_coverage$end <- "2022-12-31"
+update_dataset(dataset)
+```
+
+L'ajout du millésime est terminé.
+
+## remplacer un millésime d'un datafile existant
+
+Parfois vous voulez remplacer un millésime existant.
+
+

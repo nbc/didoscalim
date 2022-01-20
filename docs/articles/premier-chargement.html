@@ -102,30 +102,36 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span></code></pre></div>
 <div id="comment-utiliser-didoscalim" class="section level2">
 <h2 class="hasAnchor">
 <a href="#comment-utiliser-didoscalim" class="anchor"></a>Comment utiliser didoscalim</h2>
 <p>Afin d’éviter les erreurs de manipulation, il est conseillé de préparer ses scripts de chargement sur l’environnement <code>ECOLE</code>.</p>
 </div>
-<div id="créer-le-dataset" class="section level2">
+<div id="premier-chargement" class="section level2">
 <h2 class="hasAnchor">
-<a href="#cr%C3%A9er-le-dataset" class="anchor"></a>Créer le dataset</h2>
+<a href="#premier-chargement" class="anchor"></a>Premier chargement</h2>
+</div>
+<div id="créer-un-dataset" class="section level2">
+<h2 class="hasAnchor">
+<a href="#cr%C3%A9er-un-dataset" class="anchor"></a>Créer un dataset</h2>
+<p>Créer un dataset avec les caractéristiques suivantes :</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_dataset.html">create_dataset</a></span><span class="op">(</span>
   title <span class="op">=</span> <span class="st">"mon dataset de test didoscalim"</span>,
   description <span class="op">=</span> <span class="st">"test"</span>,
   topic <span class="op">=</span> <span class="st">"Transports"</span>,
-  frequency <span class="op">=</span> <span class="st">"unknown"</span>,
   temporal_coverage_start <span class="op">=</span> <span class="st">"2020-01-01"</span>,
-  temporal_coverage_end <span class="op">=</span> <span class="st">"2020-12-31"</span>
+  temporal_coverage_end <span class="op">=</span> <span class="st">"2020-12-31"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  frequency_date <span class="op">=</span> <span class="st">"2021-10-10"</span>
 <span class="op">)</span>
 <span class="co">#&gt; Environnement DiDo actif : DEV</span>
 <span class="co">#&gt; dataset `mon dataset de test didoscalim` créé</span></code></pre></div>
-</div>
-<div id="créer-un-datafile" class="section level2">
-<h2 class="hasAnchor">
-<a href="#cr%C3%A9er-un-datafile" class="anchor"></a>créer un datafile</h2>
+<div id="créer-un-datafile-dans-ce-dataset" class="section level3">
+<h3 class="hasAnchor">
+<a href="#cr%C3%A9er-un-datafile-dans-ce-dataset" class="anchor"></a>créer un datafile dans ce dataset</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/create_datafile.html">create_datafile</a></span><span class="op">(</span>
   dataset <span class="op">=</span> <span class="va">dataset</span>,
@@ -135,16 +141,18 @@
                           <span class="st">"(agriculture, industrie, tertiaire, résidentiel et non affecté) ou selon le code NAF à 2 niveaux "</span>,
                           <span class="st">"selon les cas, à la maille IRIS"</span><span class="op">)</span>,
   temporal_coverage_start <span class="op">=</span> <span class="st">"2020-01-01"</span>,
-  temporal_coverage_end <span class="op">=</span> <span class="st">"2020-12-31"</span>
+  temporal_coverage_end <span class="op">=</span> <span class="st">"2020-12-31"</span>,
+  millesime <span class="op">=</span> <span class="st">"2021-10"</span>
+
 <span class="op">)</span>
 <span class="co">#&gt;     intégration du fichier `augmente.csv`</span>
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
-<span class="co">#&gt;  * fichier intégré       rid: cff45e73-2366-4985-b03c-507a0a572e76       millesime: 2022-01      lignes: 1235</span></code></pre></div>
+<span class="co">#&gt;  * fichier intégré       rid: 52b00467-542a-4c90-9e7a-5341f9241c5f       millesime: 2021-10      lignes: 1235</span></code></pre></div>
 </div>
-<div id="ajouter-des-fichiers-annexes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#ajouter-des-fichiers-annexes" class="anchor"></a>ajouter des fichiers annexes</h2>
+<div id="ajouter-un-fichier-annexe" class="section level3">
+<h3 class="hasAnchor">
+<a href="#ajouter-un-fichier-annexe" class="anchor"></a>ajouter un fichier annexe</h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/add_attachment.html">add_attachment</a></span><span class="op">(</span>
     dataset <span class="op">=</span> <span class="va">dataset</span>,
@@ -154,7 +162,86 @@
 <span class="op">)</span>
 <span class="co">#&gt;     intégration du fichier annexe `annexe.txt`</span>
 <span class="co">#&gt;  * fichier versé</span>
-<span class="co">#&gt;  * fichier annexe intégré (rid: 168ecd40-f98e-4d02-b94c-0cfda57dea38)</span></code></pre></div>
+<span class="co">#&gt;  * fichier annexe intégré (rid: 6c3ed56e-7b1d-4f7f-963b-2c65c76c34ac)</span></code></pre></div>
+</div>
+</div>
+<div id="mettre-à-jour-des-données" class="section level2">
+<h2 class="hasAnchor">
+<a href="#mettre-%C3%A0-jour-des-donn%C3%A9es" class="anchor"></a>Mettre à jour des données</h2>
+<div id="ajouter-un-millésime" class="section level3">
+<h3 class="hasAnchor">
+<a href="#ajouter-un-mill%C3%A9sime" class="anchor"></a>ajouter un millésime</h3>
+<p>Pour ajouter un millésime vous devez d’abord récupérer le fichier de données. Vous pouvez le chercher par son identifiant ou par son titre avec la fonction <code><a href="../reference/get_datafile.html">get_datafile()</a></code>. Cette fonction retourne beaucoup d’information non pertinentes dans le cadre d’une mise à jour, vous pouvez utiliser <code><a href="../reference/clean_metadata.html">clean_metadata()</a></code> :</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">datafile</span>
+<span class="co">#&gt; List of 7</span>
+<span class="co">#&gt;  $ rid                    : chr "52b00467-542a-4c90-9e7a-5341f9241c5f"</span>
+<span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
+<span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
+<span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
+<span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
+<span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
+<span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61e93bf32f77de0025ac3c45"</span>
+<span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">millesime</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/add_millesime.html">add_millesime</a></span><span class="op">(</span>
+  datafile <span class="op">=</span> <span class="va">datafile</span>,
+  file_name <span class="op">=</span> <span class="st">"augmente.csv"</span>,
+  millesime <span class="op">=</span> <span class="st">"2022-10"</span>
+<span class="op">)</span></code></pre></div>
+<p>L’ajout de ce millésime peut modifier :</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span><span class="va">millesime</span><span class="op">)</span>  <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">datafile</span>
+<span class="co">#&gt; List of 7</span>
+<span class="co">#&gt;  $ rid                    : chr "52b00467-542a-4c90-9e7a-5341f9241c5f"</span>
+<span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
+<span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
+<span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
+<span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
+<span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
+<span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
+<span class="co">#&gt;  - attr(*, "id")= tibble [1 × 1] (S3: tbl_df/tbl/data.frame)</span>
+<span class="co">#&gt;   ..$ id: chr "61e93bf32f77de0025ac3c45"</span>
+<span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
+<p>Vous devez maintenant mettre à jour la couverture temporelle du datafile :</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">datafile</span><span class="op">$</span><span class="va">temporal_coverage_end</span> <span class="op">&lt;-</span> <span class="st">"2022-12-31"</span>
+<span class="fu"><a href="../reference/update_datafile.html">update_datafile</a></span><span class="op">(</span><span class="va">datafile</span><span class="op">)</span></code></pre></div>
+<p>Et enfin mettre à jour la couverture temporelle du dataset :</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_dataset.html">get_dataset</a></span><span class="op">(</span><span class="va">datafile</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">dataset</span>
+<span class="co">#&gt; List of 11</span>
+<span class="co">#&gt;  $ id               : chr "61e93bf32f77de0025ac3c45"</span>
+<span class="co">#&gt;  $ title            : chr "mon dataset de test didoscalim"</span>
+<span class="co">#&gt;  $ description      : chr "test"</span>
+<span class="co">#&gt;  $ organization     : chr "61dc9e68ceaec2e8bef3f0a1"</span>
+<span class="co">#&gt;  $ topic            : chr "Transports"</span>
+<span class="co">#&gt;  $ license          : chr "fr-lo"</span>
+<span class="co">#&gt;  $ frequency        : chr "annual"</span>
+<span class="co">#&gt;  $ frequency_date   : chr "2021-10-10T00:00:00"</span>
+<span class="co">#&gt;  $ tags             : list()</span>
+<span class="co">#&gt;  $ spatial          :List of 2</span>
+<span class="co">#&gt;   ..$ granularity: chr "other"</span>
+<span class="co">#&gt;   ..$ zones      : list()</span>
+<span class="co">#&gt;  $ temporal_coverage:List of 2</span>
+<span class="co">#&gt;   ..$ end  : chr "2020-12-31"</span>
+<span class="co">#&gt;   ..$ start: chr "2020-01-01"</span>
+<span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_dataset" "list"</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">dataset</span><span class="op">$</span><span class="va">temporal_coverage</span><span class="op">$</span><span class="va">end</span> <span class="op">&lt;-</span> <span class="st">"2022-12-31"</span>
+<span class="fu"><a href="../reference/update_dataset.html">update_dataset</a></span><span class="op">(</span><span class="va">dataset</span><span class="op">)</span></code></pre></div>
+<p>L’ajout du millésime est terminé.</p>
+</div>
+<div id="remplacer-un-millésime" class="section level3">
+<h3 class="hasAnchor">
+<a href="#remplacer-un-mill%C3%A9sime" class="anchor"></a>remplacer un millésime</h3>
+<p>Parfois vous voulez remplacer un millésime existant.</p>
+</div>
 </div>
   </div>
 

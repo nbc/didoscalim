@@ -27,7 +27,8 @@ Suggests:
     rmarkdown,
     styler,
     testthat (>= 3.0.0),
-    withr
+    withr,
+    tidyverse
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3

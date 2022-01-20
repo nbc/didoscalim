@@ -4,10 +4,10 @@
 \alias{get_dataset}
 \title{Récupère les métadonnées d'un dataset}
 \usage{
-get_dataset(id = NULL, title = NULL)
+get_dataset(data = NULL, title = NULL)
 }
 \arguments{
-\item{id}{l'identifiant du dataset}
+\item{data}{l'identifiant d'un dataset ou un objet \code{dido_dataset()}, \code{dido_job()} ou \code{dido_datafile()}}
 
 \item{title}{le titre du du dataset}
 }
@@ -15,12 +15,11 @@ get_dataset(id = NULL, title = NULL)
 un objet \code{\link[=dido_dataset]{dido_dataset()}}
 }
 \description{
-Permet de récupérer les données d'un dataset en utilisant soit son id soit
-son titre.
+Permet de récupérer les données d'un dataset en utilisant soit son titre soit
+un objet \code{dido_datafile()}, \code{dido_dataset()}, \code{dido_job()}
 }
 \details{
-Lève une exception si la recherche ne retourne plus ou moins que 1 dataset
-trouvé est différent de 1.
+Lève une exception si la recherche ne retourne pas exactement 1 dataset
 }
 \examples{
 \dontrun{

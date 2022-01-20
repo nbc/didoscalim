@@ -32,8 +32,7 @@ Ajoute un millésime
 \examples{
 \dontrun{
 millesime <- add_millesime(
-  id = "id",
-  rid = "rid",
+  datafile = datafile,
   file_name = "csv_upload.csv",
   millesime = "2022-10"
 )

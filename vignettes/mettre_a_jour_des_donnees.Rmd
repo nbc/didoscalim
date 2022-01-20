@@ -19,7 +19,7 @@ library(didoscalim)
 ```
 
 ```{r, eval = FALSE}
-dataset <- get_dataset(title = 'mon dataset de test didoscalim')
+dataset <- get_dataset(title = 'mon dataset de test didoscalim') 
 ```
 
 ```{r}
