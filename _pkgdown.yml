@@ -1,1 +1,8 @@
 url: https://mtes-mct.github.io/didoscalim
+
+reference:
+
+- title: "Les fonctions dataset"
+  desc: "Manipuler les datasets."
+  contents:
+  - ends_with("dataset.*")
