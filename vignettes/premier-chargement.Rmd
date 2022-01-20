@@ -22,7 +22,9 @@ library(didoscalim)
 ## Comment utiliser didoscalim
 
 Afin d'éviter les erreurs de manipulation, il est conseillé de préparer ses
-scripts de chargement sur l'environnement `ECOLE`.
+scripts de chargement sur l'environnement `ECOLE` et de les passer après sur
+`PROD`. Vous trouverez plus d'info dans la vignette sur [les
+environnements](les-environnements.html).
 
 ## Créer un dataset
 
@@ -30,7 +32,7 @@ Créer un dataset avec les caractéristiques suivantes :
 
 ```{r}
 dataset <- create_dataset(
-  title = "mon dataset de test didoscalim",
+  title = "mon nouveau dataset",
   description = "test",
   topic = "Transports",
   temporal_coverage_start = "2020-01-01",
@@ -69,6 +71,14 @@ add_attachment(
 
 ## ajouter un millésime à un datafile existant
 
+La procédure est simple :
+
+1. chercher le datafile à modifier
+2. ajouter le millésime
+3. si nécessaire, changer les couvertures temporelles du datafile et du dataset
+
+### chercher le datafile à modifier
+
 Pour ajouter un millésime vous devez d'abord récupérer le fichier de données.
 Vous pouvez le chercher par son identifiant ou par son titre avec la fonction
 `get_datafile()`. Cette fonction retourne beaucoup d'information non pertinentes
@@ -79,6 +89,9 @@ datafile <- get_datafile(title = "Données de consommation et de points de livra
   clean_metadata()
 datafile
 ```
+
+### ajouter le millésime à ce datafile
+
 ```{r}
 millesime <- add_millesime(
   datafile = datafile,
@@ -86,28 +99,45 @@ millesime <- add_millesime(
   millesime = "2022-10"
 )
 ```
-L'ajout de ce millésime peut modifier :
+### Mettre à jour les métadonnées du dataset et du datafile
+
+Trois métadonnées peuvent devoir être mises à jour :
+
+* la couverture temporelle du datafile
+* la couverture temporelle du dataset
+* la date de prochaine mise à jour du dataset
+
+#### mettre à jour les métadonnées du datafile
+
+Tout d'abord récupérer les métadonnées :
 
 ```{r}
 datafile <- get_datafile(millesime)  %>% clean_metadata()
 datafile
 ```
-Si le millésime modifie la couverture temporelle, vous devez la mettre à jour au niveau du datafile :
+
+Modifier la ou les métadonnées concernées et faire la mise à jour :
 
 ```{r}
-datafile$temporal_coverage_end <- "2022-12-31"
+datafile$temporal_coverage_end <- "2021-12-31"
 update_datafile(datafile)
 ```
 
-Et enfin mettre à jour du dataset :
+#### mettre à jour les métadonnées du dataset
+
+Encore une fois, commencer par récupérer les métadonnées du dataset :
 
 ```{r}
 dataset <- get_dataset(datafile) %>% clean_metadata()
 dataset
 ```
+Puis modifier les métadonnées concernées et faire la mise à jour. Dans ce cas là
+on met à jour la date de fin de couverture temporelle et la date de prochaine
+mise à jour :
 
 ```{r}
-dataset$temporal_coverage$end <- "2022-12-31"
+dataset$temporal_coverage$end <- "2021-12-31"
+dataset$frequency_date <- "2022-10-10T00:00:00"
 update_dataset(dataset)
 ```
 
@@ -116,5 +146,40 @@ L'ajout du millésime est terminé.
 ## remplacer un millésime d'un datafile existant
 
 Parfois vous voulez remplacer un millésime existant.
+
+1. trouver le datafile
+1. récupérer le millésime à mettre à jour
+1. mettre à jour le millésime
+
+Pour mettre à jour le dernier millésime d'un fichier de données, la procédure est :
+
+### trouver le datafile
+
+```{r}
+datafile <- get_datafile(title = "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020") %>%
+  clean_metadata()
+datafile
+```
+### récupérer le millésime à modifier
+
+On récupére le dernier millesime du datafile
+
+```{r}
+millesime_row <- get_millesimes(datafile) %>% slice_max(order_by = millesime)
+millesime <- millesime_row[['millesime']]
+millesime
+```
+
+### remplacer l'ancien millésime par le nouveau fichier
+
+Et on le remplace :
+
+```{r}
+millesime <- replace_millesime(
+  datafile = datafile,
+  file_name = "augmente.csv",
+  millesime = millesime
+)
+```
 
 

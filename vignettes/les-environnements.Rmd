@@ -1,0 +1,74 @@
+---
+title: "Les environnements"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Les environnements}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(didoscalim)
+```
+
+## Les environnements DiDo
+
+Afin de permettre de tester ses chargements, DiDo propose plusieurs environnements
+
+didoscalim propose de configurer plusieurs environnements pour tester 
+
+Les standards sont `ECOLE` et `PROD`.
+
+## Configuration
+
+Les environnements se configurent dans le fichier `.Renviron`.
+
+Chaque environnement est configuré par deux lignes comme celles-ci :
+
+```
+DIDOSCALIM_BASE_PATH_<NOM_ENVIRONNEMENT>=http://api.alimentation.ecole.fr/v1
+DIDOSCALIM_API_KEY_<NOM_ENVIRONNEMENT>=ma_clef_api_ecole
+```
+
+Où `<NOM_ENVIRONNEMENT>` peut prendre les valeurs `DEV`, `PREPROD`, `ECOLE` et
+`PROD`.
+
+Si vous êtes un producteur, vous devez avoir accès aux environnements `ECOLE` et
+`PROD`.
+
+## Choisir un environnement
+
+Si vous ne sélectionnez pas d'environnement, DiDo prendra par défaut le premier
+configuré dans l'ordre : `DEV`, `PREPROD`, `ECOLE`. Il ne choisira jamais `PROD`
+implicitement.
+
+Pour sélectionner un environnement, utilisez la commande `set_work_env()` :
+
+```{r, eval = FALSE}
+set_work_env("PROD")
+```
+
+Pour revenir à l'environnement par défaut :
+
+```{r, eval = FALSE}
+set_work_env()
+```
+
+Vous pouvez à tout moment voir dans quel environnement vous êtes avec la
+commande `get_work_env()`
+
+Vous pouvez lister les environnements configués avec la commande `list_envs()`
+et vérifier qu'ils fonctionnent avec la commande `check_envs()`
+
+## Méthode d'alimentation
+
+Écrivez et testez vos scripts dans l'environnement `ECOLE` par défaut. Quand
+vous êtes satisfait du résultat, basculer sur l'environnement de `PROD` et
+relancez les scripts.
