@@ -44,7 +44,9 @@ get_datafile <- function(datafile = NULL, title = NULL, dataset = NULL) {
 
   url <- glue::glue("/datasets/{dataset_id}/datafiles/{rid}")
   result <- dido_api(method = "GET", path = url)
-  result$id <- dataset_id
+
+  attr(result, "id") <- dataset_id
+
   new_dido_datafile(result)
 }
 

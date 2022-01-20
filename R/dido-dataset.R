@@ -118,9 +118,10 @@ clean_metadata.dido_dataset <- function(data, ...) {
   data$created_at <- NULL
   data$last_modified <- NULL
   data$last_update <- NULL
-  data$organization <- data$organization$id
   data$attachments <- NULL
   data$datafiles <- NULL
+
+  if ("id" %in% names(data$organization)) data$organization <- data$organization$id
 
   new_dido_dataset(data)
 }

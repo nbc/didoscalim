@@ -19,6 +19,7 @@ update_datafile <- function(datafile) {
   rid <- get_datafile_rid(datafile)
   id <- get_dataset_id(datafile)
 
+  datafile$rid <- NULL
   metadata <- clean_metadata(datafile)
   if (is.null(metadata$published)) metadata$published <- format(Sys.time(), "%Y-%m-%d")
 
@@ -26,5 +27,6 @@ update_datafile <- function(datafile) {
   body <- jsonlite::toJSON(metadata, pretty = TRUE, auto_unbox = TRUE, na = "null")
 
   result <- dido_api(method = "PUT", path = url, body = body)
+  attr(result, "id") <- id
   invisible(new_dido_datafile(result))
 }

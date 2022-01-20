@@ -41,14 +41,15 @@ create_datafile <- function(dataset,
 
   if (missing(file_name) || is.null(file_name)) abort_bad_argument("file_name")
 
-
   if (!quiet) rlang::inform(message = glue::glue("    intégration du fichier `{file_name}`"))
   datafile$tokenFile <- upload_file(file_name)
   if (!quiet) rlang::inform(message = glue::glue("\t* fichier versé"))
   check_csv(datafile$tokenFile)
   if (!quiet) rlang::inform(message = glue::glue("\t* fichier validé"))
 
-  body <- jsonlite::toJSON(clean_metadata(datafile), pretty = TRUE, auto_unbox = TRUE, na = "null")
+  df <- clean_metadata(datafile)
+
+  body <- jsonlite::toJSON(df, pretty = TRUE, auto_unbox = TRUE, na = "null")
 
   id <- get_dataset_id(dataset)
 

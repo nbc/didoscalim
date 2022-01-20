@@ -48,8 +48,7 @@ dido_datafile <- function(dataset,
   payload <- list(
     "title" = title,
     "description" = description,
-    "millesime" = millesime,
-    "id" = get_dataset_id(dataset)
+    "millesime" = millesime
   )
   if (!is.null(temporal_coverage_start)) payload$temporal_coverage_start <- temporal_coverage_start
   if (!is.null(temporal_coverage_end)) payload$temporal_coverage_end <- temporal_coverage_end
@@ -58,6 +57,8 @@ dido_datafile <- function(dataset,
   payload$published <- published %||% format(Sys.time(), "%Y-%m-%d")
   payload$date_diffusion <- date_diffusion %||% format(Sys.time(), "%Y-%m-%dT00:00:00.000Z")
   payload$millesime <- millesime %||% format(Sys.time(), "%Y-%m")
+
+  attr(payload, "id") <- get_dataset_id(dataset)
 
   new_dido_datafile(payload)
 }
@@ -81,7 +82,7 @@ print.dido_datafile <- function(x, ...) {
   invisible(x)
 }
 #' @export
-get_dataset_id.dido_datafile <- function(data, ...) data$id
+get_dataset_id.dido_datafile <- function(data, ...) attr(data, "id")
 
 #' @export
 get_datafile_rid.dido_datafile <- function(data, ...) data$rid
