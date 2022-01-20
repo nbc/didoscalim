@@ -121,6 +121,9 @@
     <loc>https://nbc.github.io/didoscalim/reference/wait_for_job.html</loc>
   </url>
   <url>
+    <loc>https://nbc.github.io/didoscalim/articles/charger-des-donnees.html</loc>
+  </url>
+  <url>
     <loc>https://nbc.github.io/didoscalim/articles/csv-augmente.html</loc>
   </url>
   <url>
@@ -128,8 +131,5 @@
   </url>
   <url>
     <loc>https://nbc.github.io/didoscalim/articles/mettre_a_jour_des_donnees.html</loc>
-  </url>
-  <url>
-    <loc>https://nbc.github.io/didoscalim/articles/premier-chargement.html</loc>
   </url>
 </urlset>
