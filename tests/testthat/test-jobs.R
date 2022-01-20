@@ -8,7 +8,7 @@ test_that("wait_for_jobs works", {
     frequency = "unknown"
   )
 
-  datafile_job <- create_datafile(
+  datafile_job <- add_datafile(
     dataset = dataset,
     title = "didoscalim df wait_for_jobs works",
     description = "description",

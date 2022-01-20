@@ -10,7 +10,7 @@ NULL
 
 #' Créé un objet dido_datafile
 #'
-#' Cette fonction est utilisée par `create_datafile()`
+#' Cette fonction est utilisée par `add_datafile()`
 #'
 #' @param dataset l'id d'un dataset, un objet `dido_dataset()`,
 #'   `dido_datafile()` ou `dido_job()`

@@ -8,7 +8,7 @@ test_that("replace millesime works", {
     frequency = "unknown"
   )
 
-  datafile <- create_datafile(
+  datafile <- add_datafile(
     dataset = dataset,
     title = "didoscalim df replace millesime works",
     description = "description",

@@ -10,7 +10,7 @@ test_that("create datafiles works", {
 
   date_published <- format(Sys.time(), "%Y-%m-%dT00:00:00") # .000Z")
 
-  created_df <- create_datafile(
+  created_df <- add_datafile(
     dataset = dataset,
     title = "didoscalim df create datafiles work",
     description = "description",
@@ -34,9 +34,9 @@ test_that("create datafiles warns when missing param", {
     frequency = "unknown"
   )
 
-  expect_error(create_datafile(title = "test", description = "test", file_name = "test.csv"), "is missing")
-  expect_error(create_datafile(dataset = "test", description = "test", file_name = "test.csv"), "is missing")
-  expect_error(create_datafile(dataset = dataset, description = "test", file_name = "test.csv"), "is missing")
-  expect_error(create_datafile(dataset = dataset, title = "test", file_name = "test.csv"), "is missing")
-  expect_error(create_datafile(dataset = dataset, title = "test", description = "test"), "est obligatoire")
+  expect_error(add_datafile(title = "test", description = "test", file_name = "test.csv"), "is missing")
+  expect_error(add_datafile(dataset = "test", description = "test", file_name = "test.csv"), "is missing")
+  expect_error(add_datafile(dataset = dataset, description = "test", file_name = "test.csv"), "is missing")
+  expect_error(add_datafile(dataset = dataset, title = "test", file_name = "test.csv"), "is missing")
+  expect_error(add_datafile(dataset = dataset, title = "test", description = "test"), "est obligatoire")
 })

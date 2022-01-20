@@ -8,7 +8,7 @@ test_that("get_millesimes works", {
     frequency = "unknown"
   )
 
-  datafile <- create_datafile(
+  datafile <- add_datafile(
     dataset = dataset,
     title = "didoscalim df get_millesimes works",
     description = "description",

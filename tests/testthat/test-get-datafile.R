@@ -10,7 +10,7 @@ test_that("get datafile works", {
     frequency = "unknown"
   )
 
-  datafile <- create_datafile(
+  datafile <- add_datafile(
     dataset = dataset,
     title = title,
     description = "description",

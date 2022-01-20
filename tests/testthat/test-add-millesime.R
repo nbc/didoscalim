@@ -8,7 +8,7 @@ test_that("add millesime works", {
     frequency = "unknown"
   )
 
-  job_datafile <- create_datafile(
+  job_datafile <- add_datafile(
     dataset = dataset,
     title = "didoscalim df add millesime works",
     description = "description",

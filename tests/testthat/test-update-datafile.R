@@ -9,7 +9,7 @@ test_that("update_datafile works", {
     frequency = "unknown"
   )
 
-  datafile <- create_datafile(
+  datafile <- add_datafile(
     dataset = dataset,
     title = "didoscalim df update_datafile works",
     description = "description",

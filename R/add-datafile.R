@@ -9,14 +9,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' datafile <- create_datafile(
+#' datafile <- add_datafile(
 #'   dataset = dataset$id,
 #'   title = "titre",
 #'   description = "description",
 #'   token_file = file_id
 #' )
 #' }
-create_datafile <- function(dataset,
+add_datafile <- function(dataset,
                             title,
                             description,
                             file_name,
