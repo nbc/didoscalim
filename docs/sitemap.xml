@@ -1,135 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nbc.github.io/didoscalim/index.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/index.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/add_attachment.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/add_attachment.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/add_millesime.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/add_millesime.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/check_envs.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/check_envs.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/clean_metadata.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/clean_metadata.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/create_datafile.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/create_datafile.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/create_dataset.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/create_dataset.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_api.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_api.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_attachment.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_attachment.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_csv.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_csv.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_datafile.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_datafile.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_dataset.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_dataset.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_job.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_job.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_me.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_me.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_read_delim.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_read_delim.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/dido_write_csv.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/dido_write_csv.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/didoscalim-package.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/didoscalim-package.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/extract_metadata.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/extract_metadata.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/find_by_column.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/find_by_column.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_alerts.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_alerts.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_datafile.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_datafile.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_datafile_rid.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_datafile_rid.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_datafiles.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_datafiles.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_dataset.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_dataset.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_dataset_id.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_dataset_id.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_datasets.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_datasets.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_job.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_job.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_jobs.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_jobs.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_millesimes.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_millesimes.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/get_work_env.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_work_env.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/list_envs.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/list_envs.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/load_envs.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/load_envs.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/me.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/me.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/organization.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/organization.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/replace_millesime.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/replace_millesime.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/set_work_env.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/set_work_env.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/update_datafile.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/update_datafile.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/update_dataset.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/update_dataset.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/upload_file.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/upload_file.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/reference/wait_for_job.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/wait_for_job.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/articles/charger-des-donnees.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/articles/charger-des-donnees.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/articles/csv-augmente.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/articles/csv-augmente.html</loc>
   </url>
   <url>
-    <loc>https://nbc.github.io/didoscalim/articles/les-environnements.html</loc>
-  </url>
-  <url>
-    <loc>https://nbc.github.io/didoscalim/articles/mettre_a_jour_des_donnees.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/articles/les-environnements.html</loc>
   </url>
 </urlset>

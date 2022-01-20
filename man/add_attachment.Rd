@@ -35,6 +35,11 @@ Ajoute un fichier annexe à un dataset
 }
 \examples{
 \dontrun{
-add_attachment(id = "id", title = "title", description = "description", file_name = "filename")
+add_attachment(
+  dataset = "id",
+  title = "title",
+  description = "description",
+  file_name = "filename"
+)
 }
 }

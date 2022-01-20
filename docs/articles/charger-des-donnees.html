@@ -62,9 +62,6 @@
     <li>
       <a href="../articles/les-environnements.html">Les environnements</a>
     </li>
-    <li>
-      <a href="../articles/mettre_a_jour_des_donnees.html">Mettre a jour un dataset</a>
-    </li>
   </ul>
 </li>
 <li>
@@ -144,7 +141,7 @@
 <span class="co">#&gt;     intégration du fichier `augmente.csv`</span>
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
-<span class="co">#&gt;  * fichier intégré       rid: 34e6db2b-361b-4615-8f0d-c7002296d95c       millesime: 2021-10      lignes: 20</span></code></pre></div>
+<span class="co">#&gt;  * fichier intégré       rid: 0238e5e6-dc41-4ac3-80b4-b1fb5c04f3e0       millesime: 2021-10      lignes: 20</span></code></pre></div>
 </div>
 <div id="ajouter-un-fichier-annexe" class="section level3">
 <h3 class="hasAnchor">
@@ -158,7 +155,7 @@
 <span class="op">)</span>
 <span class="co">#&gt;     intégration du fichier annexe `annexe.txt`</span>
 <span class="co">#&gt;  * fichier versé</span>
-<span class="co">#&gt;  * fichier annexe intégré (rid: ff95ee82-bb49-4354-82c9-936e44c9a47f)</span></code></pre></div>
+<span class="co">#&gt;  * fichier annexe intégré (rid: 95c8eab1-c301-40a4-ac37-03657409b0ba)</span></code></pre></div>
 </div>
 </div>
 <div id="ajouter-un-millésime-à-un-datafile-existant" class="section level2">
@@ -179,14 +176,14 @@
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "34e6db2b-361b-4615-8f0d-c7002296d95c"</span>
+<span class="co">#&gt;  $ rid                    : chr "0238e5e6-dc41-4ac3-80b4-b1fb5c04f3e0"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
 <span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61e9886e2f77de0089ac3be0"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61e998752f77de0089ac3be4"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div id="ajouter-le-millésime-à-ce-datafile" class="section level3">
@@ -216,7 +213,7 @@
 <code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span><span class="va">millesime</span><span class="op">)</span>  <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "34e6db2b-361b-4615-8f0d-c7002296d95c"</span>
+<span class="co">#&gt;  $ rid                    : chr "0238e5e6-dc41-4ac3-80b4-b1fb5c04f3e0"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
@@ -224,7 +221,7 @@
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2020-12-31T00:00:00.000Z"</span>
 <span class="co">#&gt;  - attr(*, "id")= tibble [1 × 1] (S3: tbl_df/tbl/data.frame)</span>
-<span class="co">#&gt;   ..$ id: chr "61e9886e2f77de0089ac3be0"</span>
+<span class="co">#&gt;   ..$ id: chr "61e998752f77de0089ac3be4"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 <p>Modifier la ou les métadonnées concernées et faire la mise à jour :</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -239,7 +236,7 @@
 <code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_dataset.html">get_dataset</a></span><span class="op">(</span><span class="va">datafile</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">dataset</span>
 <span class="co">#&gt; List of 11</span>
-<span class="co">#&gt;  $ id               : chr "61e9886e2f77de0089ac3be0"</span>
+<span class="co">#&gt;  $ id               : chr "61e998752f77de0089ac3be4"</span>
 <span class="co">#&gt;  $ title            : chr "mon nouveau dataset"</span>
 <span class="co">#&gt;  $ description      : chr "test"</span>
 <span class="co">#&gt;  $ organization     : chr "61dc9e68ceaec2e8bef3f0a1"</span>
@@ -282,14 +279,14 @@
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 7</span>
-<span class="co">#&gt;  $ rid                    : chr "34e6db2b-361b-4615-8f0d-c7002296d95c"</span>
+<span class="co">#&gt;  $ rid                    : chr "0238e5e6-dc41-4ac3-80b4-b1fb5c04f3e0"</span>
 <span class="co">#&gt;  $ title                  : chr "Données de consommation et de points de livraison d'énergie à la maille IRIS – chaleur et froid – année 2020"</span>
 <span class="co">#&gt;  $ description            : chr "Consommations annuelles et nombre de points de livraison de gaz naturel, par secteur d'activité (agriculture, i"| __truncated__</span>
 <span class="co">#&gt;  $ published              : chr "2022-01-20T00:00:00"</span>
 <span class="co">#&gt;  $ legal_notice           : chr "SDES"</span>
 <span class="co">#&gt;  $ temporal_coverage_start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ temporal_coverage_end  : chr "2021-12-31T00:00:00.000Z"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61e9886e2f77de0089ac3be0"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61e998752f77de0089ac3be4"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div id="récupérer-le-millésime-à-modifier" class="section level3">
@@ -316,7 +313,7 @@
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
 <span class="co">#&gt; * fichier intégré</span>
-<span class="co">#&gt; (rid: 34e6db2b-361b-4615-8f0d-c7002296d95c, millesime: 2022-10, lignes: 20</span></code></pre></div>
+<span class="co">#&gt; (rid: 0238e5e6-dc41-4ac3-80b4-b1fb5c04f3e0, millesime: 2022-10, lignes: 20</span></code></pre></div>
 </div>
 </div>
   </div>

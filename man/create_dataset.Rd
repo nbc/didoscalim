@@ -71,8 +71,8 @@ Créé un dataset
 }
 \examples{
 dataset <- create_dataset(
-  title = "test",
-  description = "test",
+  title = "le titre du dataset",
+  description = "la description du dataset",
   topic = "Transports",
   frequency = "unknown"
 )

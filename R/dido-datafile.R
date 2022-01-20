@@ -1,13 +1,16 @@
 #' L'objet dido_datafile
 #'
 #' @description
-#' L'objet dido_datafile est utilisé par `create_datafile()` et retourné par
-#' `get_datafile()`
+#' L'objet dido_datafile et retourné par `get_datafile()` et peut-être utilisé
+#' en paramètre par les fonctions de manipulation de dataset, datafile,
+#' millésime et attachement.
 #'
 #' @name dido_datafile
 NULL
 
 #' Créé un objet dido_datafile
+#'
+#' Cette fonction est utilisée par `create_datafile()`
 #'
 #' @param dataset l'id d'un dataset, un objet `dido_dataset()`,
 #'   `dido_datafile()` ou `dido_job()`
@@ -21,20 +24,20 @@ NULL
 #'   YYYY-MM-DD
 #' @param temporal_coverage_end la date de fin des données au format YYYY-MM-DD
 #' @param legal_notice mention légale, par défaut "SDES"
-#' @param date_diffusion date/heure de diffusion du fichier au format ISO 8601
-#'   (2021-10-01T08:00:00Z). Si non précisée prend la date du jour à minuit.
+#' @param date_diffusion la date/heure à laquelle le fichier sera accessible au
+#'   format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
+#'   jour à minuit, le fichier est donc immédiatement accessible.
 #'
 #' @return un objet `[dido_datafile()]`
 #'
 #' @examples
-#' \dontrun{
-#' datafile <- create_datafile(
-#'   dataset = dataset$id,
+#' datafile <- dido_datafile(
+#'   dataset = "1",
 #'   title = "titre",
 #'   description = "description",
-#'   token_file = file_id
+#'   date_diffusion = "2022-01-01T08:00:00Z"
 #' )
-#' }
+#' @keywords internal
 dido_datafile <- function(dataset,
                           title,
                           description,
