@@ -87,13 +87,11 @@ set_work_env()
 Vous pouvez trouver l'ensemble de la documentation sur [la page du
 projet](https://nbc.github.io/didoscalim/) et en particuler :
 
-* [comment générer un fichier
-augmenté](https://nbc.github.io/didoscalim/articles/csv-augmente.html)
+* [comment générer un fichier augmenté](articles/csv-augmente.html)
 * [comment intégrer des nouveaux jeux/fichiers de
-données](https://nbc.github.io/didoscalim/articles/premier-chargement.html)
-* [comment mettre à jour des jeux/fichiers de
-données](https://nbc.github.io/didoscalim/articles/mettre_a_jour_des_donnees.html)
-(en cours de rédaction)
+données](articles/charger-des-donnees.html)
+* [utiliser les environnements](articles/les-environnements.html)
+
 
 ## Pour les développeurs
 
