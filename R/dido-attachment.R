@@ -26,7 +26,4 @@ print.dido_attachment <- function(x, ...) {
 }
 
 #' @export
-get_dataset_id.dido_attachment <- function(data, ...) data$id
-
-#' @export
-get_datafile_rid.dido_attachment <- function(data, ...) data$rid
+get_dataset_id.dido_attachment <- function(data, ...) attr(data, "id")

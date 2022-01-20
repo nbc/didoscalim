@@ -13,7 +13,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' add_attachment(id = "id", title = "title", description = "description", file_name = "filename")
+#' add_attachment(
+#'   dataset = "id",
+#'   title = "title",
+#'   description = "description",
+#'   file_name = "filename"
+#' )
 #' }
 add_attachment <- function(dataset,
                            title,
@@ -49,7 +54,7 @@ add_attachment <- function(dataset,
     body = jsonlite::toJSON(payload, pretty = TRUE, auto_unbox = TRUE, na = "null")
   )
   if (!quiet) rlang::inform(glue::glue("\t* fichier annexe intégré (rid: {result$rid})"))
-  result$id <- id
+  attr(result, "id") <- id
 
   invisible(dido_attachment(result))
 }
