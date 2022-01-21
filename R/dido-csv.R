@@ -12,9 +12,7 @@ default_columns <- list(
 #'
 #' Génère un tibble avec les lignes d'entêtes du CSV augmenté.
 #'
-#'
-#'
-#' @param tbl le dataframe/tablespace à augmenter
+#' @param data le dataframe à augmenter
 #' @param params une liste nommée décrivant les caractéristiques des colonnes
 #' @param locale la locale à utiliser
 #' @param cog_year le millésime du COG utilisé si besoin. Par défaut prend l'année en cours
@@ -36,13 +34,14 @@ default_columns <- list(
 #' | ANNEE              | n/a                   | Millésimes des données  |
 #' | MOIS               | n/a                   | mois des données        |
 #'
-#' L'année `AAAA` est l'année courante, vous pouvez la modifier en passant le paramètre `cog_year`
+#' L'année `AAAA` est par défaut l'année courante, vous pouvez la modifier en
+#' passant le paramètre `cog_year`
 #'
-#' @seealso En complément, vous pouvez lire : [la description d'un fichier
-#'   csv
+#' @seealso En complément, vous pouvez lire : [la description d'un fichier csv
 #'   augmenté](https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/),
 #'    [la liste des entêtes
 #'   utilisables](https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/210-headers/)
+#'
 #'
 #' @examples
 #' \dontrun{
@@ -50,32 +49,32 @@ default_columns <- list(
 #'   OPERATEUR = list(description = "L'opérateur", type = "texte"),
 #'   CONSO = list(description = "La consommation", unit = "Mwh")
 #' )
-#' dido_csv(my_tibble)
+#' dido_csv(my_tibble, params = params)
 #' }
-dido_csv <- function(tbl, params = list(),
+dido_csv <- function(data, params = list(),
                      locale = readr::default_locale(),
                      cog_year = format(Sys.time(), "%Y")) {
-  desc <- description_row(tbl, params)
-  type <- type_row(tbl, params, locale, cog_year)
+  desc <- description_row(data, params)
+  type <- type_row(data, params, locale, cog_year)
   unit <- unit_row(type, params)
-  name <- name_row(tbl)
+  name <- name_row(data)
 
-  dplyr::bind_rows(desc, type, unit, name, tbl)
+  dplyr::bind_rows(desc, type, unit, name, data)
 }
 
 #' Enregistre le fichier CSV augmenté utilisé par DiDo.
 #'
-#' @param tbl un tibble retourné par `dido_csv()`
+#' @param data un tibble retourné par `dido_csv()`
 #' @param file le nom du fichier
 #'
-#' @export
+#' @export le tibble passé en entrée
 #'
 #' @examples
 #' \dontrun{
 #' write_dido_csv(my_tibble, "fichier.csv")
 #' }
-dido_write_csv <- function(tbl, file) {
-  readr::write_delim(tbl,
+dido_write_csv <- function(data, file) {
+  readr::write_delim(data,
     file,
     delim = ";",
     na = "",
@@ -95,13 +94,14 @@ dido_write_csv <- function(tbl, file) {
 #'
 #' @details Certaines variables peuvent avoir des valeurs secrétisées
 #'   représentées par la valeur `secret`, la détection automatique de readr
-#'   n'est donc pas fiable.
+#'   n'est donc pas fiable. La détection automatique est faite dans la fonction
+#'   `dido_csv()`.
 #'
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' tbl <- dido_read_delim("fichier.csv")
+#' data <- dido_read_delim("fichier.csv")
 #' }
 dido_read_delim <- function(file, delim = NULL, quote = '"',
                             escape_backslash = FALSE, escape_double = TRUE,
@@ -125,8 +125,8 @@ dido_read_delim <- function(file, delim = NULL, quote = '"',
 }
 
 #' @noRd
-description_row <- function(tbl, params = list()) {
-  name_cols <- vapply(names(tbl), function(name) {
+description_row <- function(data, params = list()) {
+  name_cols <- vapply(names(data), function(name) {
     params[[name]][["description"]] %||%
       default_columns[[name]][["description"]] %||%
       name
@@ -135,10 +135,10 @@ description_row <- function(tbl, params = list()) {
 }
 
 #' @noRd
-unit_row <- function(tbl_type, params = list()) {
-  tbl_unit <- vapply(names(tbl_type), function(name) {
+unit_row <- function(data_type, params = list()) {
+  data_unit <- vapply(names(data_type), function(name) {
     params[[name]][["unit"]] %||%
-      if (grepl("(nombre|entier)", tbl_type[[name]])) "s/u" else "n/a"
+      if (grepl("(nombre|entier)", data_type[[name]])) "s/u" else "n/a"
   }, character(1))
 }
 
@@ -159,13 +159,13 @@ guess_col <- function(column, locale) {
 }
 
 #' @noRd
-type_row <- function(tbl, params = list(), locale, cog_year) {
+type_row <- function(data, params = list(), locale, cog_year) {
   cog_year <- toString(cog_year)
 
-  guess_cols <- vapply(names(tbl), function(name) {
+  guess_cols <- vapply(names(data), function(name) {
     type <- params[[name]][["type"]] %||%
       default_columns[[name]][["type"]] %||%
-      guess_col(tbl[[name]], locale) %||%
+      guess_col(data[[name]], locale) %||%
       "texte"
 
     str_replace(type, "\\{COG_YEAR\\}", cog_year)
@@ -173,8 +173,8 @@ type_row <- function(tbl, params = list(), locale, cog_year) {
 }
 
 #' @noRd
-name_row <- function(tbl) {
-  name_cols <- vapply(names(tbl), function(name) {
+name_row <- function(data) {
+  name_cols <- vapply(names(data), function(name) {
     name
   }, character(1))
   return(name_cols)

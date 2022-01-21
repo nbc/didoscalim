@@ -20,8 +20,8 @@ library(didoscalim)
 
 ## Les environnements DiDo
 
-Les données publiées sur la version de production de DiDo sont immédiatement mis
-en ligne et disponibles sur internet.
+Les données publiées sur l'environnement de production de DiDo (`PROD`) sont
+immédiatement mis en ligne et disponibles sur internet.
 
 Pour tester vos jeux de données, il est recommander d'utiliser un environnement
 `ECOLE` en amont de la publication officielle. Cet environnement permet de
