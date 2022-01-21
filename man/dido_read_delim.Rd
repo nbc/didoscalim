@@ -79,10 +79,11 @@ détection du type des colonnes.
 \details{
 Certaines variables peuvent avoir des valeurs secrétisées
 représentées par la valeur \code{secret}, la détection automatique de readr
-n'est donc pas fiable.
+n'est donc pas fiable et est désactivé à ce niveau. La détection
+automatique est faite dans la fonction \code{dido_csv()}.
 }
 \examples{
 \dontrun{
-tbl <- dido_read_delim("fichier.csv")
+data <- dido_read_delim("fichier.csv")
 }
 }

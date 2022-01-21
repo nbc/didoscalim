@@ -72,13 +72,6 @@ new_dido_datafile <- function(x) {
   structure(x, class = c("dido_datafile", "list"))
 }
 
-#' @noRd
-#' @export
-extract_metadata.dido_datafile <- function(data) {
-  data$millesimes_info <- NULL
-  data
-}
-
 is.dido_datafile <- function(x) inherits(x, "dido_datafile")
 
 #' @export

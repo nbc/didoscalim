@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' dataset <- get_dataset("id") %>% extract_metadata()
+#' dataset <- get_dataset("id") %>% clean_metadata()
 #' dataset$temporal_coverage$end <- "2022-12-31"
 #' update_dataset(dataset)
 #' }

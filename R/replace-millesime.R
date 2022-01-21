@@ -2,7 +2,7 @@
 #'
 #' @inheritParams add_millesime
 #'
-#' @return un job
+#' @return un objet `dido_job()`
 #' @export
 #'
 #' @examples

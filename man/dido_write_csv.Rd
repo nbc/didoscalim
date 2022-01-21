@@ -4,12 +4,15 @@
 \alias{dido_write_csv}
 \title{Enregistre le fichier CSV augmenté utilisé par DiDo.}
 \usage{
-dido_write_csv(tbl, file)
+dido_write_csv(data, file)
 }
 \arguments{
-\item{tbl}{un tibble retourné par \code{dido_csv()}}
+\item{data}{un tibble retourné par \code{dido_csv()}}
 
 \item{file}{le nom du fichier}
+}
+\value{
+le tibble passé en entrée
 }
 \description{
 Enregistre le fichier CSV augmenté utilisé par DiDo.

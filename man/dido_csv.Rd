@@ -2,17 +2,17 @@
 % Please edit documentation in R/dido-csv.R
 \name{dido_csv}
 \alias{dido_csv}
-\title{Génère les lignes d'entête du CSV augmenté utilisé par DiDo}
+\title{Génère les lignes d'entête du CSV augmenté}
 \usage{
 dido_csv(
-  tbl,
+  data,
   params = list(),
   locale = readr::default_locale(),
   cog_year = format(Sys.time(), "\%Y")
 )
 }
 \arguments{
-\item{tbl}{le dataframe/tablespace à augmenter}
+\item{data}{le dataframe à augmenter}
 
 \item{params}{une liste nommée décrivant les caractéristiques des colonnes}
 
@@ -21,10 +21,11 @@ dido_csv(
 \item{cog_year}{le millésime du COG utilisé si besoin. Par défaut prend l'année en cours}
 }
 \value{
-un tibble avec les 4 lignes de description du csv augmenté
+un dataframe avec les 4 lignes de description du csv augmenté
 }
 \description{
-Génère un tibble avec les lignes d'entêtes du CSV augmenté.
+Génère un dataframe avec les lignes d'entêtes du CSV augmenté comme premières
+lignes.
 }
 \details{
 Certains noms de variable sont connus par didoscalim qui génère
@@ -41,7 +42,8 @@ variables et des types/descriptions associés est :\tabular{lll}{
 }
 
 
-L'année \code{AAAA} est l'année courante, vous pouvez la modifier en passant le paramètre \code{cog_year}
+L'année \code{AAAA} est par défaut l'année courante, vous pouvez la modifier en
+passant le paramètre \code{cog_year}
 }
 \examples{
 \dontrun{
@@ -49,7 +51,7 @@ params <- list(
   OPERATEUR = list(description = "L'opérateur", type = "texte"),
   CONSO = list(description = "La consommation", unit = "Mwh")
 )
-dido_csv(my_tibble)
+dido_csv(my_tibble, params = params)
 }
 }
 \seealso{

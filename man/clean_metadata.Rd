@@ -10,10 +10,12 @@ clean_metadata(data)
 \item{data}{objet dido_dataset, dido_datafile}
 }
 \value{
-un objet nettoyé
+un objet du même type avec uniquement ses métadonnées propres.
 }
 \description{
-Prépare un objet pour l'envoyer à DiDo
+Les objets \code{dido_dataset()} et \code{dido_datafile()} portent des informations sur
+les objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+permet de les supprimer pour ne garder que les métadonnées propres à l'objet.
 }
 \examples{
 \dontrun{

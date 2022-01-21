@@ -8,16 +8,17 @@ default_columns <- list(
   MOIS = list(type = "mois", description = "Mois des données")
 )
 
-#' Génère les lignes d'entête du CSV augmenté utilisé par DiDo
+#' Génère les lignes d'entête du CSV augmenté
 #'
-#' Génère un tibble avec les lignes d'entêtes du CSV augmenté.
+#' Génère un dataframe avec les lignes d'entêtes du CSV augmenté comme premières
+#' lignes.
 #'
 #' @param data le dataframe à augmenter
 #' @param params une liste nommée décrivant les caractéristiques des colonnes
 #' @param locale la locale à utiliser
 #' @param cog_year le millésime du COG utilisé si besoin. Par défaut prend l'année en cours
 #'
-#' @return un tibble avec les 4 lignes de description du csv augmenté
+#' @return un dataframe avec les 4 lignes de description du csv augmenté
 #' @export
 #'
 #' @details Certains noms de variable sont connus par didoscalim qui génère
@@ -67,7 +68,9 @@ dido_csv <- function(data, params = list(),
 #' @param data un tibble retourné par `dido_csv()`
 #' @param file le nom du fichier
 #'
-#' @export le tibble passé en entrée
+#' @return le tibble passé en entrée
+#'
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -94,8 +97,8 @@ dido_write_csv <- function(data, file) {
 #'
 #' @details Certaines variables peuvent avoir des valeurs secrétisées
 #'   représentées par la valeur `secret`, la détection automatique de readr
-#'   n'est donc pas fiable. La détection automatique est faite dans la fonction
-#'   `dido_csv()`.
+#'   n'est donc pas fiable et est désactivé à ce niveau. La détection
+#'   automatique est faite dans la fonction `dido_csv()`.
 #'
 #' @export
 #'

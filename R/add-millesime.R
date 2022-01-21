@@ -1,11 +1,13 @@
 #' Ajoute un millésime à un datafile
 #'
-#' @param datafile un objet dido_datafile
-#' @param file_name le fichier à verser
-#' @param date_diffusion la date/heure de diffusion au format ISO 8601, si non précisée, le défaut est minuit du jour courant
+#' @param datafile un objet dido_datafile obtenu par `get_datafile()`
+#' @param file_name le fichier à charger
+#' @param date_diffusion la date/heure de diffusion au format ISO 8601, si non
+#'   précisée, le défaut est minuit du jour courant
 #' @param millesime l'identifiant du millésime à publier, si non précisé AAAA-MM avec l'année et le mois courant
 #' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
-#' @return un job
+#'
+#' @return un objet `dido_job()`
 #' @export
 #'
 #' @examples

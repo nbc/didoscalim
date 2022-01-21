@@ -92,14 +92,6 @@ new_dido_dataset <- function(x) {
   structure(x, class = c("dido_dataset", "list"))
 }
 
-#' @noRd
-#' @export
-extract_metadata.dido_dataset <- function(data) {
-  data$attachments <- NULL
-  data$datafiles <- NULL
-  data
-}
-
 #' @export
 get_dataset_id.dido_dataset <- function(data, ...) data$id
 

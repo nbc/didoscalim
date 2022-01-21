@@ -1,21 +1,12 @@
-#' Retourne un objet avec uniquement ses métadonnées propre
-#'
-#' @param data un objet dido_dataset, dido_datafile
-#'
-#' @return un objet réduit à ses propres métadonnées
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' extract_id(dataset)
-#' }
-extract_metadata <- function(data) UseMethod("extract_metadata")
-
 #' Prépare un objet pour l'envoyer à DiDo
+#'
+#' Les objets `dido_dataset()` et `dido_datafile()` portent des informations sur
+#' les objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+#' permet de les supprimer pour ne garder que les métadonnées propres à l'objet.
 #'
 #' @param data objet dido_dataset, dido_datafile
 #'
-#' @return un objet nettoyé
+#' @return un objet du même type avec uniquement ses métadonnées propres.
 #' @export
 #'
 #' @examples
@@ -43,9 +34,7 @@ get_dataset_id <- function(data) UseMethod("get_dataset_id")
 get_dataset_id.default <- function(data) NULL
 
 #' @export
-get_dataset_id.character <- function(data) {
-  return(data)
-}
+get_dataset_id.character <- function(data) data
 
 #' Retourne le dafile id de l'objet
 #'
@@ -65,6 +54,4 @@ get_datafile_rid <- function(data) UseMethod("get_datafile_rid")
 get_datafile_rid.default <- function(data) NULL
 
 #' @export
-get_datafile_rid.character <- function(data) {
-  return(data)
-}
+get_datafile_rid.character <- function(data) data

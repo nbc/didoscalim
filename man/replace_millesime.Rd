@@ -13,18 +13,19 @@ replace_millesime(
 )
 }
 \arguments{
-\item{datafile}{un objet dido_datafile}
+\item{datafile}{un objet dido_datafile obtenu par \code{get_datafile()}}
 
-\item{file_name}{le fichier à verser}
+\item{file_name}{le fichier à charger}
 
 \item{millesime}{l'identifiant du millésime à publier, si non précisé AAAA-MM avec l'année et le mois courant}
 
-\item{date_diffusion}{la date/heure de diffusion au format ISO 8601, si non précisée, le défaut est minuit du jour courant}
+\item{date_diffusion}{la date/heure de diffusion au format ISO 8601, si non
+précisée, le défaut est minuit du jour courant}
 
 \item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
 }
 \value{
-un job
+un objet \code{dido_job()}
 }
 \description{
 Remplacer un millésime

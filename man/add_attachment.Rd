@@ -28,7 +28,7 @@ add_attachment(
 \item{quiet}{quand TRUE supprime les messages d'information, \code{FALSE} par défaut}
 }
 \value{
-un objet décrivant la pièce annexe
+un objet \code{dido_attachment()}
 }
 \description{
 Ajoute un fichier annexe à un dataset
