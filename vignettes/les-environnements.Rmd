@@ -1,8 +1,8 @@
 ---
-title: "Les environnements"
+title: "Utiliser les environnements"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Les environnements}
+  %\VignetteIndexEntry{Utiliser les environnements}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -20,9 +20,16 @@ library(didoscalim)
 
 ## Les environnements DiDo
 
-didoscalim propose de configurer plusieurs environnements pour tester 
+Les données publiées sur la version de production de DiDo sont immédiatement mis
+en ligne et disponibles sur internet.
 
-Les standards sont `ECOLE` et `PROD`.
+Pour tester vos jeux de données, il est recommander d'utiliser un environnement
+`ECOLE` en amont de la publication officielle. Cet environnement permet de
+valider :
+
+* le chargement proprement dit
+* les métadonnées associées
+* la qualité statistique
 
 ## Configuration
 
@@ -49,13 +56,13 @@ implicitement.
 
 Pour sélectionner un environnement, utilisez la commande `set_work_env()` :
 
-```{r, eval = FALSE}
+```{r}
 set_work_env("PROD")
 ```
 
 Pour revenir à l'environnement par défaut :
 
-```{r, eval = FALSE}
+```{r}
 set_work_env()
 ```
 

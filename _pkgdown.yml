@@ -16,9 +16,13 @@ reference:
   contents:
   - ends_with("datafile?")
 
-- title: "Les fonctions aux millésimes"
+- title: "Les fonctions liées aux millésimes"
   contents:
   - ends_with("millesime?")
+
+- title: "Les fonctions liées aux fichiers annexes"
+  contents:
+  - ends_with("attachment?")
 
 - title: "Les fonctions utilitaires"
   contents:
@@ -27,7 +31,7 @@ reference:
 
 - title: "Gérer votre environnement"
   contents:
-  - ends_with("env.*")
+  - ends_with("env?")
 
 - title: "Les fonctions liées aux jobs"
   contents:

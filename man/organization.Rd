@@ -17,5 +17,5 @@ Si l'utilisateur appartient à plusieurs organisations
 }
 \examples{
 organization_id <- organization()
-organization_id <- organization( name = "BSI" )
+organization_id <- organization(name = "BSI")
 }

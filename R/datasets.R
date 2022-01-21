@@ -10,7 +10,13 @@ get_datasets <- function() {
   dido_api(method = "GET", path = url, as_tibble = TRUE)
 }
 
-#' @noRd
+#' Supprime un dataset
+#'
+#' @param id un identifiant de dataset
+#'
+#' @return TRUE
+#' @export
+#'
 #' @examples
 #' \dontrun{
 #' get_datasets() %>%
@@ -19,6 +25,7 @@ get_datasets <- function() {
 #'   pmap(~ delete_dataset(..1))
 #' }
 #' @export
+#' @keywords internal
 delete_dataset <- function(id) {
   if (missing(id) || is.null(id)) abort_bad_argument("id")
 
