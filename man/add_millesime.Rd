@@ -2,7 +2,7 @@
 % Please edit documentation in R/add-millesime.R
 \name{add_millesime}
 \alias{add_millesime}
-\title{Ajoute un millésime}
+\title{Ajoute un millésime à un datafile}
 \usage{
 add_millesime(
   datafile,
@@ -27,7 +27,7 @@ add_millesime(
 un job
 }
 \description{
-Ajoute un millésime
+Ajoute un millésime à un datafile
 }
 \examples{
 \dontrun{

@@ -12,7 +12,7 @@ get_datasets <- function() {
 
 #' Supprime un dataset
 #'
-#' @param id un identifiant de dataset
+#' @param dataset un identifiant de dataset
 #'
 #' @return TRUE
 #' @export
@@ -26,10 +26,11 @@ get_datasets <- function() {
 #' }
 #' @export
 #' @keywords internal
-delete_dataset <- function(id) {
-  if (missing(id) || is.null(id)) abort_bad_argument("id")
+delete_dataset <- function(dataset) {
+  if (missing(dataset)) abort_bad_argument("id")
+  if (is.null(get_dataset_id(dataset))) abort_not_datafile()
 
-  url <- glue::glue("/datasets/{id}")
+  url <- glue::glue("/datasets/{get_dataset_id(dataset)}")
   dido_api(method = "DELETE", path = url)
   invisible(TRUE)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/add-datafile.R
 \name{add_datafile}
 \alias{add_datafile}
-\title{Créé un datafile}
+\title{Ajoute un datafile à un dataset}
 \usage{
 add_datafile(
   dataset,
@@ -51,7 +51,7 @@ jour à minuit, le fichier est donc immédiatement accessible.}
 un objet \code{\link[=dido_job]{dido_job()}}
 }
 \description{
-Créé un datafile
+Ajoute un datafile à un dataset
 }
 \examples{
 \dontrun{

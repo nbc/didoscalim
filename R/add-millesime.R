@@ -1,4 +1,4 @@
-#' Ajoute un millésime
+#' Ajoute un millésime à un datafile
 #'
 #' @param datafile un objet dido_datafile
 #' @param file_name le fichier à verser

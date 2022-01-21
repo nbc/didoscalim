@@ -26,6 +26,7 @@ reference:
 
 - title: "Les fonctions utilitaires"
   contents:
+  - clean_metadata
   - organization
   - get_alerts
 

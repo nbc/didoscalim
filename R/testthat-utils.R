@@ -4,6 +4,7 @@ generate_random_string <- function() {
 }
 
 skip_unless_dev_env <- function() {
+  set_work_env("DEV")
   if (get_work_env() == "DEV") {
     return(invisible(TRUE))
   }

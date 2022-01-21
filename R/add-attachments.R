@@ -8,7 +8,7 @@
 #' @param published la date de publication, si non précisée, prendra la date du jour
 #' @param quiet quand TRUE supprime les messages d'information, `FALSE` par défaut
 #'
-#' @return un objet décrivant la pièce annexe
+#' @return un objet `dido_attachment()`
 #' @export
 #'
 #' @examples

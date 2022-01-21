@@ -1,4 +1,4 @@
-#' Créé un datafile
+#' Ajoute un datafile à un dataset
 #'
 #' @inheritParams dido_datafile
 #' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
