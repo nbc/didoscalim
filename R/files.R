@@ -37,8 +37,6 @@ check_csv <- function(token_file) {
   url <- glue::glue("/files/{token_file}/checkcsv")
   result <- dido_api(method = "GET", path = url)
 
-  msg <- jsonlite::toJSON(result, pretty = TRUE, auto_unbox = TRUE)
-
   if (result$result == "invalid") {
     message <- format_check_csv_errors(result$message, result$errors)
     rlang::abort("invalid_file", message = message)

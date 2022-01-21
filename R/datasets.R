@@ -18,6 +18,7 @@ get_datasets <- function() {
 #'   select(id) %>%
 #'   pmap(~ delete_dataset(..1))
 #' }
+#' @export
 delete_dataset <- function(id) {
   if (missing(id) || is.null(id)) abort_bad_argument("id")
 

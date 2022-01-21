@@ -95,7 +95,6 @@ get_datafile_rid.dido_datafile <- function(data, ...) data$rid
 #' @noRd
 #' @export
 clean_metadata.dido_datafile <- function(data) {
-  df <- unclass(data)
   if (!is.null(data$temporal_coverage$start)) data$temporal_coverage_start <- data$temporal_coverage$start
   if (!is.null(data$temporal_coverage$end)) data$temporal_coverage_end <- data$temporal_coverage$end
 
@@ -104,8 +103,6 @@ clean_metadata.dido_datafile <- function(data) {
   data$created_at <- NULL
   data$last_modified <- NULL
   data$millesimes <- NULL
-  # FIXME
-  # df$published <- NULL
   data$url <- NULL
 
   new_dido_datafile(data)
