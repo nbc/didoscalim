@@ -66,7 +66,6 @@ add_datafile(
   temporal_coverage_start = "2020-01-01",
   temporal_coverage_end = "2020-12-31",
   millesime = "2021-10"
-
 )
 ```
 ### ajouter un fichier annexe
