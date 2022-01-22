@@ -1,7 +1,7 @@
 test_that("create datafiles works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds create datafiles works",
     description = "test",
     topic = "Transports",
@@ -27,7 +27,7 @@ test_that("create datafiles works", {
 test_that("create datafiles warns when missing param", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds create datafiles warns when missing param",
     description = "test",
     topic = "Transports",

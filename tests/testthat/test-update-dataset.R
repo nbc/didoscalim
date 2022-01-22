@@ -1,7 +1,7 @@
 test_that("check update_dataset works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds check update_dataset works",
     description = "test",
     topic = "Transports",

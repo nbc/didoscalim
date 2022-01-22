@@ -30,3 +30,10 @@ get_datafile("rid")
 get_datafile(title = "title")
 }
 }
+\seealso{
+Other datafile: 
+\code{\link{add_datafile}()},
+\code{\link{get_datafiles}()},
+\code{\link{update_datafile}()}
+}
+\concept{datafile}

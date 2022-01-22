@@ -1,7 +1,7 @@
 test_that("wait_for_jobs works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds wait_for_jobs works",
     description = "test",
     topic = "Transports",

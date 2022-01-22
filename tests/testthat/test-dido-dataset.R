@@ -11,9 +11,9 @@ test_that("multiplication works", {
   expect_equal(dataset$license, "fr-lo")
 })
 
-test_that("complete create_dataset works", {
+test_that("complete add_dataset works", {
   dataset <- dido_dataset(
-    title = "didoscalim ds complete create_dataset works",
+    title = "didoscalim ds complete add_dataset works",
     description = "test",
     topic = "Transports",
     tags = list("agriculture"),
@@ -27,7 +27,7 @@ test_that("complete create_dataset works", {
     caution = "Some text"
   )
 
-  expect_equal(dataset$title, "didoscalim ds complete create_dataset works")
+  expect_equal(dataset$title, "didoscalim ds complete add_dataset works")
   expect_equal(dataset$description, "test")
   expect_equal(dataset$topic, "Transports")
   expect_equal(dataset$tags, list("agriculture"))

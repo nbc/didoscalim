@@ -19,3 +19,10 @@ la liste des datafiles de ce dataset.
 \examples{
 get_datafiles()
 }
+\seealso{
+Other datafile: 
+\code{\link{add_datafile}()},
+\code{\link{get_datafile}()},
+\code{\link{update_datafile}()}
+}
+\concept{datafile}

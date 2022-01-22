@@ -3,75 +3,8 @@
 \name{dido_dataset}
 \alias{dido_dataset}
 \title{L'objet dido_dataset}
-\usage{
-dido_dataset(
-  title,
-  description,
-  topic,
-  frequency,
-  tags = NULL,
-  frequency_date = NULL,
-  granularity = NULL,
-  zones = NULL,
-  organization = NULL,
-  license = "fr-lo",
-  temporal_coverage_start = NULL,
-  temporal_coverage_end = NULL,
-  caution = NULL
-)
-}
-\arguments{
-\item{title}{le titre du dataset}
-
-\item{description}{la description du dataset}
-
-\item{topic}{le thème du dataset. Doit être dans "Environnement", "Énergie",
-"Transports", "Logement", "Changement climatique"}
-
-\item{frequency}{la fréquence de publication des données}
-
-\item{tags}{la liste des mots clefs. Si le fichier est déjà publié sur le
-site SDES, on reprend les mêmes. L'ensemble des mots clefs est disponible
-sur
-https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&withColumnDescription=false.}
-
-\item{frequency_date}{la date de prochaine publication.}
-
-\item{granularity}{la granularité du jeu de données. Les plus utilisés sont
-"fr:region", "fr:departement", "fr:epci", "fr:commune", "fr:iris" et pour
-les données à l'adresse "poi"}
-
-\item{zones}{la zone couverte par le jeu de données. country:fr pour France
-entière, country-subset:fr:metro pour la métropole et
-country-subset:fr:drom pour les DROM}
-
-\item{organization}{l'id de l'organisation sous laquelle vous souhaitez
-publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
-n'avez pas à remplir ce champ, didoscalim la prendra par défaut.}
-
-\item{license}{la licence des données. "fr-lo" par défaut}
-
-\item{temporal_coverage_start}{la date de début de couverture du jeux de
-données}
-
-\item{temporal_coverage_end}{la date de fin de couverture du jeux de données}
-
-\item{caution}{Les précautions à prendre avec ce jeu de données. Par exemple
-: "certaines données peuvent être secrétisées"}
-}
-\value{
-un objet dido_dataset
-}
 \description{
-L'objet dido_dataset est retourné par \code{get_dataset()} et \code{create_dataset()}
+L'objet dido_dataset est retourné par \code{get_dataset()} et \code{add_dataset()}
 et utilisé en paramètre par \code{update_dataset()} \code{add_datafile()} et
 \code{create_attachment()}
-}
-\examples{
-dataset <- dido_dataset(
-  title = "test",
-  description = "test",
-  topic = "Transports",
-  frequency = "unknown"
-)
 }

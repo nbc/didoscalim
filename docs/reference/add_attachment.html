@@ -144,7 +144,7 @@
   <span class='va'>description</span>,
   <span class='va'>file_name</span>,
   published <span class='op'>=</span> <span class='cn'>NULL</span>,
-  quiet <span class='op'>=</span> <span class='cn'>FALSE</span>
+  quiet <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -169,17 +169,19 @@
     </tr>
     <tr>
       <th>published</th>
-      <td><p>la date de publication, si non précisée, prendra la date du jour</p></td>
+      <td><p>la date de publication, si non précisée, prendra la date du
+jour</p></td>
     </tr>
     <tr>
       <th>quiet</th>
-      <td><p>quand TRUE supprime les messages d'information, <code>FALSE</code> par défaut</p></td>
+      <td><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, <code>NULL</code> par défaut</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>un objet décrivant la pièce annexe</p>
+    <p>un objet <code><a href='dido_attachment.html'>dido_attachment()</a></code></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>

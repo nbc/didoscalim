@@ -4,6 +4,9 @@
 #'   l'utilisateur
 #'
 #' @return un objet ``dido_job()``
+#'
+#' @family datafile
+#'
 #' @export
 #'
 #' @examples

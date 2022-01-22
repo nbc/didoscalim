@@ -64,3 +64,10 @@ datafile <- add_datafile(
 )
 }
 }
+\seealso{
+Other datafile: 
+\code{\link{get_datafiles}()},
+\code{\link{get_datafile}()},
+\code{\link{update_datafile}()}
+}
+\concept{datafile}

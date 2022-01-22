@@ -3,7 +3,7 @@ test_that("get datafile works", {
 
   title <- glue::glue("didoscalim rest datafiles {generate_random_string()}")
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim test datafiles",
     description = "test",
     topic = "Transports",

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Créé un datafile — add_datafile • didoscalim</title>
+<title>Ajoute un datafile à un dataset — add_datafile • didoscalim</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Créé un datafile — add_datafile" />
-<meta property="og:description" content="Créé un datafile" />
+<meta property="og:title" content="Ajoute un datafile à un dataset — add_datafile" />
+<meta property="og:description" content="Ajoute un datafile à un dataset" />
 
 
 
@@ -129,13 +129,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Créé un datafile</h1>
+    <h1>Ajoute un datafile à un dataset</h1>
     <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/add-datafile.R'><code>R/add-datafile.R</code></a></small>
     <div class="hidden name"><code>add_datafile.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Créé un datafile</p>
+    <p>Ajoute un datafile à un dataset</p>
     </div>
 
     <pre class="usage"><span class='fu'>add_datafile</span><span class='op'>(</span>
@@ -149,7 +149,7 @@
   temporal_coverage_end <span class='op'>=</span> <span class='cn'>NULL</span>,
   legal_notice <span class='op'>=</span> <span class='st'>"SDES"</span>,
   date_diffusion <span class='op'>=</span> <span class='cn'>NULL</span>,
-  quiet <span class='op'>=</span> <span class='cn'>FALSE</span>
+  quiet <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -203,13 +203,20 @@ jour à minuit, le fichier est donc immédiatement accessible.</p></td>
     </tr>
     <tr>
       <th>quiet</th>
-      <td><p>Si TRUE n'affiche pas les messages. Défaut à <code>FALSE</code></p></td>
+      <td><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, <code>NULL</code> par défaut</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>un objet <code><a href='dido_job.html'>dido_job()</a></code></p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other datafile: 
+<code><a href='get_datafiles.html'>get_datafiles</a>()</code>,
+<code><a href='get_datafile.html'>get_datafile</a>()</code>,
+<code><a href='update_datafile.html'>update_datafile</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>

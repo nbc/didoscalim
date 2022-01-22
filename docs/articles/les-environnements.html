@@ -103,15 +103,13 @@
 <div id="les-environnements-dido" class="section level2">
 <h2 class="hasAnchor">
 <a href="#les-environnements-dido" class="anchor"></a>Les environnements DiDo</h2>
-<p>Les données publiées sur la version de production de DiDo sont immédiatement mis en ligne et disponibles sur internet.</p>
+<p>Les données publiées sur l’environnement de production de DiDo (<code>PROD</code>) sont immédiatement mis en ligne et disponibles sur internet.</p>
 <p>Pour tester vos jeux de données, il est recommander d’utiliser un environnement <code>ECOLE</code> en amont de la publication officielle. Cet environnement permet de valider :</p>
 <ul>
 <li>le chargement proprement dit</li>
 <li>les métadonnées associées</li>
-<li>la qualité statistiques</li>
+<li>la qualité statistique</li>
 </ul>
-<p>didoscalim propose de configurer plusieurs environnements pour tester</p>
-<p>Les standards sont <code>ECOLE</code> et <code>PROD</code>.</p>
 </div>
 <div id="configuration" class="section level2">
 <h2 class="hasAnchor">
@@ -129,10 +127,12 @@ DIDOSCALIM_API_KEY_&lt;NOM_ENVIRONNEMENT&gt;=ma_clef_api_ecole</code></pre>
 <p>Si vous ne sélectionnez pas d’environnement, DiDo prendra par défaut le premier configuré dans l’ordre : <code>DEV</code>, <code>PREPROD</code>, <code>ECOLE</code>. Il ne choisira jamais <code>PROD</code> implicitement.</p>
 <p>Pour sélectionner un environnement, utilisez la commande <code><a href="../reference/set_work_env.html">set_work_env()</a></code> :</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="st">"PROD"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="st">"PROD"</span><span class="op">)</span>
+<span class="co">#&gt; Environnement DiDo actif : PROD</span></code></pre></div>
 <p>Pour revenir à l’environnement par défaut :</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; Environnement DiDo actif : DEV</span></code></pre></div>
 <p>Vous pouvez à tout moment voir dans quel environnement vous êtes avec la commande <code><a href="../reference/get_work_env.html">get_work_env()</a></code></p>
 <p>Vous pouvez lister les environnements configués avec la commande <code><a href="../reference/list_envs.html">list_envs()</a></code> et vérifier qu’ils fonctionnent avec la commande <code><a href="../reference/check_envs.html">check_envs()</a></code></p>
 </div>

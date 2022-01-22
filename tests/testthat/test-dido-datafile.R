@@ -1,5 +1,5 @@
 test_that("dido_datafile works", {
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds dido_datafile work",
     description = "test",
     topic = "Transports",
@@ -18,7 +18,7 @@ test_that("dido_datafile works", {
 })
 
 test_that("commplete dido_datafile works", {
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds complete create datafile work",
     description = "test",
     topic = "Transports",

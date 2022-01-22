@@ -44,7 +44,7 @@ environnements](les-environnements.html).
 Créer un dataset avec les caractéristiques suivantes :
 
 ```{r}
-dataset <- create_dataset(
+dataset <- add_dataset(
   title = "Données de consommation fictive",
   description = "test",
   topic = "Transports",

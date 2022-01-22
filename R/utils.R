@@ -9,7 +9,7 @@ abort_bad_argument <- function(arg, class = NULL) {
 abort_not_dataset <- function() {
   message <- c(
     glue::glue("`dataset` n'est pas du type attendu"),
-    i = glue::glue("`dataset` doit être soit un id de dataset soit la valeur retournée par par une des fonctions : `create_dataset`, `get_dataset`, `get_datafile`, `add_datafile`")
+    i = glue::glue("`dataset` doit être soit un id de dataset soit la valeur retournée par par une des fonctions : `add_dataset`, `get_dataset`, `get_datafile`, `add_datafile`")
   )
 
   rlang::abort("error_bad_argument_type", message = message)

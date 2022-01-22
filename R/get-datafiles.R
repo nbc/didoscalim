@@ -6,6 +6,9 @@
 #' @param dataset optionnel, un objet dataset
 #'
 #' @return un tibble avec les datafiles
+#'
+#' @family datafile
+#'
 #' @export
 #'
 #' @examples

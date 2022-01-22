@@ -23,3 +23,10 @@ df$temporal_coverage$end <- "2023-12-31"
 update_datafile(df)
 }
 }
+\seealso{
+Other datafile: 
+\code{\link{add_datafile}()},
+\code{\link{get_datafiles}()},
+\code{\link{get_datafile}()}
+}
+\concept{datafile}

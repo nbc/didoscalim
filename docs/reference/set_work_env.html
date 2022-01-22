@@ -130,7 +130,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Fixe l'environnement DiDo à utiliser</h1>
-    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/config.R'><code>R/config.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/environment.R'><code>R/environment.R</code></a></small>
     <div class="hidden name"><code>set_work_env.Rd</code></div>
     </div>
 
@@ -138,7 +138,7 @@
     <p>Fixe l'environnement DiDo à utiliser</p>
     </div>
 
-    <pre class="usage"><span class='fu'>set_work_env</span><span class='op'>(</span>env_name <span class='op'>=</span> <span class='cn'>NULL</span>, quiet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>set_work_env</span><span class='op'>(</span>env_name <span class='op'>=</span> <span class='cn'>NULL</span>, quiet <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -152,7 +152,8 @@ DEV, PREPROD et ECOLE mais <strong>jamais</strong> PROD.</p></td>
     </tr>
     <tr>
       <th>quiet</th>
-      <td><p>Si <code>FALSE</code> quand TRUE supprime les messages d'information, (<code>FALSE</code> par défaut)</p></td>
+      <td><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, <code>FALSE</code> par défaut</p></td>
     </tr>
     </table>
 

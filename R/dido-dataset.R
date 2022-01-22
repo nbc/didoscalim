@@ -1,9 +1,26 @@
 #' L'objet dido_dataset
 #'
 #' @description
-#' L'objet dido_dataset est retourné par `get_dataset()` et `create_dataset()`
+#' L'objet dido_dataset est retourné par `get_dataset()` et `add_dataset()`
 #' et utilisé en paramètre par `update_dataset()` `add_datafile()` et
 #' `create_attachment()`
+#'
+#' Il a les champs suivants :
+#' * `id` l'identifiant du dataset
+#' * `title`
+#' * `description`
+#' * `organization`
+#' * `topic` le thème
+#' * `license`
+#' * `frequency` la fréquence
+#' * `frequency_date` prochaine mise à jour
+#' * `tags` une liste de mots clefs
+#' * `spatial` une liste avec des champs, la `granularity` et `zones` une liste de zones
+#' * `temporal_coverage` un liste avec deux champs `start` et `end`
+#'
+#' Il peut avoir deux champs supplémentaires :
+#' * `attachments`
+#' * `datafiles`
 #'
 #' @name dido_dataset
 NULL
@@ -47,6 +64,7 @@ NULL
 #'   topic = "Transports",
 #'   frequency = "unknown"
 #' )
+#' @noRd
 dido_dataset <- function(title,
                          description,
                          topic,

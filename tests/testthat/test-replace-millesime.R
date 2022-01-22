@@ -1,7 +1,7 @@
 test_that("replace millesime works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds replace millesime works",
     description = "test",
     topic = "Transports",

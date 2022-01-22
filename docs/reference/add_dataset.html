@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lit un fichier CSV — dido_read_delim • didoscalim</title>
+<title>Créé un dataset — add_dataset • didoscalim</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Lit un fichier CSV — dido_read_delim" />
-<meta property="og:description" content="Cette fonction utilise directement readr::read_delim en enlevant la
-détection du type des colonnes." />
+<meta property="og:title" content="Créé un dataset — add_dataset" />
+<meta property="og:description" content="Créé un dataset" />
 
 
 
@@ -130,118 +129,56 @@ détection du type des colonnes." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Lit un fichier CSV</h1>
-    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/dido-csv.R'><code>R/dido-csv.R</code></a></small>
-    <div class="hidden name"><code>dido_read_delim.Rd</code></div>
+    <h1>Créé un dataset</h1>
+    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/create-dataset.R'><code>R/create-dataset.R</code></a></small>
+    <div class="hidden name"><code>add_dataset.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Cette fonction utilise directement <code><a href='https://readr.tidyverse.org/reference/read_delim.html'>readr::read_delim</a></code> en enlevant la
-détection du type des colonnes.</p>
+    <p>Créé un dataset</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dido_read_delim</span><span class='op'>(</span>
-  <span class='va'>file</span>,
-  delim <span class='op'>=</span> <span class='cn'>NULL</span>,
-  quote <span class='op'>=</span> <span class='st'>"\""</span>,
-  escape_backslash <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  escape_double <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  locale <span class='op'>=</span> <span class='fu'>readr</span><span class='fu'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/locale.html'>default_locale</a></span><span class='op'>(</span><span class='op'>)</span>,
-  comment <span class='op'>=</span> <span class='st'>""</span>,
-  trim_ws <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  skip <span class='op'>=</span> <span class='fl'>0</span>,
-  n_max <span class='op'>=</span> <span class='cn'>Inf</span>,
-  skip_empty_rows <span class='op'>=</span> <span class='cn'>TRUE</span>
+    <pre class="usage"><span class='fu'>add_dataset</span><span class='op'>(</span>
+  <span class='va'>title</span>,
+  <span class='va'>description</span>,
+  <span class='va'>topic</span>,
+  <span class='va'>frequency</span>,
+  tags <span class='op'>=</span> <span class='cn'>NULL</span>,
+  frequency_date <span class='op'>=</span> <span class='cn'>NULL</span>,
+  granularity <span class='op'>=</span> <span class='cn'>NULL</span>,
+  zones <span class='op'>=</span> <span class='cn'>NULL</span>,
+  organization <span class='op'>=</span> <span class='cn'>NULL</span>,
+  license <span class='op'>=</span> <span class='st'>"fr-lo"</span>,
+  temporal_coverage_start <span class='op'>=</span> <span class='cn'>NULL</span>,
+  temporal_coverage_end <span class='op'>=</span> <span class='cn'>NULL</span>,
+  caution <span class='op'>=</span> <span class='cn'>NULL</span>,
+  quiet <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>file</th>
-      <td><p>Either a path to a file, a connection, or literal data
-(either a single string or a raw vector).</p>
-<p>Files ending in <code>.gz</code>, <code>.bz2</code>, <code>.xz</code>, or <code>.zip</code> will
-be automatically uncompressed. Files starting with <code>http://</code>,
-<code>https://</code>, <code>ftp://</code>, or <code>ftps://</code> will be automatically
-downloaded. Remote gz files can also be automatically downloaded and
-decompressed.</p>
-<p>Literal data is most useful for examples and tests. To be recognised as
-literal data, the input must be either wrapped with <code><a href='https://rdrr.io/r/base/AsIs.html'>I()</a></code>, be a string
-containing at least one new line, or be a vector containing at least one
-string with a new line.</p>
-<p>Using a value of <code><a href='https://readr.tidyverse.org/reference/clipboard.html'>clipboard()</a></code> will read from the system clipboard.</p></td>
-    </tr>
-    <tr>
-      <th>delim</th>
-      <td><p>Single character used to separate fields within a record.</p></td>
-    </tr>
-    <tr>
-      <th>quote</th>
-      <td><p>Single character used to quote strings.</p></td>
-    </tr>
-    <tr>
-      <th>escape_backslash</th>
-      <td><p>Does the file use backslashes to escape special
-characters? This is more general than <code>escape_double</code> as backslashes
-can be used to escape the delimiter character, the quote character, or
-to add special characters like <code>\\n</code>.</p></td>
-    </tr>
-    <tr>
-      <th>escape_double</th>
-      <td><p>Does the file escape quotes by doubling them?
-i.e. If this option is <code>TRUE</code>, the value <code>""""</code> represents
-a single quote, <code>\"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>locale</th>
-      <td><p>The locale controls defaults that vary from place to place.
-The default locale is US-centric (like R), but you can use
-<code><a href='https://readr.tidyverse.org/reference/locale.html'>locale()</a></code> to create your own locale that controls things like
-the default time zone, encoding, decimal mark, big mark, and day/month
-names.</p></td>
-    </tr>
-    <tr>
-      <th>comment</th>
-      <td><p>A string used to identify comments. Any text after the
-comment characters will be silently ignored.</p></td>
-    </tr>
-    <tr>
-      <th>trim_ws</th>
-      <td><p>Should leading and trailing whitespace (ASCII spaces and tabs) be trimmed from
-each field before parsing it?</p></td>
-    </tr>
-    <tr>
-      <th>skip</th>
-      <td><p>Number of lines to skip before reading data. If <code>comment</code> is
-supplied any commented lines are ignored <em>after</em> skipping.</p></td>
-    </tr>
-    <tr>
-      <th>n_max</th>
-      <td><p>Maximum number of lines to read.</p></td>
-    </tr>
-    <tr>
-      <th>skip_empty_rows</th>
-      <td><p>Should blank rows be ignored altogether? i.e. If this
-option is <code>TRUE</code> then blank rows will not be represented at all.  If it is
-<code>FALSE</code> then they will be represented by <code>NA</code> values in all the columns.</p></td>
+      <th>quiet</th>
+      <td><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, <code>NULL</code> par défaut</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>un tibble dont toutes les colonnes sont de type <code>chr</code></p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>Certaines variables peuvent avoir des valeurs secrétisées
-représentées par la valeur <code>secret</code>, la détection automatique de readr
-n'est donc pas fiable et est désactivé à ce niveau. La détection
-automatique est faite dans la fonction <code><a href='dido_csv.html'>dido_csv()</a></code>.</p>
+    <p>un objet <code><a href='dido_dataset.html'>dido_dataset()</a></code>. Ce dernier sert pour créer par la suite
+les datafiles et les millésimes.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
-<span class='r-in'><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'>dido_read_delim</span><span class='op'>(</span><span class='st'>"fichier.csv"</span><span class='op'>)</span></span>
-<span class='r-in'><span class='op'>}</span></span>
+    <pre class="examples"><span class='r-in'><span class='va'>dataset</span> <span class='op'>&lt;-</span> <span class='fu'>add_dataset</span><span class='op'>(</span></span>
+<span class='r-in'>  title <span class='op'>=</span> <span class='st'>"le titre du dataset"</span>,</span>
+<span class='r-in'>  description <span class='op'>=</span> <span class='st'>"la description du dataset"</span>,</span>
+<span class='r-in'>  topic <span class='op'>=</span> <span class='st'>"Transports"</span>,</span>
+<span class='r-in'>  frequency <span class='op'>=</span> <span class='st'>"unknown"</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> Environnement DiDo actif : DEV</span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> dataset `le titre du dataset` créé</span>
 </pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

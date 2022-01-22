@@ -5,7 +5,10 @@
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
 #'   messages d'information, `NULL` par défaut
 #'
-#' @return un objet [dido_job()]
+#' @return un objet `dido_job()`
+#'
+#' @family datafile
+#'
 #' @export
 #'
 #' @examples

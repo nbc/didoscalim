@@ -3,7 +3,7 @@
 #' @description
 #' L'objet dido_job est retourné par les fonctions `add_datafile()`,
 #' `add_millesime()` et `replace_millesime()`, il peut être utilisé en argument
-#' pour les fonctions `create_dataset()`, `add_datafile()`
+#' pour les fonctions `add_dataset()`, `add_datafile()`
 #'
 #' @name dido_job
 NULL

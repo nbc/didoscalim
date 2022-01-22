@@ -2,7 +2,7 @@ test_that("update_datafile works", {
   skip_unless_dev_env()
 
   new_title <- "didoscalim df un nouveau titre"
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds update_datafile works",
     description = "test",
     topic = "Transports",

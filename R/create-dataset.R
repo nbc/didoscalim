@@ -10,13 +10,13 @@
 #' @export
 #'
 #' @examples
-#' dataset <- create_dataset(
+#' dataset <- add_dataset(
 #'   title = "le titre du dataset",
 #'   description = "la description du dataset",
 #'   topic = "Transports",
 #'   frequency = "unknown"
 #' )
-create_dataset <- function(title,
+add_dataset <- function(title,
                            description,
                            topic,
                            frequency,

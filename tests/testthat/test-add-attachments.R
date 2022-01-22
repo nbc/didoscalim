@@ -1,7 +1,7 @@
 test_that("add_attachment works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds add_attachment works",
     description = "test",
     topic = "Transports",
@@ -22,7 +22,7 @@ test_that("add_attachment works", {
 test_that("add_attachments errors on missing param", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds add_attachments errors on missing param",
     description = "test",
     topic = "Transports",

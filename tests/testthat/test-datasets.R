@@ -22,7 +22,7 @@ test_that("check get_alerts works", {
 test_that("delete works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds check get_dataset works",
     description = "test",
     topic = "Transports",

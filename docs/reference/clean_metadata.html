@@ -40,7 +40,9 @@
 
 
 <meta property="og:title" content="Prépare un objet pour l'envoyer à DiDo — clean_metadata" />
-<meta property="og:description" content="Prépare un objet pour l'envoyer à DiDo" />
+<meta property="og:description" content="Les objets dido_dataset() et dido_datafile() portent des informations sur
+les objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+permet de les supprimer pour ne garder que les métadonnées propres à l'objet." />
 
 
 
@@ -135,7 +137,9 @@
     </div>
 
     <div class="ref-description">
-    <p>Prépare un objet pour l'envoyer à DiDo</p>
+    <p>Les objets <code><a href='dido_dataset.html'>dido_dataset()</a></code> et <code><a href='dido_datafile.html'>dido_datafile()</a></code> portent des informations sur
+les objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+permet de les supprimer pour ne garder que les métadonnées propres à l'objet.</p>
     </div>
 
     <pre class="usage"><span class='fu'>clean_metadata</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span></pre>
@@ -151,7 +155,7 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>un objet nettoyé</p>
+    <p>un objet du même type avec uniquement ses métadonnées propres.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>

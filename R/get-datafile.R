@@ -11,6 +11,9 @@
 #'   fournir cet argument évite un appel à l'API
 #'
 #' @return un objet [dido_datafile()]
+#'
+#' @family datafile
+#'
 #' @export
 #'
 #' @examples

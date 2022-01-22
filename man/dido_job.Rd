@@ -6,5 +6,5 @@
 \description{
 L'objet dido_job est retourné par les fonctions \code{add_datafile()},
 \code{add_millesime()} et \code{replace_millesime()}, il peut être utilisé en argument
-pour les fonctions
+pour les fonctions \code{add_dataset()}, \code{add_datafile()}
 }

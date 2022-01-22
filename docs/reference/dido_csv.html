@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Génère les lignes d'entête du CSV augmenté utilisé par DiDo — dido_csv • didoscalim</title>
+<title>Génère les lignes d'entête du CSV augmenté — dido_csv • didoscalim</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Génère les lignes d'entête du CSV augmenté utilisé par DiDo — dido_csv" />
-<meta property="og:description" content="Génère un tibble avec les lignes d'entêtes du CSV augmenté." />
+<meta property="og:title" content="Génère les lignes d'entête du CSV augmenté — dido_csv" />
+<meta property="og:description" content="Génère un dataframe avec les lignes d'entêtes du CSV augmenté comme premières
+lignes." />
 
 
 
@@ -129,17 +130,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Génère les lignes d'entête du CSV augmenté utilisé par DiDo</h1>
+    <h1>Génère les lignes d'entête du CSV augmenté</h1>
     <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/dido-csv.R'><code>R/dido-csv.R</code></a></small>
     <div class="hidden name"><code>dido_csv.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Génère un tibble avec les lignes d'entêtes du CSV augmenté.</p>
+    <p>Génère un dataframe avec les lignes d'entêtes du CSV augmenté comme premières
+lignes.</p>
     </div>
 
     <pre class="usage"><span class='fu'>dido_csv</span><span class='op'>(</span>
-  <span class='va'>tbl</span>,
+  <span class='va'>data</span>,
   params <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>)</span>,
   locale <span class='op'>=</span> <span class='fu'>readr</span><span class='fu'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/locale.html'>default_locale</a></span><span class='op'>(</span><span class='op'>)</span>,
   cog_year <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"%Y"</span><span class='op'>)</span>
@@ -149,8 +151,8 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>tbl</th>
-      <td><p>le dataframe/tablespace à augmenter</p></td>
+      <th>data</th>
+      <td><p>le dataframe à augmenter</p></td>
     </tr>
     <tr>
       <th>params</th>
@@ -168,7 +170,7 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>un tibble avec les 4 lignes de description du csv augmenté</p>
+    <p>un dataframe avec les 4 lignes de description du csv augmenté</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Certains noms de variable sont connus par didoscalim qui génère
@@ -186,7 +188,8 @@ variables et des types/descriptions associés est :</p><table class='table'>
 
 
 
-<p>L'année <code>AAAA</code> est l'année courante, vous pouvez la modifier en passant le paramètre <code>cog_year</code></p>
+<p>L'année <code>AAAA</code> est par défaut l'année courante, vous pouvez la modifier en
+passant le paramètre <code>cog_year</code></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>En complément, vous pouvez lire : <a href='https://cgdd.gitlab-pages.din.developpement-durable.gouv.fr/sdsed-bun/datalake/api/040-csvfile/'>la description d'un fichier csv augmenté</a>,
@@ -198,7 +201,7 @@ variables et des types/descriptions associés est :</p><table class='table'>
 <span class='r-in'>  OPERATEUR <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>description <span class='op'>=</span> <span class='st'>"L'opérateur"</span>, type <span class='op'>=</span> <span class='st'>"texte"</span><span class='op'>)</span>,</span>
 <span class='r-in'>  CONSO <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>description <span class='op'>=</span> <span class='st'>"La consommation"</span>, unit <span class='op'>=</span> <span class='st'>"Mwh"</span><span class='op'>)</span></span>
 <span class='r-in'><span class='op'>)</span></span>
-<span class='r-in'><span class='fu'>dido_csv</span><span class='op'>(</span><span class='va'>my_tibble</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>dido_csv</span><span class='op'>(</span><span class='va'>my_tibble</span>, params <span class='op'>=</span> <span class='va'>params</span><span class='op'>)</span></span>
 <span class='r-in'><span class='op'>}</span></span>
 </pre>
   </div>

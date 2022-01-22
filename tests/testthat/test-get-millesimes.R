@@ -1,7 +1,7 @@
 test_that("get_millesimes works", {
   skip_unless_dev_env()
 
-  dataset <- create_dataset(
+  dataset <- add_dataset(
     title = "didoscalim ds get_millesimes works",
     description = "test",
     topic = "Transports",

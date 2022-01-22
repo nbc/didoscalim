@@ -10,6 +10,9 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/add_datafile.html</loc>
   </url>
   <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/add_dataset.html</loc>
+  </url>
+  <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/add_millesime.html</loc>
   </url>
   <url>
@@ -19,7 +22,7 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/clean_metadata.html</loc>
   </url>
   <url>
-    <loc>https://mtes-mct.github.io/didoscalim/reference/create_dataset.html</loc>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/delete_dataset.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/dido_api.html</loc>
@@ -50,9 +53,6 @@
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/didoscalim-package.html</loc>
-  </url>
-  <url>
-    <loc>https://mtes-mct.github.io/didoscalim/reference/extract_metadata.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/find_by_column.html</loc>
