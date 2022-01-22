@@ -8,7 +8,7 @@
 #' @param published la date de publication, si non précisée, prendra la date du
 #'   jour
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `FALSE` par défaut
+#'   messages d'information, `NULL` par défaut
 #'
 #' @return un objet `dido_attachment()`
 #' @export
@@ -27,7 +27,7 @@ add_attachment <- function(dataset,
                            description,
                            file_name,
                            published = NULL,
-                           quiet = FALSE) {
+                           quiet = NULL) {
   if (missing(dataset) || is.null(dataset)) abort_bad_argument("dataset")
   if (is.null(get_dataset_id(dataset))) abort_not_dataset()
 

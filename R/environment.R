@@ -86,7 +86,7 @@ list_env_names <- function() {
 #' \dontrun{
 #' set_work_env("PROD")
 #' }
-set_work_env <- function(env_name = NULL, quiet = FALSE) {
+set_work_env <- function(env_name = NULL, quiet = NULL) {
   environments <- get("environments", envir = .didoscalim_env)
 
   if (length(environments) == 0) {
@@ -132,7 +132,7 @@ set_work_env <- function(env_name = NULL, quiet = FALSE) {
 #' \dontrun{
 #' get_work_env()
 #' }
-get_work_env <- function(quiet = FALSE) {
+get_work_env <- function(quiet = NULL) {
   if (!exists("work_env", envir = .didoscalim_env)) set_work_env(quiet = quiet)
   get("work_env", envir = .didoscalim_env)
 }

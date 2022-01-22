@@ -2,7 +2,7 @@
 #'
 #' @inheritParams dido_dataset
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `FALSE` par défaut
+#'   messages d'information, `NULL` par défaut
 #'
 #' @return un objet [dido_dataset()]. Ce dernier sert pour créer par la suite
 #'   les datafiles et les millésimes.
@@ -29,7 +29,7 @@ create_dataset <- function(title,
                            temporal_coverage_start = NULL,
                            temporal_coverage_end = NULL,
                            caution = NULL,
-                           quiet = FALSE) {
+                           quiet = NULL) {
   dataset <- dido_dataset(
     title = title,
     description = description,

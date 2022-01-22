@@ -3,7 +3,7 @@
 #' @inheritParams dido_datafile
 #' @param file_name le nom du fichier à charger
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `FALSE` par défaut
+#'   messages d'information, `NULL` par défaut
 #'
 #' @return un objet [dido_job()]
 #' @export
@@ -27,7 +27,7 @@ add_datafile <- function(dataset,
                          temporal_coverage_end = NULL,
                          legal_notice = "SDES",
                          date_diffusion = NULL,
-                         quiet = FALSE) {
+                         quiet = NULL) {
   datafile <- dido_datafile(
     dataset = dataset,
     title = title,

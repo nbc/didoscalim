@@ -2,7 +2,7 @@
 #'
 #' @inheritParams add_millesime
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `FALSE` par défaut
+#'   messages d'information, `NULL` par défaut
 #'
 #' @return un objet `dido_job()`
 #' @export
@@ -20,7 +20,7 @@ replace_millesime <- function(datafile,
                               file_name,
                               millesime,
                               date_diffusion = NULL,
-                              quiet = FALSE) {
+                              quiet = NULL) {
   if (missing(datafile) || is.null(datafile)) abort_bad_argument("datafile")
   if (is.null(get_datafile_rid(datafile))) abort_not_datafile()
 
@@ -32,7 +32,6 @@ replace_millesime <- function(datafile,
   if (!is_quiet(quiet)) rlang::inform(message = glue::glue("\t* fichier versé"))
   check_csv(token_file)
   if (!is_quiet(quiet)) rlang::inform(message = glue::glue("\t* fichier validé"))
-
 
   payload <- list(
     "tokenFile" = token_file

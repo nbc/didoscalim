@@ -39,7 +39,7 @@ get_job <- function(job_id) {
 #' wait_for_job("id")
 #' }
 #' @keywords internal
-wait_for_job <- function(job_id, quiet = FALSE) {
+wait_for_job <- function(job_id, quiet = NULL) {
   pb <- progress::progress_bar$new(
     total = 100,
     format = "chargement [:bar] :percent eta: :eta",
