@@ -46,7 +46,15 @@ Où `<NOM_ENVIRONNEMENT>` peut prendre les valeurs `DEV`, `PREPROD`, `ECOLE` et
 `PROD`.
 
 Si vous êtes un producteur, vous devez avoir accès aux environnements `ECOLE` et
-`PROD`.
+`PROD`. Votre fichier `.Renviron` :
+
+```
+DIDOSCALIM_BASE_PATH_ECOLE=http://api.alimentation.ecole.fr/v1
+DIDOSCALIM_API_KEY_ECOLE=ma_clef_api_ecole
+
+DIDOSCALIM_BASE_PATH_PROD=http://api.alimentation.prod.fr/v1
+DIDOSCALIM_API_KEY_PROD=ma_clef_api_prod
+```
 
 ## Choisir un environnement
 
@@ -67,7 +75,7 @@ set_work_env()
 ```
 
 Vous pouvez à tout moment voir dans quel environnement vous êtes avec la
-commande `get_work_env()`
+commande `get_work_env()`.
 
 Vous pouvez lister les environnements configués avec la commande `list_envs()`
 et vérifier qu'ils fonctionnent avec la commande `check_envs()`

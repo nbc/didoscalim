@@ -64,6 +64,8 @@ Il a les champs suivants :
 \item \code{millesimes_info} comprenant une liste des millésimes rattachés
 }
 
+le dernier champ est supprimé par \code{clean_metadata()}
+
 L'objet a également un attribut \code{id} avec l'identifiant du dataset auquel il
 appartient
 

@@ -24,11 +24,9 @@ Il a les champs suivants :
 \item \code{created_at} la date de création
 \item \code{last_modified}
 \item \code{last_update}
-}
-
-Il peut y avoir deux champs supplémentaires :
-\itemize{
 \item \code{attachments} une liste des attachments
 \item \code{datafiles} une liste des fichiers de données
 }
+
+les deux derniers champs sont supprimés par \code{clean_metadata()}
 }
