@@ -10,7 +10,7 @@ add_attachment(
   description,
   file_name,
   published = NULL,
-  quiet = FALSE
+  quiet = NULL
 )
 }
 \arguments{
@@ -23,9 +23,11 @@ add_attachment(
 
 \item{file_name}{le nom du fichier à verser}
 
-\item{published}{la date de publication, si non précisée, prendra la date du jour}
+\item{published}{la date de publication, si non précisée, prendra la date du
+jour}
 
-\item{quiet}{quand TRUE supprime les messages d'information, \code{FALSE} par défaut}
+\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, \code{NULL} par défaut}
 }
 \value{
 un objet \code{dido_attachment()}

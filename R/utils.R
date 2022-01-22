@@ -73,6 +73,8 @@ find_by_column <- function(data, string, col, return = c("id")) {
 #' @export
 #'
 #' @examples
+#' is_quiet(FALSE)
+#' @noRd
 is_quiet <- function(quiet = NULL) {
   quiet %||% getOption("dido_quiet") %||% FALSE
 }

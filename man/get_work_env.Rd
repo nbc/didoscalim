@@ -4,10 +4,11 @@
 \alias{get_work_env}
 \title{Récupère l'environnement utilisé}
 \usage{
-get_work_env(quiet = FALSE)
+get_work_env(quiet = NULL)
 }
 \arguments{
-\item{quiet}{Si \code{FALSE} quand TRUE supprime les messages d'information, (\code{FALSE} par défaut)}
+\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, \code{FALSE} par défaut}
 }
 \value{
 une chaine de caractère avec l'environnement utilisé. Exemple "ECOLE"

@@ -9,7 +9,7 @@ replace_millesime(
   file_name,
   millesime,
   date_diffusion = NULL,
-  quiet = FALSE
+  quiet = NULL
 )
 }
 \arguments{
@@ -22,7 +22,8 @@ replace_millesime(
 \item{date_diffusion}{la date/heure de diffusion au format ISO 8601, si non
 précisée, le défaut est minuit du jour courant}
 
-\item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
+\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, \code{NULL} par défaut}
 }
 \value{
 un objet \code{dido_job()}

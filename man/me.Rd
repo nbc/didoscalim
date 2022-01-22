@@ -7,7 +7,7 @@
 me()
 }
 \value{
-Les informations utilisateurs
+Les informations de l'utilisateur
 }
 \description{
 Récupère les informations de l'utilisateur

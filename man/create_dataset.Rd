@@ -18,7 +18,7 @@ create_dataset(
   temporal_coverage_start = NULL,
   temporal_coverage_end = NULL,
   caution = NULL,
-  quiet = FALSE
+  quiet = NULL
 )
 }
 \arguments{
@@ -60,7 +60,8 @@ données}
 \item{caution}{Les précautions à prendre avec ce jeu de données. Par exemple
 : "certaines données peuvent être secrétisées"}
 
-\item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
+\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, \code{NULL} par défaut}
 }
 \value{
 un objet \code{\link[=dido_dataset]{dido_dataset()}}. Ce dernier sert pour créer par la suite

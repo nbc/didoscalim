@@ -28,7 +28,7 @@ Suggests:
     styler,
     testthat (>= 3.0.0),
     withr,
-    tidyverse
+    purrr
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3

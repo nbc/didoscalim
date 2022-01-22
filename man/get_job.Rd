@@ -10,7 +10,7 @@ get_job(job_id)
 \item{job_id}{l'id du job}
 }
 \value{
-un job
+un objet `dido_job()``
 }
 \description{
 Récupére un job en particulier

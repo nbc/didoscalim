@@ -7,10 +7,10 @@
 upload_file(file_name)
 }
 \arguments{
-\item{file_name}{nom du fichier}
+\item{file_name}{le nom du fichier}
 }
 \value{
-un id de token
+un token
 }
 \description{
 Verse un fichier de données à intégrer

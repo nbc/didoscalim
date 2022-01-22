@@ -15,7 +15,7 @@ add_datafile(
   temporal_coverage_end = NULL,
   legal_notice = "SDES",
   date_diffusion = NULL,
-  quiet = FALSE
+  quiet = NULL
 )
 }
 \arguments{
@@ -45,7 +45,8 @@ YYYY-MM-DD}
 format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
 jour à minuit, le fichier est donc immédiatement accessible.}
 
-\item{quiet}{Si TRUE n'affiche pas les messages. Défaut à \code{FALSE}}
+\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+messages d'information, \code{NULL} par défaut}
 }
 \value{
 un objet \code{\link[=dido_job]{dido_job()}}

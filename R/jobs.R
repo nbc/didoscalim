@@ -14,7 +14,7 @@ get_jobs <- function() {
 #'
 #' @param job_id l'id du job
 #'
-#' @return un job
+#' @return un objet `dido_job()``
 #' @export
 #'
 #' @examples

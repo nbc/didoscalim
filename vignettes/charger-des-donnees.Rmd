@@ -15,12 +15,15 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-suppressPackageStartupMessages(library(tidyverse))
+library(magrittr)
+library(dplyr)
 library(didoscalim)
 ```
 
 ```{r, echo=FALSE, results = FALSE, message = FALSE}
 # bugfix pour check()
+library(stringr)
+library(purrr)
 ds <- get_datasets() 
 if (nrow(ds) > 0) ds %>% 
   filter(str_detect(title, "Données.*fictive")) %>% 
