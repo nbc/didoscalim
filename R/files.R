@@ -1,8 +1,8 @@
 #' Verse un fichier de données à intégrer
 #'
-#' @param file_name nom du fichier
+#' @param file_name le nom du fichier
 #'
-#' @return un id de token
+#' @return un token
 #' @export
 #'
 #' @examples
@@ -45,7 +45,7 @@ check_csv <- function(token_file) {
     rlang::warn(message = message)
   }
 
-  return(TRUE)
+  invisible(TRUE)
 }
 
 format_check_csv_errors <- function(message, errors) {

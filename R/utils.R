@@ -6,16 +6,6 @@ abort_bad_argument <- function(arg, class = NULL) {
 }
 
 #' @noRd
-abort_bad_argument_type <- function(arg, fun) {
-  message <- c(
-    glue::glue("`{arg}` n'est pas du type attendu"),
-    i = glue::glue("Avez-vous généré `{arg}` à partir d'une des fonctions: {paste0(fun, collapse = ', ')}")
-  )
-
-  rlang::abort("error_bad_argument_type", message = message)
-}
-
-#' @noRd
 abort_not_dataset <- function() {
   message <- c(
     glue::glue("`dataset` n'est pas du type attendu"),
@@ -70,4 +60,8 @@ find_by_column <- function(data, string, col, return = c("id")) {
   }
 
   return(founded[return])
+}
+
+is_quiet <- function(quiet = FALSE) {
+  getOption("dido_quiet")
 }
