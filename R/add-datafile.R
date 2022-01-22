@@ -1,8 +1,9 @@
 #' Ajoute un datafile à un dataset
 #'
 #' @inheritParams dido_datafile
-#' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
 #' @param file_name le nom du fichier à charger
+#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+#'   messages d'information, `FALSE` par défaut
 #'
 #' @return un objet [dido_job()]
 #' @export
@@ -41,11 +42,11 @@ add_datafile <- function(dataset,
 
   if (missing(file_name) || is.null(file_name)) abort_bad_argument("file_name")
 
-  if (!quiet) rlang::inform(message = glue::glue("    intégration du fichier `{file_name}`"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("    intégration du fichier `{file_name}`"))
   datafile$tokenFile <- upload_file(file_name)
-  if (!quiet) rlang::inform(message = glue::glue("\t* fichier versé"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("\t* fichier versé"))
   check_csv(datafile$tokenFile)
-  if (!quiet) rlang::inform(message = glue::glue("\t* fichier validé"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("\t* fichier validé"))
 
   df <- clean_metadata(datafile)
 
@@ -57,7 +58,7 @@ add_datafile <- function(dataset,
   job <- dido_api(method = "POST", path = url, body = body)
   job_result <- dido_job(wait_for_job(job$id))
 
-  if (!quiet) {
+  if (!is_quiet(quiet)) {
     rlang::inform(glue::glue(
       "\t* fichier intégré",
       "\t    rid: {get_datafile_rid(job_result)}",

@@ -77,7 +77,8 @@ list_env_names <- function() {
 #'   PREPROD, DEV et suivant ce que vous avez configuré. Si env_name n'est pas
 #'   passé, `set_work_env()` choisira le premier environnement configuré parmi
 #'   DEV, PREPROD et ECOLE mais **jamais** PROD.
-#' @param quiet Si `FALSE` quand TRUE supprime les messages d'information, (`FALSE` par défaut)
+#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+#'   messages d'information, `FALSE` par défaut
 #'
 #' @export
 #'
@@ -112,7 +113,7 @@ set_work_env <- function(env_name = NULL, quiet = FALSE) {
     rlang::abort("env_error", message = glue::glue("L'environnement {env_name} n'existe pas."))
   }
 
-  if (!quiet) rlang::inform(message = c(x = glue::glue("Environnement DiDo actif : {env_name}")))
+  if (!is_quiet(quiet)) rlang::inform(message = c(x = glue::glue("Environnement DiDo actif : {env_name}")))
   assign("work_env", env_name, envir = .didoscalim_env)
 }
 

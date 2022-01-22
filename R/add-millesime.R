@@ -5,7 +5,8 @@
 #' @param date_diffusion la date/heure de diffusion au format ISO 8601, si non
 #'   précisée, le défaut est minuit du jour courant
 #' @param millesime l'identifiant du millésime à publier, si non précisé AAAA-MM avec l'année et le mois courant
-#' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
+#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+#'   messages d'information, `FALSE` par défaut
 #'
 #' @return un objet `dido_job()`
 #' @export
@@ -46,7 +47,7 @@ add_millesime <- function(datafile,
   job <- dido_api(method = "POST", path = url, body = body)
   job_result <- dido_job(wait_for_job(job$id))
 
-  if (!quiet) {
+  if (!is_quiet(quiet)) {
     rlang::inform(message = glue::glue(
       "        * fichier intégré\n",
       "(rid: {job_result$result$rid}, ",

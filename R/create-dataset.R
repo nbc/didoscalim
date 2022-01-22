@@ -1,7 +1,8 @@
 #' Créé un dataset
 #'
 #' @inheritParams dido_dataset
-#' @param quiet Si TRUE n'affiche pas les messages. Défaut à `FALSE`
+#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+#'   messages d'information, `FALSE` par défaut
 #'
 #' @return un objet [dido_dataset()]. Ce dernier sert pour créer par la suite
 #'   les datafiles et les millésimes.
@@ -48,7 +49,7 @@ create_dataset <- function(title,
   body <- jsonlite::toJSON(dataset, pretty = TRUE, auto_unbox = TRUE, na = "null")
   ds <- dido_api(method = "POST", path = "/datasets", body = body)
 
-  if (!quiet) rlang::inform(message = glue::glue("dataset `{title}` créé"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("dataset `{title}` créé"))
 
   new_dido_dataset(ds)
 }

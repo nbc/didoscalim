@@ -62,6 +62,18 @@ find_by_column <- function(data, string, col, return = c("id")) {
   return(founded[return])
 }
 
+#' Retourne la "quietness"
+#'
+#' Cherche si l'option dido_quiet est fixé et le retourne sinon retourne son
+#' paramètre.
+#'
+#' @param quiet TRUE/FALSE, FALSE par défaut
+#'
+#' @return TRUE/FALSE
+#' @export
+#'
+#' @examples
 is_quiet <- function(quiet = FALSE) {
-  getOption("dido_quiet")
+
+  getOption("dido_quiet") %||% quiet
 }

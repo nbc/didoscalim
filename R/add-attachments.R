@@ -5,8 +5,10 @@
 #' @param title le titre du fichier annexe
 #' @param description la description du fichier annexe
 #' @param file_name le nom du fichier à verser
-#' @param published la date de publication, si non précisée, prendra la date du jour
-#' @param quiet quand TRUE supprime les messages d'information, `FALSE` par défaut
+#' @param published la date de publication, si non précisée, prendra la date du
+#'   jour
+#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
+#'   messages d'information, `FALSE` par défaut
 #'
 #' @return un objet `dido_attachment()`
 #' @export
@@ -33,10 +35,10 @@ add_attachment <- function(dataset,
   if (missing(description) || is.null(description)) abort_bad_argument("description")
   if (missing(file_name) || is.null(file_name)) abort_bad_argument("file_name")
 
-  if (!quiet) rlang::inform(message = glue::glue("    intégration du fichier annexe `{file_name}`"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("    intégration du fichier annexe `{file_name}`"))
 
   file_id <- upload_file(file_name)
-  if (!quiet) rlang::inform(message = glue::glue("\t* fichier versé"))
+  if (!is_quiet(quiet)) rlang::inform(message = glue::glue("\t* fichier versé"))
 
   payload <- list(
     "title" = title,
@@ -53,7 +55,7 @@ add_attachment <- function(dataset,
     path = url,
     body = jsonlite::toJSON(payload, pretty = TRUE, auto_unbox = TRUE, na = "null")
   )
-  if (!quiet) rlang::inform(glue::glue("\t* fichier annexe intégré (rid: {result$rid})"))
+  if (!is_quiet(quiet)) rlang::inform(glue::glue("\t* fichier annexe intégré (rid: {result$rid})"))
   attr(result, "id") <- id
 
   invisible(dido_attachment(result))
