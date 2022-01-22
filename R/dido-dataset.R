@@ -124,11 +124,21 @@ print.dido_dataset <- function(x, ...) {
 #' @noRd
 #' @export
 clean_metadata.dido_dataset <- function(data) {
+  data$attachments <- NULL
+  data$datafiles <- NULL
+
+  new_dido_dataset(data)
+}
+
+#' @noRd
+#' @export
+internal_clean_metadata.dido_dataset <- function(data) {
   data$created_at <- NULL
   data$last_modified <- NULL
   data$last_update <- NULL
   data$attachments <- NULL
   data$datafiles <- NULL
+  data$id <- NULL
 
   if ("id" %in% names(data$organization)) data$organization <- data$organization$id
 

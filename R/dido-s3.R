@@ -13,8 +13,10 @@
 #' \dontrun{
 #' clean_metadata(dataset)
 #' }
-#' @keywords internal
 clean_metadata <- function(data) UseMethod("clean_metadata")
+
+#' @noRd
+internal_clean_metadata <- function(data) UseMethod("internal_clean_metadata")
 
 #' Retourne le dataset id de l'objet
 #'

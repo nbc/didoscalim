@@ -21,8 +21,7 @@ update_dataset <- function(dataset) {
   id <- dataset$id
   url <- glue::glue("/datasets/{id}")
 
-  dataset$id <- NULL
-  metadata <- clean_metadata(dataset)
+  metadata <- internal_clean_metadata(dataset)
 
   body <- jsonlite::toJSON(metadata, pretty = TRUE, auto_unbox = TRUE, na = "null")
   response <- dido_api(method = "PUT", path = url, body = body)

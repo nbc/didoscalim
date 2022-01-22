@@ -22,8 +22,7 @@ update_datafile <- function(datafile) {
   rid <- get_datafile_rid(datafile)
   id <- get_dataset_id(datafile)
 
-  datafile$rid <- NULL
-  metadata <- clean_metadata(datafile)
+  metadata <- internal_clean_metadata(datafile)
   if (is.null(metadata$published)) metadata$published <- format(Sys.time(), "%Y-%m-%d")
 
   url <- glue::glue("/datasets/{id}/datafiles/{rid}/metadata")
