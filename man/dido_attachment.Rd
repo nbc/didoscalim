@@ -5,6 +5,13 @@
 \title{L'objet dido_attachment}
 \description{
 L'objet dido_attachment inclus les champs :
-The response object captures all information from a request.  It includes
-fields:
+\itemize{
+\item \code{rid} l'identifiant du jeu de données parent
+\item \code{title}
+\item \code{description}
+\item \code{created_at}
+\item \code{last_modified}
+\item \code{published}
+\item \code{url} : l'url du fichier annexe
+}
 }

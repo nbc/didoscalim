@@ -43,6 +43,22 @@
 <meta property="og:description" content="L'objet dido_datafile et retourné par get_datafile() et peut-être utilisé
 en paramètre par les fonctions de manipulation de dataset, datafile,
 millésime et attachement.
+Il a les champs suivants :
+rid l'identifiant du datafile
+title
+description
+millesimes le nb de millésimes dans le datafile
+created_at
+last_modified
+published
+url
+temporal_coverage un liste avec deux champs start et end
+legal_notice la licence s'appliquant au fichier de données
+millesimes_info comprenant une liste des millésimes rattachés
+
+
+L'objet a également un attribut id avec l'identifiant du dataset auquel il
+appartient
 Cette fonction est utilisée par add_datafile()" />
 
 
@@ -141,6 +157,22 @@ Cette fonction est utilisée par add_datafile()" />
     <p>L'objet dido_datafile et retourné par <code><a href='get_datafile.html'>get_datafile()</a></code> et peut-être utilisé
 en paramètre par les fonctions de manipulation de dataset, datafile,
 millésime et attachement.</p>
+<p>Il a les champs suivants :</p><ul>
+<li><p><code>rid</code> l'identifiant du datafile</p></li>
+<li><p><code>title</code></p></li>
+<li><p><code>description</code></p></li>
+<li><p><code>millesimes</code> le nb de millésimes dans le datafile</p></li>
+<li><p><code>created_at</code></p></li>
+<li><p><code>last_modified</code></p></li>
+<li><p><code>published</code></p></li>
+<li><p><code>url</code></p></li>
+<li><p><code>temporal_coverage</code> un liste avec deux champs <code>start</code> et <code>end</code></p></li>
+<li><p><code>legal_notice</code> la licence s'appliquant au fichier de données</p></li>
+<li><p><code>millesimes_info</code> comprenant une liste des millésimes rattachés</p></li>
+</ul>
+
+<p>L'objet a également un attribut <code>id</code> avec l'identifiant du dataset auquel il
+appartient</p>
 <p>Cette fonction est utilisée par <code><a href='add_datafile.html'>add_datafile()</a></code></p>
     </div>
 

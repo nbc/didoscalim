@@ -5,6 +5,24 @@
 #' en paramètre par les fonctions de manipulation de dataset, datafile,
 #' millésime et attachement.
 #'
+#' Il a les champs suivants :
+#' * `rid` l'identifiant du datafile
+#' * `title`
+#' * `description`
+#' * `millesimes` le nb de millésimes dans le datafile
+#' * `created_at`
+#' * `last_modified`
+#' * `published`
+#' * `url`
+#' * `temporal_coverage` un liste avec deux champs `start` et `end`
+#' * `legal_notice` la licence s'appliquant au fichier de données
+#' * `millesimes_info` comprenant une liste des millésimes rattachés
+#'
+#' le dernier champ est supprimé par `clean_metadata()`
+#'
+#' L'objet a également un attribut `id` avec l'identifiant du dataset auquel il
+#' appartient
+#'
 #' @name dido_datafile
 NULL
 

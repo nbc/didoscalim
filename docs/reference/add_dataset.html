@@ -159,6 +159,70 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>title</th>
+      <td><p>le titre du dataset</p></td>
+    </tr>
+    <tr>
+      <th>description</th>
+      <td><p>la description du dataset</p></td>
+    </tr>
+    <tr>
+      <th>topic</th>
+      <td><p>le thème du dataset. Doit être dans "Environnement", "Énergie",
+"Transports", "Logement", "Changement climatique"</p></td>
+    </tr>
+    <tr>
+      <th>frequency</th>
+      <td><p>la fréquence de publication des données</p></td>
+    </tr>
+    <tr>
+      <th>tags</th>
+      <td><p>la liste des mots clefs. Si le fichier est déjà publié sur le
+site SDES, on reprend les mêmes. L'ensemble des mots clefs est disponible
+sur
+https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&amp;withColumnDescription=false.</p></td>
+    </tr>
+    <tr>
+      <th>frequency_date</th>
+      <td><p>la date de prochaine publication.</p></td>
+    </tr>
+    <tr>
+      <th>granularity</th>
+      <td><p>la granularité du jeu de données. Les plus utilisés sont
+"fr:region", "fr:departement", "fr:epci", "fr:commune", "fr:iris" et pour
+les données à l'adresse "poi"</p></td>
+    </tr>
+    <tr>
+      <th>zones</th>
+      <td><p>la zone couverte par le jeu de données. country:fr pour France
+entière, country-subset:fr:metro pour la métropole et
+country-subset:fr:drom pour les DROM</p></td>
+    </tr>
+    <tr>
+      <th>organization</th>
+      <td><p>l'id de l'organisation sous laquelle vous souhaitez
+publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
+n'avez pas à remplir ce champ, didoscalim la prendra par défaut.</p></td>
+    </tr>
+    <tr>
+      <th>license</th>
+      <td><p>la licence des données. "fr-lo" par défaut</p></td>
+    </tr>
+    <tr>
+      <th>temporal_coverage_start</th>
+      <td><p>la date de début de couverture du jeux de
+données</p></td>
+    </tr>
+    <tr>
+      <th>temporal_coverage_end</th>
+      <td><p>la date de fin de couverture du jeux de données</p></td>
+    </tr>
+    <tr>
+      <th>caution</th>
+      <td><p>Les précautions à prendre avec ce jeu de données. Par exemple
+: "certaines données peuvent être secrétisées"</p></td>
+    </tr>
+    <tr>
       <th>quiet</th>
       <td><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
 messages d'information, <code>NULL</code> par défaut</p></td>

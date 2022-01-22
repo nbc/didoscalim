@@ -7,4 +7,16 @@
 L'objet dido_job est retourné par les fonctions \code{add_datafile()},
 \code{add_millesime()} et \code{replace_millesime()}, il peut être utilisé en argument
 pour les fonctions \code{add_dataset()}, \code{add_datafile()}
+
+Il a les champs suivant :
+\itemize{
+\item \code{owner} : l'id du propriétaire du job
+\item \code{state} l'état du job. Devrait être "complete" ou "failed"
+\item \code{data} les informations liées à la tâche, le champ \code{dataset_id}
+\item \code{result} : le résultat qui comprend lui même les champs :
+\itemize{
+\item \code{rid} l'identifiant du fichier de données
+\item \code{duration} le temps de traitement
+}
+}
 }

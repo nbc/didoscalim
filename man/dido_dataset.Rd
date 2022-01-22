@@ -7,4 +7,28 @@
 L'objet dido_dataset est retourné par \code{get_dataset()} et \code{add_dataset()}
 et utilisé en paramètre par \code{update_dataset()} \code{add_datafile()} et
 \code{create_attachment()}
+
+Il a les champs suivants :
+\itemize{
+\item \code{id} l'identifiant du dataset
+\item \code{title}
+\item \code{description}
+\item \code{organization}
+\item \code{topic} le thème
+\item \code{license}
+\item \code{frequency} la fréquence
+\item \code{frequency_date} prochaine mise à jour
+\item \code{tags} une liste de mots clefs
+\item \code{spatial} une liste avec des champs, la \code{granularity} et \code{zones} une liste de zones
+\item \code{temporal_coverage} un liste avec deux champs \code{start} et \code{end}
+\item \code{created_at} la date de création
+\item \code{last_modified}
+\item \code{last_update}
+}
+
+Il peut y avoir deux champs supplémentaires :
+\itemize{
+\item \code{attachments} une liste des attachments
+\item \code{datafiles} une liste des fichiers de données
+}
 }

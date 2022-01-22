@@ -42,7 +42,17 @@
 <meta property="og:title" content="L'objet dido_job — dido_job" />
 <meta property="og:description" content="L'objet dido_job est retourné par les fonctions add_datafile(),
 add_millesime() et replace_millesime(), il peut être utilisé en argument
-pour les fonctions add_dataset(), add_datafile()" />
+pour les fonctions add_dataset(), add_datafile()
+Il a les champs suivant :
+owner : l'id du propriétaire du job
+state l'état du job. Devrait être &quot;complete&quot; ou &quot;failed&quot;
+data les informations liées à la tâche, le champ dataset_id
+result : le résultat qui comprend lui même les champs :
+rid l'identifiant du fichier de données
+duration le temps de traitement
+
+
+" />
 
 
 
@@ -140,6 +150,16 @@ pour les fonctions add_dataset(), add_datafile()" />
     <p>L'objet dido_job est retourné par les fonctions <code><a href='add_datafile.html'>add_datafile()</a></code>,
 <code><a href='add_millesime.html'>add_millesime()</a></code> et <code><a href='replace_millesime.html'>replace_millesime()</a></code>, il peut être utilisé en argument
 pour les fonctions <code><a href='add_dataset.html'>add_dataset()</a></code>, <code><a href='add_datafile.html'>add_datafile()</a></code></p>
+<p>Il a les champs suivant :</p><ul>
+<li><p><code>owner</code> : l'id du propriétaire du job</p></li>
+<li><p><code>state</code> l'état du job. Devrait être "complete" ou "failed"</p></li>
+<li><p><code>data</code> les informations liées à la tâche, le champ <code>dataset_id</code></p></li>
+<li><p><code>result</code> : le résultat qui comprend lui même les champs :</p><ul>
+<li><p><code>rid</code> l'identifiant du fichier de données</p></li>
+<li><p><code>duration</code> le temps de traitement</p></li>
+</ul></li>
+</ul>
+
     </div>
 
 

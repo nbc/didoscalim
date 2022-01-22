@@ -17,43 +17,20 @@
 #' * `tags` une liste de mots clefs
 #' * `spatial` une liste avec des champs, la `granularity` et `zones` une liste de zones
 #' * `temporal_coverage` un liste avec deux champs `start` et `end`
+#' * `created_at` la date de création
+#' * `last_modified`
+#' * `last_update`
+#' * `attachments` une liste des attachments
+#' * `datafiles` une liste des fichiers de données
 #'
-#' Il peut avoir deux champs supplémentaires :
-#' * `attachments`
-#' * `datafiles`
+#' les deux derniers champs sont supprimés par `clean_metadata()`
 #'
 #' @name dido_dataset
 NULL
 
 #' Créé un objet dataset
 #'
-#' @param title le titre du dataset
-#' @param description la description du dataset
-#' @param topic le thème du dataset. Doit être dans "Environnement", "Énergie",
-#'   "Transports", "Logement", "Changement climatique"
-#' @param tags la liste des mots clefs. Si le fichier est déjà publié sur le
-#'   site SDES, on reprend les mêmes. L'ensemble des mots clefs est disponible
-#'   sur
-#'   https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&withColumnDescription=false.
-#'
-#' @param frequency la fréquence de publication des données
-#' @param frequency_date la date de prochaine publication.
-#' @param organization l'id de l'organisation sous laquelle vous souhaitez
-#'   publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
-#'   n'avez pas à remplir ce champ, didoscalim la prendra par défaut.
-#' @param temporal_coverage_start la date de début de couverture du jeux de
-#'   données
-#' @param temporal_coverage_end  la date de fin de couverture du jeux de données
-#' @param zones la zone couverte par le jeu de données. country:fr pour France
-#'   entière, country-subset:fr:metro pour la métropole et
-#'   country-subset:fr:drom pour les DROM
-#' @param granularity la granularité du jeu de données. Les plus utilisés sont
-#'   "fr:region", "fr:departement", "fr:epci", "fr:commune", "fr:iris" et pour
-#'   les données à l'adresse "poi"
-#' @param caution Les précautions à prendre avec ce jeu de données. Par exemple
-#'   : "certaines données peuvent être secrétisées"
-#' @param license la licence des données. "fr-lo" par défaut
-#'
+#' @inheritParams dido_dataset
 #' @return un objet dido_dataset
 #' @export
 #'

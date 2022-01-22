@@ -42,7 +42,29 @@
 <meta property="og:title" content="L'objet dido_dataset — dido_dataset" />
 <meta property="og:description" content="L'objet dido_dataset est retourné par get_dataset() et add_dataset()
 et utilisé en paramètre par update_dataset() add_datafile() et
-create_attachment()" />
+create_attachment()
+Il a les champs suivants :
+id l'identifiant du dataset
+title
+description
+organization
+topic le thème
+license
+frequency la fréquence
+frequency_date prochaine mise à jour
+tags une liste de mots clefs
+spatial une liste avec des champs, la granularity et zones une liste de zones
+temporal_coverage un liste avec deux champs start et end
+created_at la date de création
+last_modified
+last_update
+
+
+Il peut y avoir deux champs supplémentaires :
+attachments une liste des attachments
+datafiles une liste des fichiers de données
+
+" />
 
 
 
@@ -140,6 +162,28 @@ create_attachment()" />
     <p>L'objet dido_dataset est retourné par <code><a href='get_dataset.html'>get_dataset()</a></code> et <code><a href='add_dataset.html'>add_dataset()</a></code>
 et utilisé en paramètre par <code><a href='update_dataset.html'>update_dataset()</a></code> <code><a href='add_datafile.html'>add_datafile()</a></code> et
 <code>create_attachment()</code></p>
+<p>Il a les champs suivants :</p><ul>
+<li><p><code>id</code> l'identifiant du dataset</p></li>
+<li><p><code>title</code></p></li>
+<li><p><code>description</code></p></li>
+<li><p><code>organization</code></p></li>
+<li><p><code>topic</code> le thème</p></li>
+<li><p><code>license</code></p></li>
+<li><p><code>frequency</code> la fréquence</p></li>
+<li><p><code>frequency_date</code> prochaine mise à jour</p></li>
+<li><p><code>tags</code> une liste de mots clefs</p></li>
+<li><p><code>spatial</code> une liste avec des champs, la <code>granularity</code> et <code>zones</code> une liste de zones</p></li>
+<li><p><code>temporal_coverage</code> un liste avec deux champs <code>start</code> et <code>end</code></p></li>
+<li><p><code>created_at</code> la date de création</p></li>
+<li><p><code>last_modified</code></p></li>
+<li><p><code>last_update</code></p></li>
+</ul>
+
+<p>Il peut y avoir deux champs supplémentaires :</p><ul>
+<li><p><code>attachments</code> une liste des attachments</p></li>
+<li><p><code>datafiles</code> une liste des fichiers de données</p></li>
+</ul>
+
     </div>
 
 

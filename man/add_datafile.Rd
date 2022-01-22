@@ -49,7 +49,7 @@ jour à minuit, le fichier est donc immédiatement accessible.}
 messages d'information, \code{NULL} par défaut}
 }
 \value{
-un objet \code{\link[=dido_job]{dido_job()}}
+un objet \code{dido_job()}
 }
 \description{
 Ajoute un datafile à un dataset

@@ -22,4 +22,3 @@ permet de les supprimer pour ne garder que les métadonnées propres à l'objet.
 clean_metadata(dataset)
 }
 }
-\keyword{internal}

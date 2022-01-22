@@ -2,8 +2,13 @@
 #'
 #' @description
 #' L'objet dido_attachment inclus les champs :
-#' The response object captures all information from a request.  It includes
-#' fields:
+#' * `rid` l'identifiant du jeu de données parent
+#' * `title`
+#' * `description`
+#' * `created_at`
+#' * `last_modified`
+#' * `published`
+#' * `url` : l'url du fichier annexe
 #'
 #' @name dido_attachment
 NULL

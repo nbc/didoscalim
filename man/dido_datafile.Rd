@@ -49,6 +49,24 @@ L'objet dido_datafile et retourné par \code{get_datafile()} et peut-être utili
 en paramètre par les fonctions de manipulation de dataset, datafile,
 millésime et attachement.
 
+Il a les champs suivants :
+\itemize{
+\item \code{rid} l'identifiant du datafile
+\item \code{title}
+\item \code{description}
+\item \code{millesimes} le nb de millésimes dans le datafile
+\item \code{created_at}
+\item \code{last_modified}
+\item \code{published}
+\item \code{url}
+\item \code{temporal_coverage} un liste avec deux champs \code{start} et \code{end}
+\item \code{legal_notice} la licence s'appliquant au fichier de données
+\item \code{millesimes_info} comprenant une liste des millésimes rattachés
+}
+
+L'objet a également un attribut \code{id} avec l'identifiant du dataset auquel il
+appartient
+
 Cette fonction est utilisée par \code{add_datafile()}
 }
 \examples{
