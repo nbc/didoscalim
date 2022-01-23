@@ -61,6 +61,15 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/get_alerts.html</loc>
   </url>
   <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_attachment.html</loc>
+  </url>
+  <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_attachment_rid.html</loc>
+  </url>
+  <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/get_attachments.html</loc>
+  </url>
+  <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/get_datafile.html</loc>
   </url>
   <url>
@@ -103,10 +112,16 @@
     <loc>https://mtes-mct.github.io/didoscalim/reference/organization.html</loc>
   </url>
   <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/replace_attachment.html</loc>
+  </url>
+  <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/replace_millesime.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/set_work_env.html</loc>
+  </url>
+  <url>
+    <loc>https://mtes-mct.github.io/didoscalim/reference/update_attachment.html</loc>
   </url>
   <url>
     <loc>https://mtes-mct.github.io/didoscalim/reference/update_datafile.html</loc>

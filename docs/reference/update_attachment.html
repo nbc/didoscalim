@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>L'objet dido_datafile — dido_datafile • didoscalim</title>
+<title>Mettre à jour un datafile. — update_attachment • didoscalim</title>
 
 
 <!-- jquery -->
@@ -39,27 +39,8 @@
 
 
 
-<meta property="og:title" content="L'objet dido_datafile — dido_datafile" />
-<meta property="og:description" content="L'objet dido_datafile et retourné par get_datafile() et peut-être utilisé
-en paramètre par les fonctions de manipulation de dataset, datafile,
-millésime et attachement.
-Il a les champs suivants :
-rid l'identifiant du datafile
-title
-description
-millesimes le nb de millésimes dans le datafile
-created_at
-last_modified
-published
-url
-temporal_coverage un liste avec deux champs start et end
-legal_notice la licence s'appliquant au fichier de données
-millesimes_info comprenant une liste des millésimes rattachés
-
-
-le dernier champ est supprimé par clean_metadata()
-L'objet a également un attribut id avec l'identifiant du dataset auquel il
-appartient" />
+<meta property="og:title" content="Mettre à jour un datafile. — update_attachment" />
+<meta property="og:description" content="Mettre à jour un datafile." />
 
 
 
@@ -148,37 +129,43 @@ appartient" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>L'objet dido_datafile</h1>
-    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/dido-datafile.R'><code>R/dido-datafile.R</code></a></small>
-    <div class="hidden name"><code>dido_datafile.Rd</code></div>
+    <h1>Mettre à jour un datafile.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/MTES-MCT/didoscalim/blob/master/R/update-attachment.R'><code>R/update-attachment.R</code></a></small>
+    <div class="hidden name"><code>update_attachment.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>L'objet dido_datafile et retourné par <code><a href='get_datafile.html'>get_datafile()</a></code> et peut-être utilisé
-en paramètre par les fonctions de manipulation de dataset, datafile,
-millésime et attachement.</p>
-<p>Il a les champs suivants :</p><ul>
-<li><p><code>rid</code> l'identifiant du datafile</p></li>
-<li><p><code>title</code></p></li>
-<li><p><code>description</code></p></li>
-<li><p><code>millesimes</code> le nb de millésimes dans le datafile</p></li>
-<li><p><code>created_at</code></p></li>
-<li><p><code>last_modified</code></p></li>
-<li><p><code>published</code></p></li>
-<li><p><code>url</code></p></li>
-<li><p><code>temporal_coverage</code> un liste avec deux champs <code>start</code> et <code>end</code></p></li>
-<li><p><code>legal_notice</code> la licence s'appliquant au fichier de données</p></li>
-<li><p><code>millesimes_info</code> comprenant une liste des millésimes rattachés</p></li>
-</ul>
-
-<p>le dernier champ est supprimé par <code><a href='clean_metadata.html'>clean_metadata()</a></code></p>
-<p>L'objet a également un attribut <code>id</code> avec l'identifiant du dataset auquel il
-appartient</p>
+    <p>Mettre à jour un datafile.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>update_attachment</span><span class='op'>(</span><span class='va'>attachment</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>attachment</th>
+      <td><p>un objet attachment retourné par <code><a href='get_attachment.html'>get_attachment()</a></code> modifié par
+l'utilisateur</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>un objet <code><a href='dido_attachment.html'>dido_attachment()</a></code></p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other attachment: 
+<code><a href='get_attachments.html'>get_attachments</a>()</code>,
+<code><a href='get_attachment.html'>get_attachment</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='va'>att</span> <span class='op'>&lt;-</span> <span class='fu'><a href='get_attachment.html'>get_attachment</a></span><span class='op'>(</span><span class='st'>"rid"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='va'>att</span><span class='op'>$</span><span class='va'>title</span> <span class='op'>&lt;-</span> <span class='st'>"un nouveau titre"</span></span>
+<span class='r-in'><span class='fu'>update_attachment</span><span class='op'>(</span><span class='va'>att</span><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

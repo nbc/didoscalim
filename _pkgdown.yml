@@ -1,7 +1,8 @@
 url: https://mtes-mct.github.io/didoscalim
 
-reference:
+lang: fr
 
+reference:
 - title: "Créer des fichiers CSV augmenté"
   contents:
   - dido_read_delim

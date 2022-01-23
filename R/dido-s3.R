@@ -1,7 +1,8 @@
 #' Prépare un objet pour l'envoyer à DiDo
 #'
-#' Les objets `dido_dataset()` et `dido_datafile()` portent des informations sur
-#' les objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+#' Les objets `dido_dataset()` et `dido_datafile()` retournés par
+#' `get_dataset()`, `get_datafile()`, ... portent des informations sur les
+#' objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
 #' permet de les supprimer pour ne garder que les métadonnées propres à l'objet.
 #'
 #' @param data objet dido_dataset, dido_datafile

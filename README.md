@@ -20,7 +20,8 @@ Ce package est encore en cours de développement.
 
 ## Exemple
 
-Générer le CSV augmenté :
+Comment générer un fichier CSV augmenté à partir d’un fichier [CSV
+normal](vignettes/exemple.csv) et le charger dans un dataset.
 
 ``` r
 library(didoscalim)

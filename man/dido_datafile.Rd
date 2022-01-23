@@ -3,47 +3,6 @@
 \name{dido_datafile}
 \alias{dido_datafile}
 \title{L'objet dido_datafile}
-\usage{
-dido_datafile(
-  dataset,
-  title,
-  description,
-  millesime = NULL,
-  published = NULL,
-  temporal_coverage_start = NULL,
-  temporal_coverage_end = NULL,
-  legal_notice = "SDES",
-  date_diffusion = NULL
-)
-}
-\arguments{
-\item{dataset}{l'id d'un dataset, un objet \code{dido_dataset()},
-\code{dido_datafile()} ou \code{dido_job()}}
-
-\item{title}{le titre du datafile}
-
-\item{description}{la description du datafile}
-
-\item{millesime}{le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
-avec l'année courante et le mois courant}
-
-\item{published}{la date de publication du fichier, si non précisée, prend la
-date du jour.}
-
-\item{temporal_coverage_start}{la date de début des données au format
-YYYY-MM-DD}
-
-\item{temporal_coverage_end}{la date de fin des données au format YYYY-MM-DD}
-
-\item{legal_notice}{mention légale, par défaut "SDES"}
-
-\item{date_diffusion}{la date/heure à laquelle le fichier sera accessible au
-format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
-jour à minuit, le fichier est donc immédiatement accessible.}
-}
-\value{
-un objet \verb{[dido_datafile()]}
-}
 \description{
 L'objet dido_datafile et retourné par \code{get_datafile()} et peut-être utilisé
 en paramètre par les fonctions de manipulation de dataset, datafile,
@@ -68,17 +27,4 @@ le dernier champ est supprimé par \code{clean_metadata()}
 
 L'objet a également un attribut \code{id} avec l'identifiant du dataset auquel il
 appartient
-
-Cette fonction est utilisée par \code{add_datafile()}
 }
-\examples{
-\dontrun{
-datafile <- dido_datafile(
-  dataset = "1",
-  title = "titre",
-  description = "description",
-  date_diffusion = "2022-01-01T08:00:00Z"
-)
-}
-}
-\keyword{internal}

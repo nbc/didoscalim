@@ -1,6 +1,20 @@
 #' Ajoute un datafile à un dataset
 #'
-#' @inheritParams dido_datafile
+#' @param dataset l'id d'un dataset, un objet `dido_dataset()`,
+#'   `dido_datafile()` ou `dido_job()`
+#' @param title le titre du datafile
+#' @param description la description du datafile
+#' @param millesime le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
+#'   avec l'année courante et le mois courant
+#' @param published la date de publication du fichier, si non précisée, prend la
+#'   date du jour.
+#' @param temporal_coverage_start la date de début des données au format
+#'   YYYY-MM-DD
+#' @param temporal_coverage_end la date de fin des données au format YYYY-MM-DD
+#' @param legal_notice mention légale, par défaut "SDES"
+#' @param date_diffusion la date/heure à laquelle le fichier sera accessible au
+#'   format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
+#'   jour à minuit, le fichier est donc immédiatement accessible.
 #' @param file_name le nom du fichier à charger
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
 #'   messages d'information, `NULL` par défaut

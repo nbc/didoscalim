@@ -5,7 +5,8 @@ test_that("add_dataset works", {
     title = "didoscalim check add_dataset works",
     description = "test",
     topic = "Transports",
-    frequency = "unknown"
+    frequency = "unknown",
+    tags = list("agenda-21", "agriculture")
   )
 
   expect_s3_class(dataset, "dido_dataset")
