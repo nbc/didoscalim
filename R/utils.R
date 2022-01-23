@@ -42,7 +42,9 @@ abort_not_datafile <- function() {
 #' }
 #' @keywords internal
 find_by_column <- function(data, string, col, return = c("id")) {
-  if (nrow(data) == 0) rlang::abort(glue::glue("no_data"), message = glue::glue("data est vide"))
+  if (nrow(data) == 0) {
+    rlang::abort(glue::glue("no_data"), message = glue::glue("Impossible de trouver un `{return}` avec comme `{col}` `{string}`"))
+  }
   founded <- filter(data, stringr::str_detect(string = .data[[col]], pattern = string))
 
   if (nrow(founded) > 1) {
