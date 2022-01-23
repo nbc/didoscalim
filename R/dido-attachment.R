@@ -37,3 +37,21 @@ get_dataset_id.dido_attachment <- function(data, ...) attr(data, "id")
 
 #' @export
 get_attachment_rid.dido_attachment <- function(data, ...) data$rid
+
+#' @noRd
+#' @export
+clean_metadata.dido_attachment <- function(data) {
+  new_dido_attachment(data)
+}
+
+#' @noRd
+#' @export
+internal_clean_metadata.dido_attachment <- function(data) {
+  data$created_at <- NULL
+  data$last_modified <- NULL
+  data$last_update <- NULL
+  data$rid <- NULL
+  data$url <- NULL
+
+  new_dido_dataset(data)
+}
