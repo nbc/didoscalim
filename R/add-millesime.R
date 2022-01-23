@@ -6,7 +6,7 @@
 #'   précisée, le défaut est minuit du jour courant
 #' @param millesime l'identifiant du millésime à publier, si non précisé AAAA-MM avec l'année et le mois courant
 #' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `FALSE` par défaut
+#'   messages d'information, `NULL` par défaut
 #'
 #' @return un objet `dido_job()`
 #' @export
