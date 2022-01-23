@@ -117,7 +117,7 @@ Une fois que la configuration de `params` est correcte, vous pouvez chainer avec
 `magrittr::%>%` :
 
 ```{r}
-library(magrittr)
+library(magrittr, quietly = TRUE)
 dido_read_delim("exemple.csv") %>%
   dido_csv(params = params) %>%
   dido_write_csv("resultat.csv")

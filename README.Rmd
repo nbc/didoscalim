@@ -22,11 +22,61 @@ knitr::opts_chunk$set(
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg){target='_blank'}](https://www.repostatus.org/#wip)
 <!-- badges: end -->
 
-Un package R pour générer des fichiers CSV au format DiDo (CSV augmenté) et
-alimenter l'outil de diffusion de données DiDo du
+Un package R pour :
+
+* générer des fichiers CSV au format DiDo (CSV augmenté) 
+* automatiser l'alimentation l'outil de diffusion de données DiDo du
 [CGDD/SDES](https://www.statistiques.developpement-durable.gouv.fr/).
 
 Ce package est encore en cours de développement.
+
+## Exemple
+
+Comment générer un fichier CSV augmenté à partir d'un fichier [CSV
+normal](vignettes/exemple.csv) et le charger dans un dataset.
+
+```{r}
+library(didoscalim)
+library(magrittr, quietly = TRUE)
+
+temp_file <- tempfile(fileext = ".csv")
+
+params = list(
+  OPERATEUR = list(description = "Nom de l'opérateur"),
+  FILIERE = list(description = "Filière"),
+  CODE_CATEGORIE_CONSOMMATION = list(description = "Catégorie de la consommation"),
+  CODE_SECTEUR_NAF2 = list(description = "Code NAF à 2 positions du secteur (NAF rev2 2008)", type = "naf_division"),
+  CONSO = list(description = "Consommation (en MWh)", unit = "MWh")
+)
+
+dido_read_delim("vignettes/exemple.csv") %>%
+  dido_csv(params = params, cog_year = "2019") %>%
+  dido_write_csv(temp_file)
+```
+
+L'intégrer dans DiDo :
+
+```{r}
+dataset <- add_dataset(
+  title = "Un jeu de données fictif",
+  description = "Un jeu de données énergie fictif",
+  topic = "Transports",
+  temporal_coverage_start = "2020-01-01",
+  temporal_coverage_end = "2020-12-31",
+  frequency = "annual",
+  frequency_date = "2021-10-10"
+)
+
+add_datafile(
+  dataset = dataset,
+  file_name = temp_file,
+  title = "Données de consommation fictive – gaz – année 2020",
+  description = "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité",
+  temporal_coverage_start = "2020-01-01",
+  temporal_coverage_end = "2020-12-31",
+  millesime = "2021-10"
+)
+```
 
 ## Installation
 
@@ -86,7 +136,6 @@ projet](https://mtes-mct.github.io/didoscalim/) et en particuler :
 * [comment intégrer des nouveaux jeux/fichiers de
 données](articles/charger-des-donnees.html)
 * [utiliser les environnements](articles/les-environnements.html)
-
 
 ## Pour les développeurs
 

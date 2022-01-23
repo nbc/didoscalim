@@ -10,11 +10,60 @@ DiDoscalim alimentation package
 [<img src="https://www.repostatus.org/badges/latest/wip.svg" target="_blank" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." />](https://www.repostatus.org/#wip)
 <!-- badges: end -->
 
-Un package R pour générer des fichiers CSV au format DiDo (CSV augmenté)
-et alimenter l’outil de diffusion de données DiDo du
-[CGDD/SDES](https://www.statistiques.developpement-durable.gouv.fr/).
+Un package R pour :
+
+-   générer des fichiers CSV au format DiDo (CSV augmenté)
+-   automatiser l’alimentation l’outil de diffusion de données DiDo du
+    [CGDD/SDES](https://www.statistiques.developpement-durable.gouv.fr/).
 
 Ce package est encore en cours de développement.
+
+## Exemple
+
+Générer le CSV augmenté :
+
+``` r
+library(didoscalim)
+library(magrittr, quietly = TRUE)
+
+temp_file <- tempfile(fileext = ".csv")
+
+params = list(
+  OPERATEUR = list(description = "Nom de l'opérateur"),
+  FILIERE = list(description = "Filière"),
+  CODE_CATEGORIE_CONSOMMATION = list(description = "Catégorie de la consommation"),
+  CODE_SECTEUR_NAF2 = list(description = "Code NAF à 2 positions du secteur (NAF rev2 2008)", type = "naf_division"),
+  CONSO = list(description = "Consommation (en MWh)", unit = "MWh")
+)
+
+dido_read_delim("vignettes/exemple.csv") %>%
+  dido_csv(params = params, cog_year = "2019") %>%
+  dido_write_csv(temp_file)
+```
+
+L’intégrer dans DiDo :
+
+``` r
+dataset <- add_dataset(
+  title = "Un jeu de données fictif",
+  description = "Un jeu de données énergie fictif",
+  topic = "Transports",
+  temporal_coverage_start = "2020-01-01",
+  temporal_coverage_end = "2020-12-31",
+  frequency = "annual",
+  frequency_date = "2021-10-10"
+)
+
+add_datafile(
+  dataset = dataset,
+  file_name = temp_file,
+  title = "Données de consommation fictive – gaz – année 2020",
+  description = "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité",
+  temporal_coverage_start = "2020-01-01",
+  temporal_coverage_end = "2020-12-31",
+  millesime = "2021-10"
+)
+```
 
 ## Installation
 
@@ -30,16 +79,12 @@ library(didoscalim)
 
 ## Configuration
 
+-   [utiliser les environnements](articles/les-environnements.html)
+
 La configuration de didoscalim se fait dans votre .Renviron. Pour
 l’éditer vous pouvez utiliser `usethis::edit_r_environ()`. Ajouter les
 lignes suivantes (la clef d’API est disponible dans l’interface web
 d’alimentation dans l’onglet “Mon compte”) :
-
-    DIDOSCALIM_BASE_PATH_ECOLE=http://api.alimentation.ecole.fr/v1
-    DIDOSCALIM_API_KEY_ECOLE=ma_clef_api_ecole
-
-    DIDOSCALIM_BASE_PATH_PROD=http://api.alimentation.prod.fr/v1
-    DIDOSCALIM_API_KEY_PROD=ma_clef_api_prod
 
 Il est fortement recommandé de tester les chargements avant de les
 lancer sur `PROD`, pour cela configurez au minimum les environnements
