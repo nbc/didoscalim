@@ -19,6 +19,8 @@ dido_attachment <- function(x) {
   structure(x, class = c("dido_attachment", "list"))
 }
 
+new_dido_attachment <- dido_attachment
+
 is.dido_attachment <- function(x) {
   inherits(x, "dido_attachment")
 }
@@ -32,3 +34,6 @@ print.dido_attachment <- function(x, ...) {
 
 #' @export
 get_dataset_id.dido_attachment <- function(data, ...) attr(data, "id")
+
+#' @export
+get_attachment_rid.dido_attachment <- function(data, ...) data$rid

@@ -57,3 +57,23 @@ get_datafile_rid.default <- function(data) NULL
 
 #' @export
 get_datafile_rid.character <- function(data) data
+
+#' Retourne l'attachment id de l'objet
+#'
+#' @param data un objet dido_attachment ou une chaine
+#'
+#' @return le rid de l'attachment
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' get_attachment_rid(att)
+#' }
+#' @keywords internal
+get_attachment_rid <- function(data) UseMethod("get_attachment_rid")
+
+#' @export
+get_attachment_rid.default <- function(data) NULL
+
+#' @export
+get_attachment_rid.character <- function(data) data
