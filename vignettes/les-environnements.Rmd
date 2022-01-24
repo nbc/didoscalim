@@ -1,8 +1,8 @@
 ---
-title: "Utiliser les environnements"
+title: "Configurer et utiliser les environnements"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Utiliser les environnements}
+  %\VignetteIndexEntry{Configurer et utiliser les environnements}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -39,11 +39,13 @@ Chaque environnement est configuré par deux lignes comme celles-ci :
 
 ```
 DIDOSCALIM_BASE_PATH_<NOM_ENVIRONNEMENT>=http://api.alimentation.ecole.fr/v1
-DIDOSCALIM_API_KEY_<NOM_ENVIRONNEMENT>=ma_clef_api_ecole
+DIDOSCALIM_API_KEY_<NOM_ENVIRONNEMENT>=<CLEF_API>
 ```
 
-Où `<NOM_ENVIRONNEMENT>` peut prendre les valeurs `DEV`, `PREPROD`, `ECOLE` et
-`PROD`.
+* `<NOM_ENVIRONNEMENT>` peut prendre les valeurs `DEV`, `PREPROD`, `ECOLE` et
+`PROD` 
+* `<CLEF_API>` est disponible dans l'interface d'alimentation DiDo dans la
+rubrique « Mon compte ».
 
 Si vous êtes un producteur et que vous avez accès aux environnements `ECOLE` et
 `PROD`, votre fichier `.Renviron` ressemblera à :
@@ -55,6 +57,17 @@ DIDOSCALIM_API_KEY_ECOLE=ma_clef_api_ecole
 DIDOSCALIM_BASE_PATH_PROD=http://api.alimentation.prod.fr/v1
 DIDOSCALIM_API_KEY_PROD=ma_clef_api_prod
 ```
+
+Pour le modifier vous pouvez utiliser les commandes suivantes :
+
+```{r, eval = FALSE}
+usethis::edit_r_environ()
+readRenviron("~/.Renviron")
+library(didoscalim)
+load_envs()
+check_envs()
+```
+
 
 ## Choisir un environnement
 
