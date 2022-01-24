@@ -1,5 +1,5 @@
 ---
-title: DiDoscalim alimentation package
+title: DiDoscalim
 output: github_document
 ---
 
