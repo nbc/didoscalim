@@ -28,11 +28,11 @@ add_datafile(
 
 \item{file_name}{le nom du fichier à charger}
 
-\item{millesime}{le millesime (AAAA-MM). Par défaut prendre la valeur AAAA-MM
-avec l'année courante et le mois courant}
+\item{millesime}{le millesime (AAAA-MM). Par défaut AAAA-MM avec l'année
+courante et le mois courant}
 
 \item{published}{la date de publication du fichier, si non précisée, prend la
-date du jour.}
+date du jour à minuit.}
 
 \item{temporal_coverage_start}{optionnel, la date de début de couverture du
 fichier de données au format AAAA-MM-JJ}

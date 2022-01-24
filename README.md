@@ -13,7 +13,7 @@ Un package R pour :
 -   automatiser l’alimentation l’outil de diffusion de données DiDo du
     [CGDD/SDES](https://www.statistiques.developpement-durable.gouv.fr/).
 
-Ce package est encore en cours de développement.
+Ce package est en cours de développement.
 
 ## Installation
 

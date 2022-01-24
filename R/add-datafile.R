@@ -4,10 +4,10 @@
 #'   `dido_datafile()` ou `dido_job()`
 #' @param title le titre du datafile
 #' @param description la description du datafile
-#' @param millesime le millesime (AAAA-MM). Par défaut prendre la valeur AAAA-MM
-#'   avec l'année courante et le mois courant
+#' @param millesime le millesime (AAAA-MM). Par défaut AAAA-MM avec l'année
+#'   courante et le mois courant
 #' @param published la date de publication du fichier, si non précisée, prend la
-#'   date du jour.
+#'   date du jour à minuit.
 #' @param temporal_coverage_start optionnel, la date de début de couverture du
 #'   fichier de données au format AAAA-MM-JJ
 #' @param temporal_coverage_end optionnel, la date de fin de couverture du
