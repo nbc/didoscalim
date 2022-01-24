@@ -11,17 +11,17 @@ get_attachment(attachment = NULL, title = NULL, dataset)
 
 \item{title}{le titre d'un attachment}
 
-\item{dataset}{l'identifiant d'un dataset ou un objet \code{dido_dataset()}}
+\item{dataset}{l'identifiant ou l'objet \code{dido_dataset()} du dataset parent de l'attachment}
 }
 \value{
-un objet \code{\link[=dido_attachment]{dido_attachment()}}
+un objet \code{dido_attachment()}
 }
 \description{
 Permet de récupérer les données d'un attachment en utilisant soit son rid soit
 son titre.
 }
 \details{
-Lève une exception si la recherche ne retourne plus ou moins que 1 attachment
+Lève une exception si la recherche ne retourne pas exactement 1 attachment
 }
 \examples{
 \dontrun{

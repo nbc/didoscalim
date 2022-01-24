@@ -61,13 +61,13 @@ DIDOSCALIM_API_KEY_PROD=ma_clef_api_prod
 Pour le modifier vous pouvez utiliser les commandes suivantes :
 
 ```{r, eval = FALSE}
+library(devtools)
 usethis::edit_r_environ()
 readRenviron("~/.Renviron")
 library(didoscalim)
 load_envs()
 check_envs()
 ```
-
 
 ## Choisir un environnement
 

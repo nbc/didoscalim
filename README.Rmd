@@ -40,8 +40,6 @@ devtools::install_github("mtes-mct/didoscalim")
 library(didoscalim)
 ```
 
-
-
 ## Exemple
 
 Générer un fichier CSV augmenté à partir d'un fichier [CSV
@@ -91,40 +89,9 @@ add_datafile(
 
 ## Configuration
 
-* [utiliser les environnements](articles/les-environnements.html)
-
-La configuration de didoscalim se fait dans votre .Renviron. Pour l'éditer vous
-pouvez utiliser `usethis::edit_r_environ()`. Ajouter les lignes suivantes (la
-clef d'API est disponible dans l'interface web d'alimentation dans l'onglet "Mon
-compte")  :
-
-
-Il est fortement recommandé de tester les chargements avant de les lancer sur
-`PROD`, pour cela configurez au minimum les environnements `ECOLE` et `PROD`.
-
-Pour vérifier que vos environnements sont bien configurés :
-
-```{r, eval = FALSE}
-library(didoscalim)
-readRenviron("~/.Renviron")
-load_envs()
-check_envs()
-```
-
-Par défaut, didoscalim utilisera l'environnement `ECOLE`. pour basculer sur
-l'environnement `PROD` vous pouvez lancer la commande :
-
-```{r, eval = FALSE}
-set_work_env("PROD")
-```
-
-Vous pouvez à tout moment voir sur quel environnement vous travailler avec la
-commande `get_work_env()`
-
-Pour rebasculer sur l'environnement `ECOLE` :
-```{r, eval = FALSE}
-set_work_env()
-```
+La configuration de didoscalim se fait dans votre .Renviron. Vous trouverez la
+documentation nécessaire dansla vignette [utiliser les
+environnements](articles/les-environnements.html)
 
 ## Documentation
 
@@ -132,8 +99,7 @@ Vous pouvez trouver l'ensemble de la documentation sur [la page du
 projet](https://mtes-mct.github.io/didoscalim/) et en particuler :
 
 * [comment générer un fichier augmenté](articles/csv-augmente.html)
-* [comment intégrer des nouveaux jeux/fichiers de
-données](articles/charger-des-donnees.html)
+* [comment charger des données dans DiDo](articles/charger-des-donnees.html)
 * [utiliser les environnements](articles/les-environnements.html)
 
 ## Pour les développeurs

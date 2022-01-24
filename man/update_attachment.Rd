@@ -2,19 +2,19 @@
 % Please edit documentation in R/update-attachment.R
 \name{update_attachment}
 \alias{update_attachment}
-\title{Mettre à jour un datafile.}
+\title{Mettre à jour une pièce jointe.}
 \usage{
 update_attachment(attachment)
 }
 \arguments{
-\item{attachment}{un objet attachment retourné par \code{get_attachment()} modifié par
-l'utilisateur}
+\item{attachment}{un objet attachment retourné par \code{get_attachment()} modifié
+par l'utilisateur}
 }
 \value{
 un objet \code{dido_attachment()}
 }
 \description{
-Mettre à jour un datafile.
+Mettre à jour une pièce jointe.
 }
 \examples{
 \dontrun{

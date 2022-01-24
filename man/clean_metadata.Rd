@@ -15,7 +15,7 @@ un objet du même type avec uniquement ses métadonnées propres.
 \description{
 Les objets \code{dido_dataset()} et \code{dido_datafile()} retournés par
 \code{get_dataset()}, \code{get_datafile()}, ... portent des informations sur les
-objets enfants (fichiers annexes, datafile, millésime...). Cette fonction
+objets enfants (fichiers annexes, datafiles, millésimes...). Cette fonction
 permet de les supprimer pour ne garder que les métadonnées propres à l'objet.
 }
 \examples{

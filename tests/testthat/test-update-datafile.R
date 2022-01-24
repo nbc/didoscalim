@@ -24,6 +24,7 @@ test_that("update_datafile works", {
 
   df <- update_datafile(updated)
 
+  expect_equal(df$temporal_coverage$start, "2023-01-01T00:00:00.000Z")
   expect_equal(df$temporal_coverage$end, "2023-12-31T00:00:00.000Z")
   expect_equal(df$title, new_title)
 })
