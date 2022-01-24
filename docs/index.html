@@ -90,9 +90,7 @@
 <p>Générer un fichier CSV augmenté à partir d’un fichier <a href="articles/exemple.csv">CSV normal</a> et le charger dans un dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="va">temp_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".csv"</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span>, warn.conflict <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
 <span class="va">params</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
   OPERATEUR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>description <span class="op">=</span> <span class="st">"Nom de l'opérateur"</span><span class="op">)</span>,
@@ -102,6 +100,7 @@
   CONSO <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>description <span class="op">=</span> <span class="st">"Consommation (en MWh)"</span>, unit <span class="op">=</span> <span class="st">"MWh"</span><span class="op">)</span>
 <span class="op">)</span>
 
+<span class="va">temp_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".csv"</span><span class="op">)</span>
 <span class="fu"><a href="reference/dido_read_delim.html">dido_read_delim</a></span><span class="op">(</span><span class="st">"vignettes/exemple.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="reference/dido_csv.html">dido_csv</a></span><span class="op">(</span>params <span class="op">=</span> <span class="va">params</span>, cog_year <span class="op">=</span> <span class="st">"2019"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="reference/dido_write_csv.html">dido_write_csv</a></span><span class="op">(</span><span class="va">temp_file</span><span class="op">)</span></code></pre></div>
@@ -203,7 +202,7 @@
 <h2 data-toc-skip>Licence</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Licence complète</a></li>
-<li><small>GPL (&gt;= 3)</small></li>
+<li><small>CeCILL (&gt;= 2.1)</small></li>
 </ul>
 </div>
 

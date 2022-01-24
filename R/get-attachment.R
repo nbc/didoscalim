@@ -3,13 +3,13 @@
 #' Permet de récupérer les données d'un attachment en utilisant soit son rid soit
 #' son titre.
 #'
-#' Lève une exception si la recherche ne retourne plus ou moins que 1 attachment
+#' Lève une exception si la recherche ne retourne pas exactement 1 attachment
 #'
 #' @param attachment un rid de attachment, un objet `dido_attachment()` ou `dido_job()`
 #' @param title le titre d'un attachment
-#' @param dataset l'identifiant d'un dataset ou un objet `dido_dataset()`
+#' @param dataset l'identifiant ou l'objet `dido_dataset()` du dataset parent de l'attachment
 #'
-#' @return un objet [dido_attachment()]
+#' @return un objet `dido_attachment()`
 #'
 #' @family attachment
 #'

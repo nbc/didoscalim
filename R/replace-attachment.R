@@ -6,6 +6,8 @@
 #' @return un objet `dido_attachment()`
 #' @export
 #'
+#' @family attachment
+#'
 #' @examples
 #' \dontrun{
 #' replace_attachment(

@@ -23,6 +23,8 @@
 #' L'objet a également un attribut `id` avec l'identifiant du dataset auquel il
 #' appartient
 #'
+#' @family datafile
+#'
 #' @name dido_datafile
 NULL
 

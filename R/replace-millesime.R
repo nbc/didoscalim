@@ -7,6 +7,8 @@
 #' @return un objet `dido_job()`
 #' @export
 #'
+#' @family millesime
+#'
 #' @examples
 #' \dontrun{
 #' datafile <- get_datafile("rid")

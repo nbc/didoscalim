@@ -172,7 +172,7 @@ check_envs <- function() {
         message <- c(message, i = glue::glue("{e}: OK"))
       },
       error = function(error) {
-        message <<- c(message, x = glue::glue("{e}: KO: {stringr::str_replace(error$message, '\n.*', '')}"))
+        message <<- c(message, x = glue::glue("{e}: KO: {stringr::str_replace_all(error$message, '\n', ' ')}"))
       }
     )
   }

@@ -15,6 +15,18 @@ Un package R pour :
 
 Ce package est encore en cours de développement.
 
+## Installation
+
+Vous pouvez installer ce package depuis GitHub :
+
+``` r
+# Install from GitHub
+library(devtools)
+devtools::install_github("mtes-mct/didoscalim")
+
+library(didoscalim)
+```
+
 ## Exemple
 
 Générer un fichier CSV augmenté à partir d’un fichier [CSV
@@ -60,18 +72,6 @@ add_datafile(
   temporal_coverage_end = "2020-12-31",
   millesime = "2021-10"
 )
-```
-
-## Installation
-
-Vous pouvez installer ce package depuis GitHub :
-
-``` r
-# Install from GitHub
-library(devtools)
-devtools::install_github("mtes-mct/didoscalim")
-
-library(didoscalim)
 ```
 
 ## Configuration

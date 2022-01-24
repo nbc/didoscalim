@@ -5,8 +5,10 @@
 #'
 #' @param dataset un objet dido_dataset modifié
 #'
-#' @return un objet dataset
+#' @return un objet `dido_dataset()`
 #' @export
+#'
+#' @family dataset
 #'
 #' @examples
 #' \dontrun{

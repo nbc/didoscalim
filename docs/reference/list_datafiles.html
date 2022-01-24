@@ -53,7 +53,7 @@ la liste des datafiles de ce dataset."><!-- mathjax --><script src="https://cdnj
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Liste les datafiles</h1>
-      <small class="dont-index">Source : <a href="https://github.com/MTES-MCT/didoscalim/blob/HEAD/R/get-datafiles.R" class="external-link"><code>R/get-datafiles.R</code></a></small>
+      <small class="dont-index">Source : <a href="https://github.com/MTES-MCT/didoscalim/blob/HEAD/R/list-datafiles.R" class="external-link"><code>R/list-datafiles.R</code></a></small>
       <div class="d-none name"><code>list_datafiles.Rd</code></div>
     </div>
 
@@ -80,6 +80,7 @@ la liste des datafiles de ce dataset.</p>
     <h2 id="voir-galement">Voir également<a class="anchor" aria-label="anchor" href="#voir-galement"></a></h2>
     <div class="dont-index"><p>Other datafile: 
 <code><a href="add_datafile.html">add_datafile</a>()</code>,
+<code><a href="dido_datafile.html">dido_datafile</a>()</code>,
 <code><a href="get_datafile.html">get_datafile</a>()</code>,
 <code><a href="update_datafile.html">update_datafile</a>()</code></p></div>
     </div>
@@ -87,20 +88,20 @@ la liste des datafiles de ce dataset.</p>
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">list_datafiles</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 40 × 13</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 102 × 13</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    id     rid    title description millesimes created_at last_modified published</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61ee6… a3ae5… Donn… Consommati…          2 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61ee6… a4f33… Donn… Consommati…          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61ee6… 48e1c… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61ee6… 5116b… dido… description          2 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61ee6… a719c… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61ee6… 74baa… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61ee6… c6e58… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61ee6… 76e20… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61ee6… 7d2bb… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61ee6… d8465… dido… description          1 2022-01-2… 2022-01-24T0… 2022-01-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 30 more rows, and 5 more variables: url &lt;chr&gt;, millesimes_info &lt;list&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61eed… 5cca1… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61eed… 7acb2… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61eed… fe8d3… Donn… Consommati…          2 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61eed… 48f48… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61eed… ec819… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61eed… 8578f… dido… description          2 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61eed… f1098… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61eed… 558b0… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61eed… 2000e… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61eed… 81b3b… dido… description          1 2022-01-2… 2022-01-24T1… 2022-01-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 92 more rows, and 5 more variables: url &lt;chr&gt;, millesimes_info &lt;list&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   legal_notice &lt;chr&gt;, temporal_coverage.start &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   temporal_coverage.end &lt;chr&gt;</span></span>
 </code></pre></div>

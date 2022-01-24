@@ -13,6 +13,8 @@
 #' @return un objet `dido_attachment()`
 #' @export
 #'
+#' @family attachment
+#'
 #' @examples
 #' \dontrun{
 #' add_attachment(

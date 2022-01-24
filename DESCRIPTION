@@ -5,7 +5,7 @@ Authors@R:
     person("Nicolas", "Chuche", , "nicolas.chuche@developpement-durable.gouv.fr", role = c("aut", "cre"))
 Description: Ce package permet de charger des données dans DiDo en passant
     par l'API d'alimentation.
-License: GPL (>= 3)
+License: CeCILL (>= 2.1)
 URL: https://mtes-mct.github.io/didoscalim/, https://github.com/MTES-MCT/didoscalim
 BugReports: https://github.com/MTES-MCT/didoscalim/issues
 Imports: 

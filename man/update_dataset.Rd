@@ -10,7 +10,7 @@ update_dataset(dataset)
 \item{dataset}{un objet dido_dataset modifié}
 }
 \value{
-un objet dataset
+un objet \code{dido_dataset()}
 }
 \description{
 Cette fonction permet de mettre à jour les métadonnées d'un dataset comme,
@@ -23,3 +23,10 @@ dataset$temporal_coverage$end <- "2022-12-31"
 update_dataset(dataset)
 }
 }
+\seealso{
+Other dataset: 
+\code{\link{add_dataset}()},
+\code{\link{dido_dataset}()},
+\code{\link{get_dataset}()}
+}
+\concept{dataset}

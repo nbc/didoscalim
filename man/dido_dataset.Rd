@@ -30,3 +30,12 @@ Il a les champs suivants :
 
 les deux derniers champs sont supprimés par \code{clean_metadata()}
 }
+\seealso{
+\code{add_dataset()}
+
+Other dataset: 
+\code{\link{add_dataset}()},
+\code{\link{get_dataset}()},
+\code{\link{update_dataset}()}
+}
+\concept{dataset}

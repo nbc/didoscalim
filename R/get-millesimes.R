@@ -5,6 +5,8 @@
 #' @return un tibble avec les millesimes du datafile
 #' @export
 #'
+#' @family millesime
+#'
 #' @examples
 #' list_millesimes()
 list_millesimes <- function(datafile = NULL) {

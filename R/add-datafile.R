@@ -4,7 +4,7 @@
 #'   `dido_datafile()` ou `dido_job()`
 #' @param title le titre du datafile
 #' @param description la description du datafile
-#' @param millesime le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
+#' @param millesime le millesime (AAAA-MM). Par défaut prendre la valeur AAAA-MM
 #'   avec l'année courante et le mois courant
 #' @param published la date de publication du fichier, si non précisée, prend la
 #'   date du jour.
@@ -12,13 +12,15 @@
 #'   fichier de données au format AAAA-MM-JJ
 #' @param temporal_coverage_end optionnel, la date de fin de couverture du
 #'   fichier de données au format AAAA-MM-JJ
-#' @param legal_notice mention légale, par défaut "SDES"
-#' @param date_diffusion la date/heure à laquelle le fichier sera accessible au
-#'   format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
-#'   jour à minuit, le fichier est donc immédiatement accessible.
+#' @param legal_notice les mentions légales, par défaut "SDES"
+#' @param date_diffusion la date/heure à laquelle le fichier sera accessible. Si
+#'   cette date est dans le passé, les données sont immédiatement accessibles,
+#'   si elle est dans le futur, les données ne seront accessibles qu'à cette
+#'   date/heure. au format ISO 8601 (2021-10-01T08:00:00Z) Si non précisée prend
+#'   la date du au jour à minuit, le fichier est donc immédiatement accessible.
 #' @param file_name le nom du fichier à charger
-#' @param quiet quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-#'   messages d'information, `NULL` par défaut
+#' @param quiet quand `TRUE` ou que l'option dido_quiet est à `TRUE` supprime
+#'   les messages d'information, `NULL` par défaut
 #'
 #' @return un objet `dido_job()`
 #'

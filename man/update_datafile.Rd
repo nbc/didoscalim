@@ -26,6 +26,7 @@ update_datafile(df)
 \seealso{
 Other datafile: 
 \code{\link{add_datafile}()},
+\code{\link{dido_datafile}()},
 \code{\link{get_datafile}()},
 \code{\link{list_datafiles}()}
 }

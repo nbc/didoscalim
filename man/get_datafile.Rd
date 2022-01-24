@@ -4,15 +4,16 @@
 \alias{get_datafile}
 \title{Récupère un datafile}
 \usage{
-get_datafile(datafile = NULL, title = NULL, dataset = NULL)
+get_datafile(data = NULL, title = NULL, dataset = NULL)
 }
 \arguments{
-\item{datafile}{un rid de datafile, un objet \code{dido_datafile()} ou \code{dido_job()}}
+\item{data}{un rid de datafile, un objet \code{dido_job()} (ou un
+\code{dido_datafile()} même si l'intérêt est limité).}
 
 \item{title}{le titre d'un datafile}
 
-\item{dataset}{optionnel l'identifiant du dataset ou un objet \code{dido_dataset()},
-fournir cet argument évite un appel à l'API}
+\item{dataset}{optionnel l'identifiant du dataset ou un objet
+\code{dido_dataset()}}
 }
 \value{
 un objet \code{\link[=dido_datafile]{dido_datafile()}}
@@ -33,6 +34,7 @@ get_datafile(title = "title")
 \seealso{
 Other datafile: 
 \code{\link{add_datafile}()},
+\code{\link{dido_datafile}()},
 \code{\link{list_datafiles}()},
 \code{\link{update_datafile}()}
 }

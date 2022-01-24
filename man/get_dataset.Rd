@@ -7,24 +7,31 @@
 get_dataset(data = NULL, title = NULL)
 }
 \arguments{
-\item{data}{l'identifiant d'un dataset ou un objet \code{dido_dataset()}, \code{dido_job()} ou \code{dido_datafile()}}
+\item{data}{l'identifiant d'un dataset ou un objet \code{dido_dataset()},
+\code{dido_job()} ou \code{dido_datafile()}}
 
 \item{title}{le titre du du dataset}
 }
 \value{
-un objet \code{\link[=dido_dataset]{dido_dataset()}}
+un objet \code{dido_dataset()}
 }
 \description{
-Permet de récupérer les données d'un dataset en utilisant soit son titre soit
-un objet \code{dido_datafile()}, \code{dido_dataset()}, \code{dido_job()}
+Permet de récupérer les métadonnées d'un dataset en utilisant soit son titre
+soit un objet \code{dido_datafile()}, \code{dido_dataset()}, \code{dido_job()}
 }
 \details{
-Lève une exception si la recherche ne retourne pas exactement 1 dataset
+Lève une exception si le titre ne retourne pas un unique dataset.
 }
 \examples{
 \dontrun{
 get_dataset(id)
-get_dataset(id = id)
 get_dataset(title = "un titre de dataset")
 }
 }
+\seealso{
+Other dataset: 
+\code{\link{add_dataset}()},
+\code{\link{dido_dataset}()},
+\code{\link{update_dataset}()}
+}
+\concept{dataset}

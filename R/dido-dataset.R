@@ -25,6 +25,10 @@
 #'
 #' les deux derniers champs sont supprimés par `clean_metadata()`
 #'
+#' @seealso `add_dataset()`
+#'
+#' @family dataset
+#'
 #' @name dido_dataset
 NULL
 

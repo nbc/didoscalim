@@ -45,3 +45,12 @@ add_attachment(
 )
 }
 }
+\seealso{
+Other attachment: 
+\code{\link{dido_attachment}()},
+\code{\link{get_attachment}()},
+\code{\link{list_attachments}()},
+\code{\link{replace_attachment}()},
+\code{\link{update_attachment}()}
+}
+\concept{attachment}

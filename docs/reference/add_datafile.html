@@ -88,7 +88,7 @@
 <dt>file_name</dt>
 <dd><p>le nom du fichier à charger</p></dd>
 <dt>millesime</dt>
-<dd><p>le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
+<dd><p>le millesime (AAAA-MM). Par défaut prendre la valeur AAAA-MM
 avec l'année courante et le mois courant</p></dd>
 <dt>published</dt>
 <dd><p>la date de publication du fichier, si non précisée, prend la
@@ -100,14 +100,16 @@ fichier de données au format AAAA-MM-JJ</p></dd>
 <dd><p>optionnel, la date de fin de couverture du
 fichier de données au format AAAA-MM-JJ</p></dd>
 <dt>legal_notice</dt>
-<dd><p>mention légale, par défaut "SDES"</p></dd>
+<dd><p>les mentions légales, par défaut "SDES"</p></dd>
 <dt>date_diffusion</dt>
-<dd><p>la date/heure à laquelle le fichier sera accessible au
-format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
-jour à minuit, le fichier est donc immédiatement accessible.</p></dd>
+<dd><p>la date/heure à laquelle le fichier sera accessible. Si
+cette date est dans le passé, les données sont immédiatement accessibles,
+si elle est dans le futur, les données ne seront accessibles qu'à cette
+date/heure. au format ISO 8601 (2021-10-01T08:00:00Z) Si non précisée prend
+la date du au jour à minuit, le fichier est donc immédiatement accessible.</p></dd>
 <dt>quiet</dt>
-<dd><p>quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-messages d'information, <code>NULL</code> par défaut</p></dd>
+<dd><p>quand <code>TRUE</code> ou que l'option dido_quiet est à <code>TRUE</code> supprime
+les messages d'information, <code>NULL</code> par défaut</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="valeur-de-retour">Valeur de retour<a class="anchor" aria-label="anchor" href="#valeur-de-retour"></a></h2>
@@ -116,6 +118,7 @@ messages d'information, <code>NULL</code> par défaut</p></dd>
     <div class="section level2">
     <h2 id="voir-galement">Voir également<a class="anchor" aria-label="anchor" href="#voir-galement"></a></h2>
     <div class="dont-index"><p>Other datafile: 
+<code><a href="dido_datafile.html">dido_datafile</a>()</code>,
 <code><a href="get_datafile.html">get_datafile</a>()</code>,
 <code><a href="list_datafiles.html">list_datafiles</a>()</code>,
 <code><a href="update_datafile.html">update_datafile</a>()</code></p></div>

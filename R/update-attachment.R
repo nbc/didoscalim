@@ -1,7 +1,7 @@
-#' Mettre à jour un datafile.
+#' Mettre à jour une pièce jointe.
 #'
-#' @param attachment un objet attachment retourné par `get_attachment()` modifié par
-#'   l'utilisateur
+#' @param attachment un objet attachment retourné par `get_attachment()` modifié
+#'   par l'utilisateur
 #'
 #' @return un objet `dido_attachment()`
 #'

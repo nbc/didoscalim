@@ -28,3 +28,11 @@ le dernier champ est supprimé par \code{clean_metadata()}
 L'objet a également un attribut \code{id} avec l'identifiant du dataset auquel il
 appartient
 }
+\seealso{
+Other datafile: 
+\code{\link{add_datafile}()},
+\code{\link{get_datafile}()},
+\code{\link{list_datafiles}()},
+\code{\link{update_datafile}()}
+}
+\concept{datafile}

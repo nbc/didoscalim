@@ -11,6 +11,8 @@
 #' @return un objet `dido_job()`
 #' @export
 #'
+#' @family millesime
+#'
 #' @examples
 #' \dontrun{
 #' millesime <- add_millesime(

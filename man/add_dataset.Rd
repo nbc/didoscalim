@@ -2,7 +2,7 @@
 % Please edit documentation in R/add-dataset.R
 \name{add_dataset}
 \alias{add_dataset}
-\title{Créé un dataset}
+\title{Ajoute un dataset}
 \usage{
 add_dataset(
   title,
@@ -29,18 +29,17 @@ add_dataset(
 \item{topic}{le thème du dataset. Doit être dans "Environnement", "Énergie",
 "Transports", "Logement", "Changement climatique"}
 
-\item{frequency}{la fréquence de publication des données}
+\item{frequency}{la fréquence de publication des données. Les fréquences les
+plus utilisées sont \code{annual}, \code{monthly}, \code{ponctual}. \href{https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/metadata/frequencies}{la liste complète des fréquences}}
 
 \item{tags}{la liste des mots clefs. Si le fichier est déjà publié sur le
-site SDES, on reprend les mêmes. L'ensemble des mots clefs est disponible
-sur
-https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&withColumnDescription=false.}
+site SDES, on reprend les mêmes. La liste des \href{https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&withColumnDescription=false}{mots clefs recensés}.}
 
 \item{frequency_date}{la date de prochaine publication.}
 
 \item{granularity}{la granularité du jeu de données. Les plus utilisés sont
 "fr:region", "fr:departement", "fr:epci", "fr:commune", "fr:iris" et pour
-les données à l'adresse "poi"}
+les données à l'adresse "poi". \href{https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/metadata/granularities}{La liste complète des granularités}}
 
 \item{zones}{la zone couverte par le jeu de données. country:fr pour France
 entière, country-subset:fr:metro pour la métropole et
@@ -69,7 +68,7 @@ un objet \code{\link[=dido_dataset]{dido_dataset()}}. Ce dernier sert pour crée
 les datafiles et les millésimes.
 }
 \description{
-Créé un dataset
+Ajoute un dataset
 }
 \examples{
 dataset <- add_dataset(
@@ -79,3 +78,12 @@ dataset <- add_dataset(
   frequency = "unknown"
 )
 }
+\seealso{
+La liste des \href{https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/referentiels/tags/csv?withColumnName=true&withColumnDescription=false}{mots clefs recensés}
+
+Other dataset: 
+\code{\link{dido_dataset}()},
+\code{\link{get_dataset}()},
+\code{\link{update_dataset}()}
+}
+\concept{dataset}

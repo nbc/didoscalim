@@ -25,7 +25,10 @@ update_attachment(att)
 }
 \seealso{
 Other attachment: 
+\code{\link{add_attachment}()},
+\code{\link{dido_attachment}()},
 \code{\link{get_attachment}()},
-\code{\link{list_attachments}()}
+\code{\link{list_attachments}()},
+\code{\link{replace_attachment}()}
 }
 \concept{attachment}

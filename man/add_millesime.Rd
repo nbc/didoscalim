@@ -40,3 +40,9 @@ millesime <- add_millesime(
 )
 }
 }
+\seealso{
+Other millesime: 
+\code{\link{list_millesimes}()},
+\code{\link{replace_millesime}()}
+}
+\concept{millesime}

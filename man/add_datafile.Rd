@@ -28,7 +28,7 @@ add_datafile(
 
 \item{file_name}{le nom du fichier à charger}
 
-\item{millesime}{le millesime (YYYY-MM). Par défaut prendre la valeur YYYY-MM
+\item{millesime}{le millesime (AAAA-MM). Par défaut prendre la valeur AAAA-MM
 avec l'année courante et le mois courant}
 
 \item{published}{la date de publication du fichier, si non précisée, prend la
@@ -40,14 +40,16 @@ fichier de données au format AAAA-MM-JJ}
 \item{temporal_coverage_end}{optionnel, la date de fin de couverture du
 fichier de données au format AAAA-MM-JJ}
 
-\item{legal_notice}{mention légale, par défaut "SDES"}
+\item{legal_notice}{les mentions légales, par défaut "SDES"}
 
-\item{date_diffusion}{la date/heure à laquelle le fichier sera accessible au
-format ISO 8601 (2021-10-01T08:00:00Z). Si non précisée prend la date du
-jour à minuit, le fichier est donc immédiatement accessible.}
+\item{date_diffusion}{la date/heure à laquelle le fichier sera accessible. Si
+cette date est dans le passé, les données sont immédiatement accessibles,
+si elle est dans le futur, les données ne seront accessibles qu'à cette
+date/heure. au format ISO 8601 (2021-10-01T08:00:00Z) Si non précisée prend
+la date du au jour à minuit, le fichier est donc immédiatement accessible.}
 
-\item{quiet}{quand TRUE ou que l'option dido_quiet est à TRUE supprime les
-messages d'information, \code{NULL} par défaut}
+\item{quiet}{quand \code{TRUE} ou que l'option dido_quiet est à \code{TRUE} supprime
+les messages d'information, \code{NULL} par défaut}
 }
 \value{
 un objet \code{dido_job()}
@@ -67,6 +69,7 @@ datafile <- add_datafile(
 }
 \seealso{
 Other datafile: 
+\code{\link{dido_datafile}()},
 \code{\link{get_datafile}()},
 \code{\link{list_datafiles}()},
 \code{\link{update_datafile}()}

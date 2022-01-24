@@ -10,6 +10,8 @@
 #' * `published`
 #' * `url` : l'url du fichier annexe
 #'
+#' @family attachment
+#'
 #' @name dido_attachment
 NULL
 

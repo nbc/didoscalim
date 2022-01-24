@@ -18,3 +18,9 @@ Liste les millesimes
 \examples{
 list_millesimes()
 }
+\seealso{
+Other millesime: 
+\code{\link{add_millesime}()},
+\code{\link{replace_millesime}()}
+}
+\concept{millesime}

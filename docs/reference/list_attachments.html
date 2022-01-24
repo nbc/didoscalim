@@ -53,7 +53,7 @@ la liste des attachments de ce dataset."><!-- mathjax --><script src="https://cd
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Liste les attachments</h1>
-      <small class="dont-index">Source : <a href="https://github.com/MTES-MCT/didoscalim/blob/HEAD/R/get-attachments.R" class="external-link"><code>R/get-attachments.R</code></a></small>
+      <small class="dont-index">Source : <a href="https://github.com/MTES-MCT/didoscalim/blob/HEAD/R/list-attachments.R" class="external-link"><code>R/list-attachments.R</code></a></small>
       <div class="d-none name"><code>list_attachments.Rd</code></div>
     </div>
 
@@ -79,27 +79,30 @@ la liste des attachments de ce dataset.</p>
     <div class="section level2">
     <h2 id="voir-galement">Voir également<a class="anchor" aria-label="anchor" href="#voir-galement"></a></h2>
     <div class="dont-index"><p>Other attachment: 
+<code><a href="add_attachment.html">add_attachment</a>()</code>,
+<code><a href="dido_attachment.html">dido_attachment</a>()</code>,
 <code><a href="get_attachment.html">get_attachment</a>()</code>,
+<code><a href="replace_attachment.html">replace_attachment</a>()</code>,
 <code><a href="update_attachment.html">update_attachment</a>()</code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">list_attachments</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 30 × 8</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 70 × 8</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    id     rid    title   description   created_at last_modified published url   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61ee6… 1fda0… Liste … Détail des v… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61ee6… e4a98… didosc… une autre de… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61ee6… 44a95… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61ee6… 17abb… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61ee6… c89e9… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61ee6… 42fd5… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61ee6… 550dc… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61ee6… 2f04e… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61ee6… e1081… didosc… une autre de… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61ee6… 1d853… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 20 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61eed… f990d… Liste … Détail des v… 2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61eed… b7c34… didosc… une autre de… 2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61eed… eef91… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61eed… 820f4… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61eed… 7bcaf… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61eed… 84406… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61eec… f58bd… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61eec… d25e0… didosc… une autre de… 2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61eec… 940ef… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61eec… 8096c… didosc… test          2022-01-2… 2022-01-24T1… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 60 more rows</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

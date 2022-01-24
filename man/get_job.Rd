@@ -4,10 +4,10 @@
 \alias{get_job}
 \title{Récupére un job en particulier}
 \usage{
-get_job(job_id)
+get_job(data)
 }
 \arguments{
-\item{job_id}{l'id du job}
+\item{data}{l'id du job}
 }
 \value{
 un objet `dido_job()``
