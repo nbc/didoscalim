@@ -2,10 +2,10 @@ pandoc: 2.11.4
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
+  charger-des-donnees: charger-des-donnees.html
   csv-augmente: csv-augmente.html
-  didoscalim: didoscalim.html
   les-environnements: les-environnements.html
-last_built: 2022-01-24T17:18Z
+last_built: 2022-01-24T17:55Z
 urls:
   reference: https://mtes-mct.github.io/didoscalim/reference
   article: https://mtes-mct.github.io/didoscalim/articles

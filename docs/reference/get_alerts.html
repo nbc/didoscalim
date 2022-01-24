@@ -18,17 +18,15 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/didoscalim.html">Prise en main</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Référence</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/charger-des-donnees.html">Charger des données</a>
     <a class="dropdown-item" href="../articles/csv-augmente.html">Générer un fichier csv augmenté</a>
-    <a class="dropdown-item" href="../articles/les-environnements.html">Utiliser les environnements</a>
+    <a class="dropdown-item" href="../articles/les-environnements.html">Configurer et utiliser les environnements</a>
   </div>
 </li>
 <li class="nav-item">
@@ -72,12 +70,18 @@
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_alerts</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 19</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 9 × 19</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   id      title   description  topic license frequency created_at  last_modified</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 61ee6c… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 61ee58… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 61ee57… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 61eee7… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 61eee1… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 61eecd… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> 61ee8f… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> 61ee74… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> 61ee73… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> 61ee6c… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">8</span> 61ee58… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">9</span> 61ee57… Un jeu… Un jeu de d… Tran… fr-lo   annual    2022-01-24… 2022-01-24T0…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 11 more variables: last_update &lt;chr&gt;, frequency_date &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   tags &lt;list&gt;, attachments &lt;list&gt;, datafiles &lt;list&gt;, organization.id &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   organization.title &lt;chr&gt;, spatial.granularity &lt;chr&gt;, spatial.zones &lt;list&gt;,</span></span>

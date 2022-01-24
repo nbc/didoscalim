@@ -38,16 +38,14 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="articles/didoscalim.html">Prise en main</a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="reference/index.html">Référence</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/charger-des-donnees.html">Charger des données</a>
     <a class="dropdown-item" href="articles/csv-augmente.html">Générer un fichier csv augmenté</a>
-    <a class="dropdown-item" href="articles/les-environnements.html">Utiliser les environnements</a>
+    <a class="dropdown-item" href="articles/les-environnements.html">Configurer et utiliser les environnements</a>
   </div>
 </li>
 <li class="nav-item">
@@ -85,10 +83,21 @@
 </ul>
 <p>Ce package est encore en cours de développement.</p>
 <div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>Vous pouvez installer ce package depuis GitHub :</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Install from GitHub</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"mtes-mct/didoscalim"</span><span class="op">)</span>
+
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
 <h2 id="exemple">Exemple<a class="anchor" aria-label="anchor" href="#exemple"></a>
 </h2>
 <p>Générer un fichier CSV augmenté à partir d’un fichier <a href="articles/exemple.csv">CSV normal</a> et le charger dans un dataset.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span>, warn.conflict <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
@@ -105,7 +114,7 @@
   <span class="fu"><a href="reference/dido_csv.html">dido_csv</a></span><span class="op">(</span>params <span class="op">=</span> <span class="va">params</span>, cog_year <span class="op">=</span> <span class="st">"2019"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="reference/dido_write_csv.html">dido_write_csv</a></span><span class="op">(</span><span class="va">temp_file</span><span class="op">)</span></code></pre></div>
 <p>L’intégrer dans DiDo :</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/add_dataset.html">add_dataset</a></span><span class="op">(</span>
   title <span class="op">=</span> <span class="st">"Un jeu de données fictif"</span>,
   description <span class="op">=</span> <span class="st">"Un jeu de données énergie fictif"</span>,
@@ -127,37 +136,9 @@
 <span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h2>
-<p>Vous pouvez installer ce package depuis GitHub :</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Install from GitHub</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"mtes-mct/didoscalim"</span><span class="op">)</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span></code></pre></div>
-</div>
-<div class="section level2">
 <h2 id="configuration">Configuration<a class="anchor" aria-label="anchor" href="#configuration"></a>
 </h2>
-<ul>
-<li><a href="articles/les-environnements.html">utiliser les environnements</a></li>
-</ul>
-<p>La configuration de didoscalim se fait dans votre .Renviron. Pour l’éditer vous pouvez utiliser <code><a href="https://usethis.r-lib.org/reference/edit.html" class="external-link">usethis::edit_r_environ()</a></code>. Ajouter les lignes suivantes (la clef d’API est disponible dans l’interface web d’alimentation dans l’onglet “Mon compte”) :</p>
-<p>Il est fortement recommandé de tester les chargements avant de les lancer sur <code>PROD</code>, pour cela configurez au minimum les environnements <code>ECOLE</code> et <code>PROD</code>.</p>
-<p>Pour vérifier que vos environnements sont bien configurés :</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mtes-mct.github.io/didoscalim/">didoscalim</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/readRenviron.html" class="external-link">readRenviron</a></span><span class="op">(</span><span class="st">"~/.Renviron"</span><span class="op">)</span>
-<span class="fu"><a href="reference/load_envs.html">load_envs</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="reference/check_envs.html">check_envs</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>Par défaut, didoscalim utilisera l’environnement <code>ECOLE</code>. pour basculer sur l’environnement <code>PROD</code> vous pouvez lancer la commande :</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="st">"PROD"</span><span class="op">)</span></code></pre></div>
-<p>Vous pouvez à tout moment voir sur quel environnement vous travailler avec la commande <code><a href="reference/get_work_env.html">get_work_env()</a></code></p>
-<p>Pour rebasculer sur l’environnement <code>ECOLE</code> :</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>La configuration de didoscalim se fait dans votre .Renviron. Vous trouverez la documentation nécessaire dansla vignette <a href="articles/les-environnements.html">utiliser les environnements</a></p>
 </div>
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
@@ -165,7 +146,7 @@
 <p>Vous pouvez trouver l’ensemble de la documentation sur <a href="https://mtes-mct.github.io/didoscalim/">la page du projet</a> et en particuler :</p>
 <ul>
 <li><a href="articles/csv-augmente.html">comment générer un fichier augmenté</a></li>
-<li><a href="articles/charger-des-donnees.html">comment intégrer des nouveaux jeux/fichiers de données</a></li>
+<li><a href="articles/charger-des-donnees.html">comment charger des données dans DiDo</a></li>
 <li><a href="articles/les-environnements.html">utiliser les environnements</a></li>
 </ul>
 </div>
@@ -182,7 +163,7 @@
 </h3>
 <p>La documentation ne peut pas (encore ?) être généré par les github actions, il faut donc pour le moment générer le site statiquement à partir d’une poste qui a accès à un environnement DiDo de développement.</p>
 <p>Si vous avez modifié la documentation, avant de pousser une nouvelle vous devez lancer les commandes suivantes :</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/build_rmd.html" class="external-link">build_readme</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">document</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/build_vignettes.html" class="external-link">build_vignettes</a></span><span class="op">(</span><span class="op">)</span>

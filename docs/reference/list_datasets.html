@@ -18,17 +18,15 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/didoscalim.html">Prise en main</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Référence</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/charger-des-donnees.html">Charger des données</a>
     <a class="dropdown-item" href="../articles/csv-augmente.html">Générer un fichier csv augmenté</a>
-    <a class="dropdown-item" href="../articles/les-environnements.html">Utiliser les environnements</a>
+    <a class="dropdown-item" href="../articles/les-environnements.html">Configurer et utiliser les environnements</a>
   </div>
 </li>
 <li class="nav-item">
@@ -72,24 +70,24 @@
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">list_datasets</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 90 × 20</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    id     title    description  topic license frequency created_at last_modified</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61ee6… le titr… la descript… Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61ee6… Données… test         Tran… fr-lo   annual    2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61ee6… Un jeu … Un jeu de d… Tran… fr-lo   annual    2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61ee6… didosca… test         Tran… fr-lo   unknown   2022-01-2… 2022-01-24T0…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 80 more rows, and 12 more variables: last_update &lt;chr&gt;, tags &lt;list&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   attachments &lt;list&gt;, datafiles &lt;list&gt;, frequency_date &lt;chr&gt;, caution &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   organization.id &lt;chr&gt;, organization.title &lt;chr&gt;, spatial.granularity &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   spatial.zones &lt;list&gt;, temporal_coverage.end &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   temporal_coverage.start &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 283 × 20</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id     title   description   topic license frequency created_at last_modified</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61eee… Donnée… Données sur … Tran… fr-lo   annual    2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61eee… le tit… la descripti… Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61eee… Donnée… test          Tran… fr-lo   annual    2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61eee… Donnée… Données sur … Tran… fr-lo   annual    2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61eee… Un jeu… Un jeu de do… Tran… fr-lo   annual    2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61eee… didosc… test          Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61eee… didosc… test          Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61eee… didosc… test          Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61eee… didosc… test          Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61eee… didosc… test          Tran… fr-lo   unknown   2022-01-2… 2022-01-24T1…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 273 more rows, and 12 more variables: last_update &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   frequency_date &lt;chr&gt;, tags &lt;list&gt;, caution &lt;chr&gt;, attachments &lt;list&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   datafiles &lt;list&gt;, organization.id &lt;chr&gt;, organization.title &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   spatial.granularity &lt;chr&gt;, spatial.zones &lt;list&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   temporal_coverage.end &lt;chr&gt;, temporal_coverage.start &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

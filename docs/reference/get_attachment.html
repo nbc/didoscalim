@@ -20,17 +20,15 @@ son titre."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/didoscalim.html">Prise en main</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Référence</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/charger-des-donnees.html">Charger des données</a>
     <a class="dropdown-item" href="../articles/csv-augmente.html">Générer un fichier csv augmenté</a>
-    <a class="dropdown-item" href="../articles/les-environnements.html">Utiliser les environnements</a>
+    <a class="dropdown-item" href="../articles/les-environnements.html">Configurer et utiliser les environnements</a>
   </div>
 </li>
 <li class="nav-item">
@@ -74,7 +72,7 @@ son titre.</p>
 <dt>title</dt>
 <dd><p>le titre d'un attachment</p></dd>
 <dt>dataset</dt>
-<dd><p>l'identifiant d'un dataset ou un objet <code><a href="dido_dataset.html">dido_dataset()</a></code></p></dd>
+<dd><p>l'identifiant ou l'objet <code><a href="dido_dataset.html">dido_dataset()</a></code> du dataset parent de l'attachment</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="valeur-de-retour">Valeur de retour<a class="anchor" aria-label="anchor" href="#valeur-de-retour"></a></h2>
@@ -82,7 +80,7 @@ son titre.</p>
     </div>
     <div class="section level2">
     <h2 id="d-tails">Détails<a class="anchor" aria-label="anchor" href="#d-tails"></a></h2>
-    <p>Lève une exception si la recherche ne retourne plus ou moins que 1 attachment</p>
+    <p>Lève une exception si la recherche ne retourne pas exactement 1 attachment</p>
     </div>
     <div class="section level2">
     <h2 id="voir-galement">Voir également<a class="anchor" aria-label="anchor" href="#voir-galement"></a></h2>
