@@ -10,7 +10,5 @@ list_envs()
 Liste les environnements configurés avec les URL associées.
 }
 \examples{
-\dontrun{
 list_envs()
-}
 }

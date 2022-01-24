@@ -18,10 +18,8 @@ missing_key_message <- function(env_name, key) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' readEnviron()
+#' readRenviron("~/.Renviron")
 #' load_envs()
-#' }
 load_envs <- function() {
   rm(list = ls(pos = .didoscalim_env), pos = .didoscalim_env)
 
@@ -53,9 +51,7 @@ load_envs <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' list_envs()
-#' }
 list_envs <- function() {
   envs <- get("environments", envir = .didoscalim_env)
   message <- c(glue::glue("Vous avez {length(envs)} environnement(s) configuré(s) : "))
@@ -129,9 +125,7 @@ set_work_env <- function(env_name = NULL, quiet = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' get_work_env()
-#' }
 get_work_env <- function(quiet = NULL) {
   if (!exists("work_env", envir = .didoscalim_env)) set_work_env(quiet = quiet)
   get("work_env", envir = .didoscalim_env)
@@ -166,9 +160,7 @@ find_lowest_env <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' check_envs()
-#' }
 check_envs <- function() {
   old_env <- get_work_env(quiet = TRUE)
   message <- c("Test de connexion:")

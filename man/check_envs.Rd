@@ -11,7 +11,5 @@ Affiche un état des connexions aux différents environnements avec le message
 d'erreur le cas échéant
 }
 \examples{
-\dontrun{
 check_envs()
-}
 }

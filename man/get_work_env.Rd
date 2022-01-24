@@ -19,7 +19,5 @@ retournera le premier environnement configuré en suivant l'ordre : DEV,
 PREPROD, ECOLE. Il ne fixera \strong{jamais} PROD implicitement.
 }
 \examples{
-\dontrun{
 get_work_env()
-}
 }

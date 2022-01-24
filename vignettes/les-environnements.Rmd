@@ -77,8 +77,17 @@ set_work_env()
 Vous pouvez à tout moment voir dans quel environnement vous êtes avec la
 commande `get_work_env()`.
 
-Vous pouvez lister les environnements configués avec la commande `list_envs()`
-et vérifier qu'ils fonctionnent avec la commande `check_envs()`
+Vous pouvez lister les environnements configués avec la commande `list_envs()` :
+
+```{r}
+list_envs()
+```
+
+et vérifier qu'ils fonctionnent avec la commande `check_envs()` :
+
+```{r}
+check_envs()
+```
 
 ## Méthode d'alimentation
 

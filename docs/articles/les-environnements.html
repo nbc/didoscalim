@@ -125,7 +125,21 @@ DIDOSCALIM_API_KEY_PROD=ma_clef_api_prod</code></pre>
 <code class="sourceCode R"><span class="fu"><a href="../reference/set_work_env.html">set_work_env</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Environnement DiDo actif : DEV</span></code></pre></div>
 <p>Vous pouvez à tout moment voir dans quel environnement vous êtes avec la commande <code><a href="../reference/get_work_env.html">get_work_env()</a></code>.</p>
-<p>Vous pouvez lister les environnements configués avec la commande <code><a href="../reference/list_envs.html">list_envs()</a></code> et vérifier qu’ils fonctionnent avec la commande <code><a href="../reference/check_envs.html">check_envs()</a></code></p>
+<p>Vous pouvez lister les environnements configués avec la commande <code><a href="../reference/list_envs.html">list_envs()</a></code> :</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/list_envs.html">list_envs</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; * Vous avez 3 environnement(s) configuré(s) : </span>
+<span class="co">#&gt; <span style="color: #0000BB;">ℹ</span> DEV : http://api.alimentation.dido.fr/v1</span>
+<span class="co">#&gt; <span style="color: #0000BB;">ℹ</span> PREPROD : http://api.alimentation.dido.fr/</span>
+<span class="co">#&gt; <span style="color: #0000BB;">ℹ</span> PROD : http://api.alimentation.dido.fr/v1</span></code></pre></div>
+<p>et vérifier qu’ils fonctionnent avec la commande <code><a href="../reference/check_envs.html">check_envs()</a></code> :</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/check_envs.html">check_envs</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; * Test de connexion:</span>
+<span class="co">#&gt; <span style="color: #0000BB;">ℹ</span> DEV: OK</span>
+<span class="co">#&gt; <span style="color: #BB0000;">x</span> PREPROD: KO: Client error : 404</span>
+<span class="co">#&gt; <span style="color: #0000BB;">ℹ</span> PROD: OK</span>
+<span class="co">#&gt; Environnement DiDo actif : DEV</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="méthode-dalimentation">Méthode d’alimentation<a class="anchor" aria-label="anchor" href="#m%C3%A9thode-dalimentation"></a>

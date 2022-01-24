@@ -23,7 +23,7 @@ library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
 ```{r, echo=FALSE, results = FALSE, message = FALSE}
 # bugfix pour check()
 library(stringr)
-library(purrr)
+library(purrr, warn.conflicts = FALSE)
 ds <- list_datasets() 
 if (nrow(ds) > 0) ds %>% 
   filter(str_detect(title, "Données.*fictive")) %>% 
@@ -62,7 +62,7 @@ add_datafile(
   dataset = dataset,
   file_name = "augmente.csv",
   title = "Données de consommation fictive – chaleur et froid – année 2020",
-  description = "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité",
+  description = "Consommations annuelles et nombre de points de livraison",
   temporal_coverage_start = "2020-01-01",
   temporal_coverage_end = "2020-12-31",
   millesime = "2021-10"
@@ -90,9 +90,9 @@ La procédure est simple :
 ### chercher le datafile à modifier
 
 Pour ajouter un millésime vous devez d'abord récupérer le fichier de données.
-Vous pouvez le chercher par son identifiant ou par son titre avec la fonction
-`get_datafile()`. Cette fonction retourne beaucoup d'information non pertinentes
-dans le cadre d'une mise à jour, vous pouvez utiliser `clean_metadata()` :
+Vous pouvez le chercher par son titre avec la fonction `get_datafile()`. Cette
+fonction retourne beaucoup d'information non pertinentes dans le cadre d'une
+mise à jour, vous pouvez utiliser `clean_metadata()` :
 
 ```{r}
 datafile <- get_datafile(title = "Données de consommation fictive – chaleur et froid – année 2020") %>%

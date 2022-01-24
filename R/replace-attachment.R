@@ -1,5 +1,6 @@
 #' Remplace un fichier annexe
 #'
+#' @param attachment un objet `dido_attachment()` ou un rid
 #' @inheritParams add_attachment
 #'
 #' @return un objet `dido_attachment()`

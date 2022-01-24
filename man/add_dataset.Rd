@@ -13,7 +13,7 @@ add_dataset(
   frequency_date = NULL,
   granularity = NULL,
   zones = NULL,
-  organization = NULL,
+  organization = my_organization(),
   license = "fr-lo",
   temporal_coverage_start = NULL,
   temporal_coverage_end = NULL,
@@ -52,10 +52,11 @@ n'avez pas à remplir ce champ, didoscalim la prendra par défaut.}
 
 \item{license}{la licence des données. "fr-lo" par défaut}
 
-\item{temporal_coverage_start}{la date de début de couverture du jeux de
-données}
+\item{temporal_coverage_start}{optionnel, la date de début de couverture du
+jeux de données au format AAAA-MM-JJ}
 
-\item{temporal_coverage_end}{la date de fin de couverture du jeux de données}
+\item{temporal_coverage_end}{optionnel, la date de fin de couverture du jeux
+de données au format AAAA-MM-JJ}
 
 \item{caution}{Les précautions à prendre avec ce jeu de données. Par exemple
 : "certaines données peuvent être secrétisées"}

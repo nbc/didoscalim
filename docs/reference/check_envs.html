@@ -70,9 +70,12 @@ d'erreur le cas échéant</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">check_envs</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">check_envs</span><span class="op">(</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> * Test de connexion:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">ℹ</span> DEV: OK</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">✖</span> PREPROD: KO: Client error : 404</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">ℹ</span> PROD: OK</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Environnement DiDo actif : DEV</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

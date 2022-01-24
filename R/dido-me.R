@@ -4,6 +4,7 @@
 #' L'objet dido_me est retourné par `me()`
 #'
 #' @name dido_me
+#' @keywords internal
 NULL
 
 new_dido_me <- function(data) {

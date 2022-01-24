@@ -29,7 +29,7 @@ reference:
 - title: "Les fonctions utilitaires"
   contents:
   - clean_metadata
-  - organization
+  - my_organization
   - get_alerts
 
 - title: "Gérer votre environnement"

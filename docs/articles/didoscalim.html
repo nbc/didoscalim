@@ -116,7 +116,7 @@
   dataset <span class="op">=</span> <span class="va">dataset</span>,
   file_name <span class="op">=</span> <span class="st">"augmente.csv"</span>,
   title <span class="op">=</span> <span class="st">"Données de consommation fictive – chaleur et froid – année 2020"</span>,
-  description <span class="op">=</span> <span class="st">"Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité"</span>,
+  description <span class="op">=</span> <span class="st">"Consommations annuelles et nombre de points de livraison"</span>,
   temporal_coverage_start <span class="op">=</span> <span class="st">"2020-01-01"</span>,
   temporal_coverage_end <span class="op">=</span> <span class="st">"2020-12-31"</span>,
   millesime <span class="op">=</span> <span class="st">"2021-10"</span>
@@ -124,7 +124,7 @@
 <span class="co">#&gt;     intégration du fichier `augmente.csv`</span>
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
-<span class="co">#&gt;  * fichier intégré       rid: dbc10659-169f-4da2-9598-5bbce474940d       millesime: 2021-10      lignes: 20</span></code></pre></div>
+<span class="co">#&gt;  * fichier intégré       rid: bb7313fc-f924-4fc0-943f-4915cb7f00f6       millesime: 2021-10      lignes: 20</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="ajouter-un-fichier-annexe">ajouter un fichier annexe<a class="anchor" aria-label="anchor" href="#ajouter-un-fichier-annexe"></a>
@@ -138,7 +138,7 @@
 <span class="op">)</span>
 <span class="co">#&gt;     intégration du fichier annexe `annexe.txt`</span>
 <span class="co">#&gt;  * fichier versé</span>
-<span class="co">#&gt;  * fichier annexe intégré (rid: f5defd20-35e0-4947-a4da-32d795209d08)</span></code></pre></div>
+<span class="co">#&gt;  * fichier annexe intégré (rid: 74f474cf-63f4-46b3-8d25-c08ff439f229)</span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -153,25 +153,25 @@
 <div class="section level3">
 <h3 id="chercher-le-datafile-à-modifier">chercher le datafile à modifier<a class="anchor" aria-label="anchor" href="#chercher-le-datafile-%C3%A0-modifier"></a>
 </h3>
-<p>Pour ajouter un millésime vous devez d’abord récupérer le fichier de données. Vous pouvez le chercher par son identifiant ou par son titre avec la fonction <code><a href="../reference/get_datafile.html">get_datafile()</a></code>. Cette fonction retourne beaucoup d’information non pertinentes dans le cadre d’une mise à jour, vous pouvez utiliser <code><a href="../reference/clean_metadata.html">clean_metadata()</a></code> :</p>
+<p>Pour ajouter un millésime vous devez d’abord récupérer le fichier de données. Vous pouvez le chercher par son titre avec la fonction <code><a href="../reference/get_datafile.html">get_datafile()</a></code>. Cette fonction retourne beaucoup d’information non pertinentes dans le cadre d’une mise à jour, vous pouvez utiliser <code><a href="../reference/clean_metadata.html">clean_metadata()</a></code> :</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Données de consommation fictive – chaleur et froid – année 2020"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 10</span>
-<span class="co">#&gt;  $ rid              : chr "dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ rid              : chr "bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ title            : chr "Données de consommation fictive – chaleur et froid – année 2020"</span>
-<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité"</span>
+<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison"</span>
 <span class="co">#&gt;  $ millesimes       : int 1</span>
-<span class="co">#&gt;  $ created_at       : chr "2022-01-24T07:47:27.789000"</span>
-<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T07:47:27.868000"</span>
+<span class="co">#&gt;  $ created_at       : chr "2022-01-24T13:33:20.289000"</span>
+<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T13:33:20.385000"</span>
 <span class="co">#&gt;  $ published        : chr "2022-01-24T00:00:00"</span>
-<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61ee5980acb527cefd5cae24/datafile/dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61eeaa9019103a970d5cae3f/datafile/bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ temporal_coverage:List of 2</span>
 <span class="co">#&gt;   ..$ start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;   ..$ end  : chr "2020-12-31T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ legal_notice     : chr "SDES"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61ee5980acb527cefd5cae24"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61eeaa9019103a970d5cae3f"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div class="section level3">
@@ -201,20 +201,20 @@
 <code class="sourceCode R"><span class="va">datafile</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_datafile.html">get_datafile</a></span><span class="op">(</span><span class="va">millesime</span><span class="op">)</span>  <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 10</span>
-<span class="co">#&gt;  $ rid              : chr "dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ rid              : chr "bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ title            : chr "Données de consommation fictive – chaleur et froid – année 2020"</span>
-<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité"</span>
+<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison"</span>
 <span class="co">#&gt;  $ millesimes       : int 2</span>
-<span class="co">#&gt;  $ created_at       : chr "2022-01-24T07:47:27.789000"</span>
-<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T07:47:57.452000"</span>
+<span class="co">#&gt;  $ created_at       : chr "2022-01-24T13:33:20.289000"</span>
+<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T13:33:50.552000"</span>
 <span class="co">#&gt;  $ published        : chr "2022-01-24T00:00:00"</span>
-<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61ee5980acb527cefd5cae24/datafile/dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61eeaa9019103a970d5cae3f/datafile/bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ temporal_coverage:List of 2</span>
 <span class="co">#&gt;   ..$ start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;   ..$ end  : chr "2020-12-31T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ legal_notice     : chr "SDES"</span>
 <span class="co">#&gt;  - attr(*, "id")= tibble [1 × 1] (S3: tbl_df/tbl/data.frame)</span>
-<span class="co">#&gt;   ..$ id: chr "61ee5980acb527cefd5cae24"</span>
+<span class="co">#&gt;   ..$ id: chr "61eeaa9019103a970d5cae3f"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 <p>Modifier la ou les métadonnées concernées et faire la mise à jour :</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -229,7 +229,7 @@
 <code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_dataset.html">get_dataset</a></span><span class="op">(</span><span class="va">datafile</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">dataset</span>
 <span class="co">#&gt; List of 14</span>
-<span class="co">#&gt;  $ id               : chr "61ee5980acb527cefd5cae24"</span>
+<span class="co">#&gt;  $ id               : chr "61eeaa9019103a970d5cae3f"</span>
 <span class="co">#&gt;  $ title            : chr "Données de consommation fictive"</span>
 <span class="co">#&gt;  $ description      : chr "test"</span>
 <span class="co">#&gt;  $ organization     :List of 2</span>
@@ -238,8 +238,8 @@
 <span class="co">#&gt;  $ topic            : chr "Transports"</span>
 <span class="co">#&gt;  $ license          : chr "fr-lo"</span>
 <span class="co">#&gt;  $ frequency        : chr "annual"</span>
-<span class="co">#&gt;  $ created_at       : chr "2022-01-24T07:47:12.154000"</span>
-<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T07:48:05.657000"</span>
+<span class="co">#&gt;  $ created_at       : chr "2022-01-24T13:33:04.228000"</span>
+<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T13:33:59.650000"</span>
 <span class="co">#&gt;  $ last_update      : chr "2022-01-24T00:00:00"</span>
 <span class="co">#&gt;  $ frequency_date   : chr "2021-10-10T00:00:00"</span>
 <span class="co">#&gt;  $ tags             : list()</span>
@@ -277,19 +277,19 @@
   <span class="fu"><a href="../reference/clean_metadata.html">clean_metadata</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">datafile</span>
 <span class="co">#&gt; List of 10</span>
-<span class="co">#&gt;  $ rid              : chr "dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ rid              : chr "bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ title            : chr "Données de consommation fictive – chaleur et froid – année 2020"</span>
-<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison de chaleur et froid, par secteur d'activité"</span>
+<span class="co">#&gt;  $ description      : chr "Consommations annuelles et nombre de points de livraison"</span>
 <span class="co">#&gt;  $ millesimes       : int 2</span>
-<span class="co">#&gt;  $ created_at       : chr "2022-01-24T07:47:27.789000"</span>
-<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T07:48:05.657000"</span>
+<span class="co">#&gt;  $ created_at       : chr "2022-01-24T13:33:20.289000"</span>
+<span class="co">#&gt;  $ last_modified    : chr "2022-01-24T13:33:59.650000"</span>
 <span class="co">#&gt;  $ published        : chr "2022-01-24T00:00:00"</span>
-<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61ee5980acb527cefd5cae24/datafile/dbc10659-169f-4da2-9598-5bbce474940d"</span>
+<span class="co">#&gt;  $ url              : chr "http://catalogue.diffusion.dido.fr/dataset/61eeaa9019103a970d5cae3f/datafile/bb7313fc-f924-4fc0-943f-4915cb7f00f6"</span>
 <span class="co">#&gt;  $ temporal_coverage:List of 2</span>
 <span class="co">#&gt;   ..$ start: chr "2020-01-01T00:00:00.000Z"</span>
 <span class="co">#&gt;   ..$ end  : chr "2021-12-31T00:00:00.000Z"</span>
 <span class="co">#&gt;  $ legal_notice     : chr "SDES"</span>
-<span class="co">#&gt;  - attr(*, "id")= chr "61ee5980acb527cefd5cae24"</span>
+<span class="co">#&gt;  - attr(*, "id")= chr "61eeaa9019103a970d5cae3f"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "dido_datafile" "list"</span></code></pre></div>
 </div>
 <div class="section level3">
@@ -316,7 +316,7 @@
 <span class="co">#&gt;  * fichier versé</span>
 <span class="co">#&gt;  * fichier validé</span>
 <span class="co">#&gt; * fichier intégré</span>
-<span class="co">#&gt; (rid: dbc10659-169f-4da2-9598-5bbce474940d, millesime: 2022-10, lignes: 20</span></code></pre></div>
+<span class="co">#&gt; (rid: bb7313fc-f924-4fc0-943f-4915cb7f00f6, millesime: 2022-10, lignes: 20</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

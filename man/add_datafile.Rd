@@ -34,10 +34,11 @@ avec l'année courante et le mois courant}
 \item{published}{la date de publication du fichier, si non précisée, prend la
 date du jour.}
 
-\item{temporal_coverage_start}{la date de début des données au format
-YYYY-MM-DD}
+\item{temporal_coverage_start}{optionnel, la date de début de couverture du
+fichier de données au format AAAA-MM-JJ}
 
-\item{temporal_coverage_end}{la date de fin des données au format YYYY-MM-DD}
+\item{temporal_coverage_end}{optionnel, la date de fin de couverture du
+fichier de données au format AAAA-MM-JJ}
 
 \item{legal_notice}{mention légale, par défaut "SDES"}
 

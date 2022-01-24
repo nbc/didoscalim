@@ -19,6 +19,6 @@ Enregistre le fichier CSV augmenté utilisé par DiDo.
 }
 \examples{
 \dontrun{
-write_dido_csv(my_tibble, "fichier.csv")
+write_dido_csv(data, "/tmp/fichier.csv")
 }
 }

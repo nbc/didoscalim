@@ -10,9 +10,9 @@
 #' @export
 #'
 #' @examples
-#' organization_id <- organization()
-#' organization_id <- organization(name = "BSI")
-organization <- function(name = NULL) {
+#' organization_id <- my_organization()
+#' organization_id <- my_organization(name = "BSI")
+my_organization <- function(name = NULL) {
   orgs <- me()$organizations
   if (is.null(name)) {
     if (length(orgs) > 1) {

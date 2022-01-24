@@ -86,19 +86,20 @@ la liste des attachments de ce dataset.</p>
     <div class="section level2">
     <h2 id="ref-examples">Exemples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">list_attachments</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 8</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    id     rid     title   description created_at last_modified published url    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61ee5… a09c43… didosc… une autre … 2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61ee5… 251b1e… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61ee5… 64fa5b… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61ee5… 9a0f28… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61ee5… 4147b9… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61ee5… bb0da5… didosc… une autre … 2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61ee5… 984ce5… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61ee5… d811e6… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61ee5… 6390f6… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61ee5… 98621e… didosc… test        2022-01-2… 2022-01-24T0… 2022-01-… http:/…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 30 × 8</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id     rid    title   description   created_at last_modified published url   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 61ee6… 1fda0… Liste … Détail des v… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 61ee6… e4a98… didosc… une autre de… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 61ee6… 44a95… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 61ee6… 17abb… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 61ee6… c89e9… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 61ee6… 42fd5… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 61ee6… 550dc… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 61ee6… 2f04e… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 61ee6… e1081… didosc… une autre de… 2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 61ee6… 1d853… didosc… test          2022-01-2… 2022-01-24T0… 2022-01-… http:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 20 more rows</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

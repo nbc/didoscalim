@@ -84,6 +84,6 @@ automatique est faite dans la fonction \code{dido_csv()}.
 }
 \examples{
 \dontrun{
-data <- dido_read_delim("fichier.csv")
+data <- dido_read_delim("vignettes/exemple.csv")
 }
 }

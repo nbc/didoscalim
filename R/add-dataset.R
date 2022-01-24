@@ -14,9 +14,10 @@
 #' @param organization l'id de l'organisation sous laquelle vous souhaitez
 #'   publier le dataset, si vous n'appartenez qu'à une seule organisation, vous
 #'   n'avez pas à remplir ce champ, didoscalim la prendra par défaut.
-#' @param temporal_coverage_start la date de début de couverture du jeux de
-#'   données
-#' @param temporal_coverage_end  la date de fin de couverture du jeux de données
+#' @param temporal_coverage_start optionnel, la date de début de couverture du
+#'   jeux de données au format AAAA-MM-JJ
+#' @param temporal_coverage_end  optionnel, la date de fin de couverture du jeux
+#'   de données au format AAAA-MM-JJ
 #' @param zones la zone couverte par le jeu de données. country:fr pour France
 #'   entière, country-subset:fr:metro pour la métropole et
 #'   country-subset:fr:drom pour les DROM
@@ -49,7 +50,7 @@ add_dataset <- function(title,
                            frequency_date = NULL,
                            granularity = NULL,
                            zones = NULL,
-                           organization = organization(),
+                           organization = my_organization(),
                            license = "fr-lo",
                            temporal_coverage_start = NULL,
                            temporal_coverage_end = NULL,

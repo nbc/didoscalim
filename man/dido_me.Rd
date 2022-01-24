@@ -6,3 +6,4 @@
 \description{
 L'objet dido_me est retourné par \code{me()}
 }
+\keyword{internal}

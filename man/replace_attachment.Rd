@@ -7,6 +7,8 @@
 replace_attachment(attachment, file_name, published = NULL, quiet = NULL)
 }
 \arguments{
+\item{attachment}{un objet \code{dido_attachment()} ou un rid}
+
 \item{file_name}{le nom du fichier à verser}
 
 \item{published}{la date de publication, si non précisée, prendra la date du

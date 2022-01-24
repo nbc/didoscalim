@@ -5,6 +5,8 @@ vignette: >
   %\VignetteIndexEntry{Générer un fichier csv augmenté}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+resource_files:
+  - exemple.csv
 ---
 
 ```{r, include = FALSE}
@@ -55,10 +57,9 @@ La génération se passe en trois étapes :
 
 ## le chargement du fichier d'origine
 
-Le fichier d'origine doit être au format CSV classique, ie, la première ligne du fichier contient le
-nom des variables.
-
-Vous pouvez télécharger le [fichier exemple utilisé](https://raw.githubusercontent.com/mtes-mct/didoscalim/main/vignettes/exemple.csv).
+Le fichier d'origine doit être au format CSV classique, ie, la première ligne du
+fichier contient le nom des variables. Vous pouvez télécharger le [fichier
+exemple utilisé](exemple.csv).
 
 En premier lieu, charger le fichier dans un dataframe avec la commande `dido_read_delim()`.
 
@@ -109,12 +110,12 @@ knitr::kable(head(result, n = 5))
 dido_write_csv(result, "resultat.csv")
 ```
 
-Vous pouvez télécharger [le fichier généré](https://raw.githubusercontent.com/mtes-mct/didoscalim/main/vignettes/resultat.csv)
+Vous pouvez télécharger [le fichier généré](resultat.csv)
 
 ## résumé.
 
 Une fois que la configuration de `params` est correcte, vous pouvez chainer avec
-`magrittr::%>%` :
+l'opérateur `magrittr::%>%` :
 
 ```{r}
 library(magrittr, quietly = TRUE)

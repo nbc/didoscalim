@@ -2,9 +2,6 @@ DiDoscalim
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# DiDoscalim
-
 <!-- badges: start -->
 
 [<img src="https://www.repostatus.org/badges/latest/wip.svg" target="_blank" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." />](https://www.repostatus.org/#wip)
@@ -21,13 +18,11 @@ Ce package est encore en cours de développement.
 ## Exemple
 
 Générer un fichier CSV augmenté à partir d’un fichier [CSV
-normal](vignettes/exemple.csv) et le charger dans un dataset.
+normal](articles/exemple.csv) et le charger dans un dataset.
 
 ``` r
 library(didoscalim)
-library(magrittr, quietly = TRUE)
-
-temp_file <- tempfile(fileext = ".csv")
+library(magrittr, quietly = TRUE, warn.conflict = FALSE)
 
 params = list(
   OPERATEUR = list(description = "Nom de l'opérateur"),
@@ -37,6 +32,7 @@ params = list(
   CONSO = list(description = "Consommation (en MWh)", unit = "MWh")
 )
 
+temp_file <- tempfile(fileext = ".csv")
 dido_read_delim("vignettes/exemple.csv") %>%
   dido_csv(params = params, cog_year = "2019") %>%
   dido_write_csv(temp_file)

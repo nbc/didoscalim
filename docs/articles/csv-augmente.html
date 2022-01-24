@@ -119,8 +119,7 @@
 <div class="section level2">
 <h2 id="le-chargement-du-fichier-dorigine">le chargement du fichier d’origine<a class="anchor" aria-label="anchor" href="#le-chargement-du-fichier-dorigine"></a>
 </h2>
-<p>Le fichier d’origine doit être au format CSV classique, ie, la première ligne du fichier contient le nom des variables.</p>
-<p>Vous pouvez télécharger le <a href="https://raw.githubusercontent.com/mtes-mct/didoscalim/main/vignettes/exemple.csv" class="external-link">fichier exemple utilisé</a>.</p>
+<p>Le fichier d’origine doit être au format CSV classique, ie, la première ligne du fichier contient le nom des variables. Vous pouvez télécharger le <a href="exemple.csv">fichier exemple utilisé</a>.</p>
 <p>En premier lieu, charger le fichier dans un dataframe avec la commande <code><a href="../reference/dido_read_delim.html">dido_read_delim()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/dido_read_delim.html">dido_read_delim</a></span><span class="op">(</span><span class="st">"exemple.csv"</span><span class="op">)</span></code></pre></div>
@@ -305,12 +304,12 @@
 </h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/dido_write_csv.html">dido_write_csv</a></span><span class="op">(</span><span class="va">result</span>, <span class="st">"resultat.csv"</span><span class="op">)</span></code></pre></div>
-<p>Vous pouvez télécharger <a href="https://raw.githubusercontent.com/mtes-mct/didoscalim/main/vignettes/resultat.csv" class="external-link">le fichier généré</a></p>
+<p>Vous pouvez télécharger <a href="resultat.csv">le fichier généré</a></p>
 </div>
 <div class="section level2">
 <h2 id="résumé-">résumé.<a class="anchor" aria-label="anchor" href="#r%C3%A9sum%C3%A9-"></a>
 </h2>
-<p>Une fois que la configuration de <code>params</code> est correcte, vous pouvez chainer avec <code>magrittr::%&gt;%</code> :</p>
+<p>Une fois que la configuration de <code>params</code> est correcte, vous pouvez chainer avec l’opérateur <code>magrittr::%&gt;%</code> :</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="fu"><a href="../reference/dido_read_delim.html">dido_read_delim</a></span><span class="op">(</span><span class="st">"exemple.csv"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>

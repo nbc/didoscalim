@@ -51,7 +51,7 @@ params <- list(
   OPERATEUR = list(description = "L'opérateur", type = "texte"),
   CONSO = list(description = "La consommation", unit = "Mwh")
 )
-dido_csv(my_tibble, params = params)
+augmente <- dido_csv(data, params = params)
 }
 }
 \seealso{

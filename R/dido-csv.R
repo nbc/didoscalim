@@ -8,6 +8,48 @@ default_columns <- list(
   MOIS = list(type = "mois", description = "Mois des données")
 )
 
+#' Lit un fichier CSV
+#'
+#' Cette fonction utilise directement `readr::read_delim` en enlevant la
+#' détection du type des colonnes.
+#'
+#' @inheritParams readr::read_delim
+#'
+#' @return un tibble dont toutes les colonnes sont de type `chr`
+#'
+#' @details Certaines variables peuvent avoir des valeurs secrétisées
+#'   représentées par la valeur `secret`, la détection automatique de readr
+#'   n'est donc pas fiable et est désactivé à ce niveau. La détection
+#'   automatique est faite dans la fonction `dido_csv()`.
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' data <- dido_read_delim("vignettes/exemple.csv")
+#' }
+dido_read_delim <- function(file, delim = NULL, quote = '"',
+                            escape_backslash = FALSE, escape_double = TRUE,
+                            locale = readr::default_locale(),
+                            comment = "", trim_ws = FALSE,
+                            skip = 0, n_max = Inf,
+                            skip_empty_rows = TRUE) {
+  readr::read_delim(
+    file = file,
+    delim = delim,
+    quote = quote,
+    col_types = readr::cols(.default = "c"),
+    escape_backslash = escape_backslash,
+    escape_double = escape_double,
+    locale = locale,
+    comment = comment,
+    trim_ws = trim_ws,
+    skip = skip, n_max = n_max,
+    skip_empty_rows = skip_empty_rows
+  )
+}
+
+
 #' Génère les lignes d'entête du CSV augmenté
 #'
 #' Génère un dataframe avec les lignes d'entêtes du CSV augmenté comme premières
@@ -50,7 +92,7 @@ default_columns <- list(
 #'   OPERATEUR = list(description = "L'opérateur", type = "texte"),
 #'   CONSO = list(description = "La consommation", unit = "Mwh")
 #' )
-#' dido_csv(my_tibble, params = params)
+#' augmente <- dido_csv(data, params = params)
 #' }
 dido_csv <- function(data, params = list(),
                      locale = readr::default_locale(),
@@ -74,7 +116,7 @@ dido_csv <- function(data, params = list(),
 #'
 #' @examples
 #' \dontrun{
-#' write_dido_csv(my_tibble, "fichier.csv")
+#' write_dido_csv(data, "/tmp/fichier.csv")
 #' }
 dido_write_csv <- function(data, file) {
   readr::write_delim(data,
@@ -86,46 +128,6 @@ dido_write_csv <- function(data, file) {
   )
 }
 
-#' Lit un fichier CSV
-#'
-#' Cette fonction utilise directement `readr::read_delim` en enlevant la
-#' détection du type des colonnes.
-#'
-#' @inheritParams readr::read_delim
-#'
-#' @return un tibble dont toutes les colonnes sont de type `chr`
-#'
-#' @details Certaines variables peuvent avoir des valeurs secrétisées
-#'   représentées par la valeur `secret`, la détection automatique de readr
-#'   n'est donc pas fiable et est désactivé à ce niveau. La détection
-#'   automatique est faite dans la fonction `dido_csv()`.
-#'
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' data <- dido_read_delim("fichier.csv")
-#' }
-dido_read_delim <- function(file, delim = NULL, quote = '"',
-                            escape_backslash = FALSE, escape_double = TRUE,
-                            locale = readr::default_locale(),
-                            comment = "", trim_ws = FALSE,
-                            skip = 0, n_max = Inf,
-                            skip_empty_rows = TRUE) {
-  readr::read_delim(
-    file = file,
-    delim = delim,
-    quote = quote,
-    col_types = readr::cols(.default = "c"),
-    escape_backslash = escape_backslash,
-    escape_double = escape_double,
-    locale = locale,
-    comment = comment,
-    trim_ws = trim_ws,
-    skip = skip, n_max = n_max,
-    skip_empty_rows = skip_empty_rows
-  )
-}
 
 #' @noRd
 description_row <- function(data, params = list()) {
@@ -178,7 +180,7 @@ type_row <- function(data, params = list(), locale, cog_year) {
 #' @noRd
 name_row <- function(data) {
   name_cols <- vapply(names(data), function(name) {
-    name
+    toupper(stringr::str_replace_all(name, " .*", "_"))
   }, character(1))
   return(name_cols)
 }

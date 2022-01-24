@@ -11,8 +11,6 @@ Cette commande permet de recharger les environnements si vous avez modifié le R
 Vous devez d'abord le relire avec \code{\link[=readRenviron]{readRenviron()}}
 }
 \examples{
-\dontrun{
-readEnviron()
+readRenviron("~/.Renviron")
 load_envs()
-}
 }

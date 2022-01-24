@@ -11,7 +11,7 @@
 #' @importFrom tibble tibble as_tibble
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr bind_rows select slice filter
-#' @importFrom stringr str_replace str_detect fixed
+#' @importFrom stringr str_replace str_detect fixed str_replace_all
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data abort warn inform %||% format_error_bullets
 #' @importFrom glue glue

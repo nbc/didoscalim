@@ -25,6 +25,16 @@ abort_not_datafile <- function() {
   rlang::abort("error_bad_argument_type", message = message)
 }
 
+#' @noRd
+abort_not_attachment <- function() {
+  message <- c(
+    glue::glue("`attachment` n'est pas du type attendu"),
+    i = glue::glue("`attachment` doit être un rid de datafile ou la valeur retournée par une des fonctions `add_attachment`, `get_attachment`")
+  )
+
+  rlang::abort("error_bad_argument_type", message = message)
+}
+
 #' cherche dans un tibble
 #'
 #' @param data le dataframe/tibble dans lequel rechercher
