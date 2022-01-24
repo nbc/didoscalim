@@ -9,6 +9,7 @@
 #' \dontrun{
 #' token <- upload_file("mon_fichier.csv")
 #' }
+#' @keywords internal
 upload_file <- function(file_name) {
   if (missing(file_name) || is.null(file_name)) abort_bad_argument("file_name")
   if (file.exists(file_name) == FALSE) {

@@ -1,4 +1,4 @@
-DiDoscalim alimentation package
+DiDoscalim
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -20,7 +20,7 @@ Ce package est encore en cours de développement.
 
 ## Exemple
 
-Comment générer un fichier CSV augmenté à partir d’un fichier [CSV
+Générer un fichier CSV augmenté à partir d’un fichier [CSV
 normal](vignettes/exemple.csv) et le charger dans un dataset.
 
 ``` r

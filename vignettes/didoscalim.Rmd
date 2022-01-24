@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(didoscalim)
 library(magrittr)
-library(dplyr, quietly = TRUE)
+library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
 ```
 
 ```{r, echo=FALSE, results = FALSE, message = FALSE}
@@ -129,7 +129,7 @@ datafile
 Modifier la ou les métadonnées concernées et faire la mise à jour :
 
 ```{r}
-datafile$temporal_coverage_end <- "2021-12-31"
+datafile$temporal_coverage$end <- "2021-12-31"
 update_datafile(datafile)
 ```
 

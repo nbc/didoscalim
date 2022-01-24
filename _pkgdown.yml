@@ -1,5 +1,6 @@
 url: https://mtes-mct.github.io/didoscalim
-
+template:
+  bootstrap: 5
 lang: fr
 
 reference:
@@ -11,19 +12,19 @@ reference:
 
 - title: "Les fonctions liées aux datasets"
   contents:
-  - ends_with("dataset?")
+  - ends_with("datasets?")
 
 - title: "Les fonctions liées aux datafiles"
   contents:
-  - ends_with("datafile?")
+  - ends_with("datafiles?")
 
 - title: "Les fonctions liées aux millésimes"
   contents:
-  - ends_with("millesime?")
+  - ends_with("millesimes?")
 
 - title: "Les fonctions liées aux fichiers annexes"
   contents:
-  - ends_with("attachment?")
+  - ends_with("attachments?")
 
 - title: "Les fonctions utilitaires"
   contents:
@@ -33,9 +34,9 @@ reference:
 
 - title: "Gérer votre environnement"
   contents:
-  - ends_with("env?")
+  - ends_with("envs?")
 
 - title: "Les fonctions liées aux jobs"
   contents:
-  - ends_with("job?")
+  - ends_with("jobs?")
 
