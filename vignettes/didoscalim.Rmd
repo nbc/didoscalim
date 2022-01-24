@@ -24,7 +24,7 @@ library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
 # bugfix pour check()
 library(stringr)
 library(purrr)
-ds <- get_datasets() 
+ds <- list_datasets() 
 if (nrow(ds) > 0) ds %>% 
   filter(str_detect(title, "Données.*fictive")) %>% 
   select(id) %>% 
@@ -175,7 +175,7 @@ datafile
 On récupére le dernier millesime du datafile
 
 ```{r}
-millesime_row <- get_millesimes(datafile) %>% slice_max(order_by = millesime)
+millesime_row <- list_millesimes(datafile) %>% slice_max(order_by = millesime)
 millesime <- millesime_row[['millesime']]
 millesime
 ```

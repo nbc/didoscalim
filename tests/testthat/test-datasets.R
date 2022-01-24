@@ -1,12 +1,12 @@
-test_that("check get_datasets errors on missing param", {
+test_that("check list_datasets errors on missing param", {
   err <- rlang::catch_cnd(get_dataset())
   expect_s3_class(err, "error_bad_argument")
 })
 
-test_that("check get_datasets works", {
+test_that("check list_datasets works", {
   skip_unless_dev_env()
 
-  ds <- get_datasets()
+  ds <- list_datasets()
 
   expect_s3_class(ds, "tbl")
 })

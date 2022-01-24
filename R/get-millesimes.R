@@ -6,11 +6,11 @@
 #' @export
 #'
 #' @examples
-#' get_millesimes()
-get_millesimes <- function(datafile = NULL) {
+#' list_millesimes()
+list_millesimes <- function(datafile = NULL) {
   if (!is.null(datafile) && is.null(get_datafile_rid(datafile))) abort_not_datafile()
 
-  df <- get_datafiles()
+  df <- list_datafiles()
 
   if (!is.null(datafile)) df <- filter(df, .data$rid == get_datafile_rid(datafile))
 

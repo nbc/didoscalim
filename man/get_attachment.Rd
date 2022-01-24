@@ -31,7 +31,7 @@ get_attachment(title = "title", dataset = dataset)
 }
 \seealso{
 Other attachment: 
-\code{\link{get_attachments}()},
+\code{\link{list_attachments}()},
 \code{\link{update_attachment}()}
 }
 \concept{attachment}

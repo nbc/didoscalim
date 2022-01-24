@@ -38,7 +38,7 @@ get_attachment <- function(attachment = NULL, title = NULL, dataset) {
   dataset_id <- if (!is.null(dataset)) get_dataset_id(dataset) else NULL
 
   if (!is.null(title)) {
-    df <- get_attachments()
+    df <- list_attachments()
     result <- find_by_column(df, title, "title", c("id", "rid"))
     dataset_id <- result$id
     rid <- result$rid
@@ -57,5 +57,5 @@ get_attachment <- function(attachment = NULL, title = NULL, dataset) {
 }
 
 get_attachment_id_by_rid <- function(rid) {
-  find_by_column(data = get_attachments(), string = stringr::fixed(rid), col = "rid")
+  find_by_column(data = list_attachments(), string = stringr::fixed(rid), col = "rid")
 }

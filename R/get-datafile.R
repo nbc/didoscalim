@@ -35,7 +35,7 @@ get_datafile <- function(datafile = NULL, title = NULL, dataset = NULL) {
   dataset_id <- if (!is.null(dataset)) get_dataset_id(dataset) else NULL
 
   if (!is.null(title)) {
-    df <- get_datafiles()
+    df <- list_datafiles()
     result <- find_by_column(df, title, "title", c("id", "rid"))
     dataset_id <- result$id
     rid <- result$rid
@@ -54,5 +54,5 @@ get_datafile <- function(datafile = NULL, title = NULL, dataset = NULL) {
 }
 
 get_datafile_id_by_rid <- function(rid) {
-  find_by_column(data = get_datafiles(), string = stringr::fixed(rid), col = "rid")
+  find_by_column(data = list_datafiles(), string = stringr::fixed(rid), col = "rid")
 }

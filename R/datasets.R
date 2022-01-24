@@ -4,8 +4,8 @@
 #' @export
 #'
 #' @examples
-#' get_datasets()
-get_datasets <- function() {
+#' list_datasets()
+list_datasets <- function() {
   url <- "/datasets"
   dido_api(method = "GET", path = url, as_tibble = TRUE)
 }
@@ -19,7 +19,7 @@ get_datasets <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' get_datasets() %>%
+#' list_datasets() %>%
 #'   filter(str_detect(title, "didoscalim")) %>%
 #'   select(id) %>%
 #'   pmap(~ delete_dataset(..1))

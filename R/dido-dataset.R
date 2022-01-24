@@ -50,7 +50,7 @@ dido_dataset <- function(title,
                          frequency_date = NULL,
                          granularity = NULL,
                          zones = NULL,
-                         organization = NULL,
+                         organization = organization(),
                          license = "fr-lo",
                          temporal_coverage_start = NULL,
                          temporal_coverage_end = NULL,
@@ -63,7 +63,6 @@ dido_dataset <- function(title,
     "topic" = topic,
     "license" = license
   )
-  payload$organization <- if (is.null(organization)) organization() else organization
   if (!is.null(frequency_date)) payload$frequency_date <- frequency_date
   if (!is.null(zones)) payload$spatial$zones <- zones
   if (!is.null(granularity)) payload$spatial$granularity <- granularity

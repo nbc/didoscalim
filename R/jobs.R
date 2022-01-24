@@ -4,8 +4,8 @@
 #' @export
 #'
 #' @examples
-#' jobs <- get_jobs()
-get_jobs <- function() {
+#' jobs <- list_jobs()
+list_jobs <- function() {
   url <- "/jobs"
   dido_api(method = "GET", path = url, as_tibble = TRUE)
 }

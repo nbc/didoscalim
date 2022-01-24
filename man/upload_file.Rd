@@ -20,3 +20,4 @@ Verse un fichier de données à intégrer
 token <- upload_file("mon_fichier.csv")
 }
 }
+\keyword{internal}

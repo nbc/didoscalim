@@ -25,7 +25,7 @@ organization <- function(name = NULL) {
 
   orgs <- orgs[grepl(name, orgs, ignore.case = TRUE)]
   if (length(orgs) > 1) {
-    rlang::abort("multiple_organization", message = "La recherche donne plusieurs organisations, vous devez préciser votre recherche")
+    rlang::abort("multiple_organization", message = "La recherche retourne plusieurs organisations, vous devez préciser votre recherche")
   } else if (length(orgs) < 1) {
     rlang::abort("bad_organization", message = "La recherche ne retourne aucune organisation")
   }

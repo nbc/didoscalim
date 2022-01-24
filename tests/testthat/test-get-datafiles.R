@@ -1,6 +1,6 @@
-test_that("get_datafiles works", {
+test_that("list_datafiles works", {
   skip_unless_dev_env()
 
-  df <- get_datafiles()
+  df <- list_datafiles()
   expect_s3_class(df, "tbl")
 })

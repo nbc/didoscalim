@@ -22,10 +22,10 @@ test_that("wait_for_jobs works", {
   expect_true("data" %in% names(result))
 })
 
-test_that("get_jobs works", {
+test_that("list_jobs works", {
   skip_unless_dev_env()
 
-  jobs <- get_jobs()
+  jobs <- list_jobs()
 
   expect_s3_class(jobs, "tbl")
 })

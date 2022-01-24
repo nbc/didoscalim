@@ -28,7 +28,7 @@ get_dataset <- function(data = NULL, title = NULL) {
   }
 
   id <- if (!is.null(title)) {
-    find_by_column(get_datasets(), title, "title")
+    find_by_column(list_datasets(), title, "title")
   } else {
     get_dataset_id(data)
   }

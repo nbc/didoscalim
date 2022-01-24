@@ -17,7 +17,7 @@ Supprime un dataset
 }
 \examples{
 \dontrun{
-get_datasets() \%>\%
+list_datasets() \%>\%
   filter(str_detect(title, "didoscalim")) \%>\%
   select(id) \%>\%
   pmap(~ delete_dataset(..1))

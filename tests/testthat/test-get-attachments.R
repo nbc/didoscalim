@@ -1,21 +1,21 @@
-test_that("get_attachments works", {
+test_that("list_attachments works", {
   skip_unless_dev_env()
 
-  df <- get_attachments()
+  df <- list_attachments()
   expect_s3_class(df, "tbl")
 })
 
-test_that("get_attachments works", {
+test_that("list_attachments works", {
   skip_unless_dev_env()
 
   dataset <- add_dataset(
-    title = "didoscalim ds get_attachments works",
+    title = "didoscalim ds list_attachments works",
     description = "test",
     topic = "Transports",
     frequency = "unknown"
   )
 
-  df <- get_attachments(dataset = dataset)
+  df <- list_attachments(dataset = dataset)
   expect_equal(nrow(df), 0)
 
   att <- add_attachment(
@@ -25,7 +25,7 @@ test_that("get_attachments works", {
     file_name = "dido-csv-simple.csv"
   )
 
-  df <- get_attachments(dataset = dataset)
+  df <- list_attachments(dataset = dataset)
   expect_equal(nrow(df), 1)
 })
 
