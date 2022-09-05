@@ -1,6 +1,11 @@
 DiDoscalim
 ================
 
+Ce dépôt n'est plus utilisé, vous trouvez les informations sur didoscalim sur les pages suivantes :
+
+* [le dépôt](https://github.com/MTES-MCT/didoscalim)
+* [la documentation](https://mtes-mct.github.io/didoscalim/)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
